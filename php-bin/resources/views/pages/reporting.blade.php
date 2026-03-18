@@ -65,23 +65,6 @@
             </div>
             <div class="r-n-a-panel panel panel-default col-xs-12 col-sm-12 col-lg-4">
                 <div class="panel-heading">
-                    <a id="enrollment-report-image" href="/enrolment-app" target="_blank">
-                        <img alt="enrollment model thumbnail" class="enrollment-model-thumbnail"
-                            src="/img/charts/enrolment-model-icon.png" />
-                    </a>
-                </div>
-                <div class="panel-body">
-                    <p id="learner-centered" class="panel-body-title dark-blue">Data Science</p>
-                    <a id="enrollment-report-link" href="/enrolment-app" target="_blank">
-                        <p>Enrolment Model Report</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="r-n-a-panel panel panel-default col-xs-12 col-sm-12 col-lg-4">
-                <div class="panel-heading">
                     <a id="fsa-report-link" href="/fsa/index.html" target="_blank">
                         <img alt="" class="toc-chart-thumbnail" src="/img/charts/fsa-panel-img.png"
                             style="height:221px" />
@@ -94,6 +77,9 @@
                     </a>
                 </div>
             </div>
+        </div>
+
+        <div class="row">
             <div class="r-n-a-panel panel panel-default col-xs-12 col-sm-4 col-lg-4">
                 <div class="panel-heading">
                     <a id="surrey-class-size-download-report-link" href="/pdf/student-impacts-report-feb2021.pdf"

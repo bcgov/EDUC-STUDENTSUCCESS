@@ -7,7 +7,7 @@
         <div class="restrain">
                 <img src="/img/indigenous-hex.png" alt="" class="key-image thirds">
                 <h2 id="directory-main-heading" class="ministry-blue slide-title">Aboriginal Students: How Are We Doing
-                        2023/2024</h2>
+                        2024/2025</h2>
                 <h4 style="color:white">The Aboriginal: How Are We Doing Report is an annual, public-facing report focusing on
                         Indigenous students in B.C. The data in this report provides teachers, schools, school districts and the
                         Ministry of Education and Child Care with important information on how Indigenous students are developing
@@ -272,7 +272,7 @@
                                                 target="_blank">Excel</a></td>
                         </tr>
                         <tr>
-                                <th scope="row">North Okanagan-Shuswap (83)</th>
+                                <th scope="row">K̓wsaltktnéws ne Secwepemcúl'ecw (83)</th>
                                 <td><a href="https://www2.gov.bc.ca/assets/gov/education/administration/kindergarten-to-grade-12/reports/ab-hawd/ab-hawd-school-district-083.pdf"
                                                 target="_blank">PDF</a></td>
                                 <td><a href="https://www2.gov.bc.ca/assets/gov/education/administration/kindergarten-to-grade-12/reports/ab-hawd/ab-hawd-school-district-083.xlsx"

@@ -78,7 +78,7 @@ Route::get('/glossary', 'GlossaryController@getAllTerms');
 Route::get('/childcare', 'ChildcareController@getChildcareData');
 
 // Enrolment app
-Route::get('/enrolment-app', 'EnrolmentController@showEnrolment');
+// Route::get('/enrolment-app', 'EnrolmentController@showEnrolment');
 
 // Reporting Page
 Route::get('/reporting', 'ReportingPageController@showReportingPage');
