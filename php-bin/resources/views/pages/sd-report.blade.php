@@ -386,6 +386,7 @@ $(function() {
             var spec = {!! json_encode($data) !!};
             var viewVar = "#desktopView"+{{ $key++ }};
             console.log(viewVar);
+            console.log(spec);
             vegaEmbed(viewVar, spec, {"actions": false}).then(function(result) {
               // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);                     
