@@ -1,0 +1,108 @@
+/* Vanilla Custom Hero Carousel Styling */
+
+.custom-hero-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f8f9fa; /* Fallback background */
+}
+
+/* Inner wrapper controls the height */
+.custom-hero-inner {
+    position: relative;
+    width: 100%;
+    height: 400px; 
+}
+
+/* Each slide overlaps completely, fading via opacity */
+.custom-hero-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    z-index: 1;
+}
+
+.custom-hero-item.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Force inner images to cover consistently */
+.custom-hero-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Custom rounded indicators to match design mockup */
+.custom-carousel-indicators {
+    position: absolute;
+    right: 5%;
+    bottom: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10;
+}
+
+.custom-carousel-indicators button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 0 6px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0;
+}
+
+/* Active Indicator state */
+.custom-carousel-indicators button.active {
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+/* Style the text overlay */
+.custom-carousel-caption {
+    position: absolute;
+    bottom: 4rem;
+    left: 15%; /* Centers caption loosely aligned with the page container */
+    max-width: 60%;
+    color: #fff;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.6);
+    z-index: 5;
+}
+
+/* Typography for carousel headings */
+.custom-carousel-caption h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Typography for carousel texts */
+.custom-carousel-caption p {
+    font-size: 1.2rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .custom-hero-inner {
+        height: 300px;
+    }
+    .custom-carousel-caption {
+        left: 5%;
+        max-width: 90%;
+    }
+    .custom-carousel-caption h2 {
+        font-size: 1.8rem;
+    }
+    .custom-carousel-caption p {
+        font-size: 1rem;
+    }
+}

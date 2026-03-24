@@ -1,0 +1,54 @@
+/* Navigation Component Styling */
+
+/* Make the active and hover state of nav links have a thick bottom border */
+#mainNavigation .nav-link {
+    color: #003366 !important;
+    position: relative;
+    transition: color 0.2s ease-in-out;
+}
+
+#mainNavigation .nav-link.active-nav-link,
+#mainNavigation .nav-link:hover {
+    color: #003366 !important;
+}
+
+/* Adds a bottom border to active or hovered links */
+#mainNavigation .nav-link.active-nav-link::after,
+#mainNavigation .nav-link:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #003366;
+}
+
+/* Vertical separator styling */
+.nav-separator {
+    color: #dee2e6; /* Bootstrap border-color */
+    line-height: 1;
+}
+
+/* Notice Banner */
+.notice-banner {
+    background-color: #003366;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.notice-banner a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* BC Logo Placeholder */
+.bc-logo-placeholder {
+    width: 200px;
+    height: 60px;
+    background-color: #f8f9fa;
+    border: 1px dashed #adb5bd;
+    color: #6c757d;
+    font-weight: 600;
+}
