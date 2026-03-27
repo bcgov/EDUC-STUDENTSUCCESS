@@ -360,21 +360,30 @@ $(function() {
       @endif
       @if ($report_slug == 'grad-assess')
         @include('components.chart-legend')
+       
         @foreach ($labels as $key=>$label)
         <h3 class="slide-title light-blue">{{$label}}</h3>
+        @if($school_district->sd == '093')
+          <h3 class="light-blue">English</h3>
+        @endif
         <div id="desktopView{{ $key }}" class="desktop"></div>
         <div id="tabletView{{ $key }}" class="tablet"></div>
         <div id="mobileView{{ $key++ }}" class="mobile"></div>
-        
+        @if($school_district->sd == '093')
+        <hr>
+          <h3 class="light-blue">French</h3>
+          <div id="frenchDesktopView" class="desktop"></div>
+          <div id="frenchTabletView" class="tablet"></div>
+          <div id="frenchMobileView" class="mobile"></div>
+        @endif
         <br>
         @endforeach
-
         @foreach ($mobileData as $key=>$data)
           <script type="text/javascript"> 
             var view;        
             var spec = {!! json_encode($data) !!};
             var viewVar = "#mobileView"+{{ $key++ }};
-            console.log(viewVar);
+            // console.log(viewVar);
             vegaEmbed(viewVar, spec, {"actions": false}).then(function(result) {
               // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);                     
@@ -385,8 +394,8 @@ $(function() {
             var view;        
             var spec = {!! json_encode($data) !!};
             var viewVar = "#desktopView"+{{ $key++ }};
-            console.log(viewVar);
-            console.log(spec);
+            // console.log(viewVar);
+            // console.log(spec);
             vegaEmbed(viewVar, spec, {"actions": false}).then(function(result) {
               // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);                     
@@ -397,12 +406,49 @@ $(function() {
             var view;        
             var spec = {!! json_encode($data) !!};
             var viewVar = "#tabletView"+{{ $key++ }};
-            console.log(viewVar);
+            // console.log(viewVar);
             vegaEmbed(viewVar, spec, {"actions": false}).then(function(result) {
               // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);                     
           </script>
         @endforeach
+        @if($school_district->sd == '093')
+        @foreach ($frenchMobileData as $key=>$data)
+          <script type="text/javascript"> 
+            var view;        
+            var spec = {!! json_encode($data) !!};
+            var viewVar = "#frenchMobileView";
+            console.log(viewVar);
+            console.log(spec);
+            vegaEmbed(viewVar, spec, {"actions": false}).then(function(result) {
+              // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);                     
+          </script>
+        @endforeach
+        @foreach ($frenchDesktopData as $key=>$data)
+          <script type="text/javascript"> 
+            var view;        
+            var spec = {!! json_encode($data) !!};
+            var viewVar = "#frenchDesktopView";
+            console.log(viewVar);
+            console.log(spec);
+            vegaEmbed(viewVar, spec, {"actions": false}).then(function(result) {
+              // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);                     
+          </script>
+        @endforeach
+        @foreach ($frenchTabletData as $key=>$data)
+          <script type="text/javascript"> 
+            var view;        
+            var spec = {!! json_encode($data) !!};
+            var viewVar = "#frenchTabletView";
+            // console.log(viewVar);
+            vegaEmbed(viewVar, spec, {"actions": false}).then(function(result) {
+              // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);                     
+          </script>
+        @endforeach
+        @endif
       @endif
 
       @if ($report_slug == 'transition-to-post-secondary')
