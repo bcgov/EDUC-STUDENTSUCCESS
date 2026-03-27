@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 // In order to get $_GET params.
-use Illuminate\Support\Facades\Input;
+// use Illuminate\Support\Facades\Input;
 
 use App\SchoolDistrict;
 use App\Reports;
@@ -17,50 +17,40 @@ use DB;
 
 class SchoolDistrictsController extends Controller {
   
-  public function getAllSchoolDistricts() {
+  public function getAllSchoolDistricts(Request $request) {
 
-    // Gets things like POST and GET data from request.
-    $input = Input::all();
+    $input = $request->all();
 
-    if (isset($input['sortBy']) && $input['sortBy'] == 'number') {
-
+    if ($request->has('sortBy') && $request->sortBy == 'number') {
       $school_districts = SchoolDistrict::select('sd', 'district_name')
-      ->orderBy('sd')
-      ->remember(30)
-      ->get();
-
-    } else {
-
+          ->orderBy('sd')
+          ->remember(30)
+          ->get();
+  } else {
       $school_districts = SchoolDistrict::select('sd', 'district_name')
-      ->orderBy('district_name')
-      ->remember(30)
-      ->get();
+          ->orderBy('district_name')
+          ->remember(30)
+          ->get();
+  }
 
-    }
-
-    return view('pages.directory', compact('school_districts'));
+  return view('pages.directory', compact('school_districts'));
 
   }
   public function getAllSchoolDistrictsApi() {
 
-    // Gets things like POST and GET data from request.
-    $input = Input::all();
+    $input = $request->all();
 
-    if (isset($input['sortBy']) && $input['sortBy'] == 'number') {
-
+    if ($request->has('sortBy') && $request->sortBy == 'number') {
       $school_districts = SchoolDistrict::select('sd', 'district_name')
-      ->orderBy('sd')
-      ->remember(30)
-      ->get();
-
-    } else {
-
+          ->orderBy('sd')
+          ->remember(30)
+          ->get();
+  } else {
       $school_districts = SchoolDistrict::select('sd', 'district_name')
-      ->orderBy('district_name')
-      ->remember(30)
-      ->get();
-
-    }
+          ->orderBy('district_name')
+          ->remember(30)
+          ->get();
+  }
     return response()->json($school_districts, 200);
   }
 
@@ -73,7 +63,7 @@ class SchoolDistrictsController extends Controller {
 
     if ($sdID == '099') {
       // Redirect in the case of SD 99 (Provincial Results)
-      return redirect('/provincial-results');  
+      return redirect('/provincial-results');
     } else {
       return view('pages.schooldistrict', compact('school_district'));
     }
@@ -173,43 +163,34 @@ class SchoolDistrictsController extends Controller {
     
   //   return view('pages.sd-report', compact('school_district', 'report_slug', 'sd_report_slugs', 'metadata', 'data')); 
   // }
-  public function getSdReport($sdID, $report_slug) {
+public function getSdReport($sdID, $report_slug) {
     //Metadata
     $m = Metadata::select('location', 'school_year')
       ->get();
-
     $metadata = [];
     foreach ($m as $md) {
       $metadata[$md->location] = $md->school_year;
     }
-
     $sd_report_slugs = (new ReportsController)->getSdReportSlugs();
-
     // Exception for Mission SD
     if ($sdID == '075') {
       $mission_report_slugs = array_diff($sd_report_slugs, array('post-secondary-career-prep'));
       $sd_report_slugs = array_values($mission_report_slugs);
     }
-
     // Bail out if we didn't get a valid report type.
     if (!in_array($report_slug, $sd_report_slugs)) {
       \App::abort(404);
     }
-
     // Exception for Provincial Report
-    if ($sdID == '099') {
-      
+    if ($sdID == '099') {     
       $school_district = (object)[];
 
       $school_district->district_name = trans('esdr2.prov_results_label');
       $school_district->sd = '099';
-
     } else {
-
       $school_district = SchoolDistrict::where('sd', $sdID)
         ->remember(30)
         ->firstOrFail();
-
     }
    //Report Labels
    $label = VegaCharts::where('school_district', $sdID)
@@ -260,92 +241,51 @@ class SchoolDistrictsController extends Controller {
      array_push($tabletJson,json_decode($tabletReportData[$rd->school_district]));
    }
    $tabletData = $tabletJson;
-    $result = compact('school_district', 'report_slug', 'sd_report_slugs', 'metadata', 'labels', 'desktopData','mobileData' ,'tabletData');
-    return view('pages.sd-report', $result);
-
-  }
-  public function getAllReportApi($sdID) {
-   
-    $m = Metadata::select('location', 'school_year')
+    // Report Data for School District 93
+    $frenchDesktopData = [];
+    $frenchMobileData = [];
+    $frenchTabletData = [];
+  if($sdID == '093' && $report_slug == 'grad-assess') {
+      //Report Data for Desktop
+      $frenchDesktop = VegaCharts::where('school_district', $sdID)
+      ->where('PAGE', 'grad-assess-french')
+      ->where('TYPE', 'Desktop')
       ->get();
-     
-    $metadata = [];
-    foreach ($m as $md) {
-      $metadata[$md->location] = $md->school_year;
+      $frenchDesktopReportData = [];
+      $frenchDesktopJson = [];
+      foreach ($frenchDesktop as $frd) {
+        $frenchDesktopReportData[$frd->school_district] = $frd->json_data;
+        array_push($frenchDesktopJson,json_decode($frenchDesktopReportData[$frd->school_district]) );
+      }
+      $frenchDesktopData = $frenchDesktopJson;
+
+      //Report Data for Mobile
+      $frenchMobile = VegaCharts::where('school_district', $sdID)
+      ->where('PAGE', 'grad-assess-french')
+      ->where('TYPE', 'Mobile')
+      ->get();
+      $frenchMobileReportData = [];
+      $frenchMobileJson = [];
+      foreach ($frenchMobile as $frd) {
+        $frenchMobileReportData[$frd->school_district] = $frd->json_data;
+        array_push($frenchMobileJson,json_decode($frenchMobileReportData[$frd->school_district]));
+      }
+      $frenchMobileData = $frenchMobileJson;
+
+      $frenchTablet = VegaCharts::where('school_district', $sdID)
+      ->where('PAGE', 'grad-assess-french')
+      ->where('TYPE', 'Tablet')
+      ->get();
+      $frenchTabletReportData = [];
+      $frenchTabletJson = [];
+      foreach ($frenchTablet as $frd) {
+        $frenchTabletReportData[$frd->school_district] = $frd->json_data;
+        array_push($frenchTabletJson,json_decode($frenchTabletReportData[$frd->school_district]));
+      }
+      $frenchTabletData = $frenchTabletJson;
     }
-
-    $sd_report_slugs = (new ReportsController)->getSdReportSlugs();
-
-    // Exception for Mission SD
-    if ($sdID == '075') {
-      $mission_report_slugs = array_diff($sd_report_slugs, array('post-secondary-career-prep'));
-      $sd_report_slugs = array_values($mission_report_slugs);
-    }
-
-    // Exception for Provincial Report
-    if ($sdID == '099') {
-      
-      $school_district = (object)[];
-
-      $school_district->district_name = trans('esdr2.prov_results_label');
-      $school_district->sd = '099';
-
-    } else {
-
-      $school_district = SchoolDistrict::where('sd', $sdID)
-        ->remember(30)
-        ->firstOrFail();
-
-    }
-    //Report Labels
-    $label = VegaCharts::where('school_district', $sdID)
-    ->where('TYPE', 'Desktop')
-    ->get();
-    $LabelData = [];
-    $labelJson = [];
-    foreach ($label as $rd) {
-      $LabelData[$rd->school_district] = $rd->label;
-      array_push($labelJson,$LabelData[$rd->school_district] );
-    }
-    $labels = $labelJson;
-    //Report Data for Desktop
-    $desktop = VegaCharts::where('school_district', $sdID)
-    ->where('TYPE', 'Desktop')
-    ->get();
-    $desktopReportData = [];
-    $desktopJson = [];
-    foreach ($desktop as $rd) {
-      $desktopReportData[$rd->school_district] = $rd->json_data;
-      array_push($desktopJson,json_decode($desktopReportData[$rd->school_district]) );
-    }
-    $desktopData = $desktopJson;
-
-    //Report Data for Mobile
-    $mobile = VegaCharts::where('school_district', $sdID)
-    ->where('TYPE', 'Mobile')
-    ->get();
-    $mobileReportData = [];
-    $mobileJson = [];
-    foreach ($mobile as $rd) {
-      $mobileReportData[$rd->school_district] = $rd->json_data;
-      array_push($mobileJson,json_decode($mobileReportData[$rd->school_district]));
-    }
-    $mobileData = $mobileJson;
-
-    $tablet = VegaCharts::where('school_district', $sdID)
-    ->where('TYPE', 'Tablet')
-    ->get();
-    $tabletReportData = [];
-    $tabletJson = [];
-    foreach ($tablet as $rd) {
-      $tabletReportData[$rd->school_district] = $rd->json_data;
-      array_push($tabletJson,json_decode($tabletReportData[$rd->school_district]));
-    }
-    $tabletData = $tabletJson;
-    // $test = VegaCharts::where('school_district', $sdID)
-    // ->get();
-    return response()->json(compact('school_district', 'sd_report_slugs', 'metadata', 'labels', 'desktopData','mobileData' ,'tabletData'), 200);
-
+    $result = compact('school_district', 'report_slug', 'sd_report_slugs', 'metadata', 'labels', 'desktopData', 'mobileData', 'tabletData', 'frenchDesktopData', 'frenchMobileData', 'frenchTabletData');
+    return view('pages.sd-report', $result);
   }
   public function getSdReportApi($sdID, $report_slug) {
    
