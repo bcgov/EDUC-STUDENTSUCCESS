@@ -4,8 +4,10 @@
 @section('content')
 @include('components/hero')
 @include('components/main-search')
+@include('components.intro-text')
 @include('components/about-this-website')
-
+@include('components.available-reports')
+@include('components.learn-more')
 @endsection
 
 @push('css')

@@ -1,0 +1,212 @@
+/* Available Reports Component Styles */
+
+.available-reports-section {
+    background-color: #f7f9fa;
+    padding: 60px 0;
+}
+
+.reports-heading-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.reports-heading {
+    color: #1a365d;
+    font-weight: 700;
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Light blue highlight behind the heading text */
+.reports-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background-color: #d1f4f9;
+    z-index: -1;
+}
+
+.report-categories-title {
+    color: #1a365d;
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Tabs Styling */
+.reports-tabs-wrapper {
+    background: #fff;
+    border-radius: 8px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.nav-pills.reports-tabs .nav-item {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-pills.reports-tabs .nav-link {
+    color: #6c757d;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 12px 15px;
+    border-radius: 8px !important;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.nav-pills.reports-tabs .nav-link:hover {
+    color: #1a365d;
+}
+
+.nav-pills.reports-tabs .nav-link.active {
+    background: linear-gradient(135deg, #f05252, #e83e8c);
+    color: #fff;
+    /* Custom tab active shape */
+    border-radius: 8px 20px 8px 8px !important; 
+    box-shadow: 0 4px 10px rgba(240, 82, 82, 0.3);
+}
+
+/* Report Cards */
+.report-card-container {
+    perspective: 1000px;
+}
+
+.report-card {
+    border-radius: 12px 12px 40px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    aspect-ratio: 1 / 1;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease, opacity 0.4s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%;
+}
+
+.report-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    color: #fff;
+}
+
+/* Gradients for cards */
+.bg-gradient-pink {
+    background: linear-gradient(135deg, #ff6b6b, #d83b7d);
+}
+
+.bg-gradient-teal {
+    background: linear-gradient(135deg, #32b5ab, #1f7b88);
+}
+
+.bg-gradient-light-teal {
+    background: linear-gradient(135deg, #4ed3c7, #2f9d93);
+}
+
+/* Calendar Card specific styling */
+.calendar-card {
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    aspect-ratio: 1 / 1;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.calendar-card .calendar-title {
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.calendar-btn {
+    background-color: #1a365d;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.calendar-btn:hover {
+    background-color: #122847;
+    color: #fff;
+}
+
+/* Card Icons */
+.report-card-icon {
+    font-size: 3rem; /* Increase for font icons on mobile */
+    max-height: 55px; /* Size for image icons on mobile */
+    max-width: 55px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    object-fit: contain;
+}
+
+@media (min-width: 992px) { /* Desktop sizes */
+    .report-card-icon {
+        font-size: 1.8rem; 
+        max-height: 35px; 
+        max-width: 35px;
+    }
+}
+
+/* Card Titles */
+.report-card-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Filtering logic */
+/* When a category is selected (wrapper gets the class), non-matching cards fade out */
+.reports-grid.is-filtered .report-wrapper {
+    opacity: 0.3;
+}
+.reports-grid.is-filtered .report-wrapper.highlight {
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+/* Custom 5 column grid for desktop */
+@media (min-width: 992px) {
+    .col-lg-1-5 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+/* Custom 15px gap between cards */
+.reports-grid .row {
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+}
+.reports-grid .report-wrapper {
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    margin-bottom: 15px !important;
+}

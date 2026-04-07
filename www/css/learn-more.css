@@ -1,0 +1,54 @@
+/* Learn More Component Styles */
+
+.learn-more-section {
+    margin-bottom: -20px;
+}
+
+.learn-more-restrain {
+    padding-bottom: 50px;
+}
+
+.learn-more-green-bar {
+    margin: 0; 
+    float: left;
+}
+
+.learn-more-image {
+    padding-top: 20px;
+}
+
+/* First Column Buttons */
+.learn-more-col-1-btn {
+    padding-top: 10px;
+}
+.learn-more-col-1-btn a {
+    position: relative;
+    top: -11px;
+}
+
+/* Second Column Adjustments */
+.learn-more-col-2 {
+    padding-left: 14px;
+}
+.learn-more-col-2-btn {
+    padding-top: 8px;
+}
+.learn-more-col-2-btn a {
+    position: relative; 
+    top: -26px;
+}
+
+/* Third Column Adjustments */
+.learn-more-col-3 {
+    padding-left: 30px;
+}
+.learn-more-col-3-btn {
+    padding-top: 4px;
+}
+.learn-more-col-3-btn a {
+    margin-top: 35px;
+}
+.learn-more-img-3 {
+    width: 322.59px; 
+    height: 259.72px;
+}
