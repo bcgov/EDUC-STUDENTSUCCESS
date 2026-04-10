@@ -1,0 +1,68 @@
+.search-btn-teal,
+.search-btn-blue {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px 3px 16px 3px;
+    height: 100%;
+    padding: 10px 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s;
+    box-sizing: border-box;
+}
+
+.search-btn-teal {
+    background-color: #00a0a0;
+}
+
+.search-btn-blue {
+    background-color: #003366;
+}
+
+.search-btn-teal:hover,
+.search-btn-blue:hover {
+    opacity: 0.9;
+    color: #fff;
+    text-decoration: none;
+}
+
+.search-btn-teal:focus,
+.search-btn-blue:focus {
+    outline: none;
+}
+
+/* Global Typography Scale */
+body {
+    font-size: 16px;
+}
+
+h1, .h1 {
+    font-size: 34px;
+}
+
+h2, .h2 {
+    font-size: 28px;
+}
+
+h3, .h3 {
+    font-size: 22px;
+}
+
+/* Button font sizing */
+.btn,
+.search-btn-teal,
+.search-btn-blue {
+    font-size: 15px;
+}
+
+/* Captions and Hints */
+.caption,
+.hint,
+.text-muted,
+small {
+    font-size: 13px;
+}

@@ -3,39 +3,40 @@
         {{-- <img src="/img/bg-images/BCmapSuccessHomeCropped.png" alt="image of a map of B.C."
             style="position:absolute; top:119px"> --}}
 
-        <div class="restrain">
+        <div class="container">
             <h2 class="dark-blue tp" style="text-align:left;">Overview of B.C. Public School Data</h2>
             <img class="green-bar" style="margin-left: 4px; margin-top: 7px; position: relative;"
                 src="{{URL::to('/')}}/img/green-bar-2.png" alt="" />
         </div>
-        <div class="row frontPage-charts">
-            <div id="stp" style="display:block" class="col-md-8 restrain">
-                <iframe scrolling="no" height="535px" id="homeFrameId-6" class="tableau-embed"
+        <div class="container">
+            <div class="row frontPage-charts justify-content-center">
+                <div id="stp" style="display:block" class="col-md-8">
+                    <iframe scrolling="no" height="535px" id="homeFrameId-6" class="tableau-embed"
                     src='//public.tableau.com/views/ESDR_PROVINCE/12_STP_P?:showVizHome=no&amp;:display_share=no&amp;:embed=true&amp;:toolbar=no&amp;:device=desktop&amp;'
                     style='border:none'></iframe>
                 <div style="background:white;margin-top: -49px;position:absolute;height: 27px;width: 100%;"></div>
             </div>
-            <div id="enrollment-info" style="display: none" class="col-md-8 restrain">
+            <div id="enrollment-info" style="display: none" class="col-md-8">
                 <iframe scrolling="no" height="535px" id="homeFrameId-1" class="tableau-embed"
                     src="//public.tableau.com/views/ESDR_PROVINCE/2_Enrolment_P?:showVizHome=no&amp;:display_share=no&amp;:embed=true&amp;:toolbar=no&amp;:device=desktop&amp;"></iframe>
                 <div style="background:white;margin-top: -49px;position:absolute;height: 27px;width: 100%;"></div>
             </div>
-            <div id="completion-rate" style="display:none" class="col-md-8 restrain">
+            <div id="completion-rate" style="display:none" class="col-md-8">
                 <iframe scrolling="no" height="535px" id="homeFrameId-2" class="tableau-embed"
                     src="//public.tableau.com/views/ESDR_PROVINCE/5_CompRate_P?:showVizHome=no&amp;:display_share=no&amp;:embed=true&amp;:toolbar=no&amp;:device=desktop&amp;"></iframe>
                 <div style="background:white;margin-top: -49px;position:absolute;height: 27px;width: 100%;"></div>
             </div>
-            <div id="grade-4-7-fsa" style="display:none" class="col-md-8 restrain">
+            <div id="grade-4-7-fsa" style="display:none" class="col-md-8">
                 <iframe scrolling="no" height="535px" id="homeFrameId-3" class="tableau-embed"
                     src="//public.tableau.com/views/ESDR_PROVINCE/P_7_FSA_P?:showVizHome=no&amp;:display_share=no&amp;:embed=true&amp;:toolbar=no&amp;:device=desktop&amp;"></iframe>
                 <div style="background:white;margin-top: -49px;position:absolute;height: 27px;width: 100%;"></div>
             </div>
-            <div id="provincial-assessments" style="display:none" class="col-md-8 restrain">
+            <div id="provincial-assessments" style="display:none" class="col-md-8">
                 <iframe scrolling="no" height="535px" id="homeFrameId-4" class="tableau-embed"
                     src="//public.tableau.com/views/ESDR_PROVINCE/13_Assessments_P?:showVizHome=no&amp;:display_share=no&amp;:embed=true&amp;:toolbar=no&amp;:device=desktop&amp;"></iframe>
                 <div style="background:white;margin-top: -49px;position:absolute;height: 27px;width: 100%;"></div>
             </div>
-            <div id="students-satisfaction-survey" style="display:none" class="col-md-8 restrain">
+            <div id="students-satisfaction-survey" style="display:none" class="col-md-8">
                 <iframe scrolling="no" height="535px" id="homeFrameId-5" class="tableau-embed"
                     src="//public.tableau.com/views/ESDR_PROVINCE/11_SatSurv_P?:showVizHome=no&amp;:display_share=no&amp;:embed=true&amp;:toolbar=no&amp;:device=desktop&amp;"></iframe>
                 <div style="background:white;margin-top: -49px;position:absolute;height: 27px;width: 100%;"></div>
@@ -61,10 +62,11 @@
                 </ul>
             </div>
         </div>
+        </div>
         <!-- </div> -->
     </div>
 
-    <div class="restrain" style="position: relative;"><a class="btn btn-primary btn-lg" href="/reporting">LEARN MORE
+    <div class="container" style="position: relative;"><a class="btn btn-primary btn-lg" href="/reporting">LEARN MORE
             +</a></div>
     <script type="text/javascript">
         // Define the yesnoCheck function outside window.onload

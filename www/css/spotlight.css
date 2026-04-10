@@ -1,0 +1,162 @@
+/* No shorthand CSS properties used as requested */
+
+.spotlight-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.spotlight-title {
+    color: #002244;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-cyan {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.highlight-cyan::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 2px;
+    width: 100%;
+    height: 12px;
+    background-color: #e0fafa;
+    z-index: -1;
+}
+
+.spotlight-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.spotlight-image-wrapper {
+    position: relative;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 200px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: 350px;
+}
+
+.spotlight-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.decorative-shape {
+    position: absolute;
+    bottom: -15px;
+    right: 25px;
+    width: 80px;
+    height: 80px;
+    z-index: 10;
+}
+
+.decorative-circle {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80px;
+    height: 80px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-top-width: 12px;
+    border-right-width: 12px;
+    border-bottom-width: 12px;
+    border-left-width: 12px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: #00e5ff;
+    border-right-color: #00e5ff;
+    border-bottom-color: #00e5ff;
+    border-left-color: #00e5ff;
+    z-index: 2;
+}
+
+.decorative-square {
+    position: absolute;
+    bottom: 0px;
+    right: -20px;
+    width: 35px;
+    height: 35px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: #ff9800;
+    border-right-color: #ff9800;
+    border-bottom-color: #ff9800;
+    border-left-color: #ff9800;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.spotlight-heading {
+    color: #000000;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.spotlight-text {
+    color: #333333;
+    line-height: 1.6;
+}
+
+.spotlight-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #e0e0e0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-decoration-line: none;
+    color: #000000;
+}
+
+.spotlight-link.border-bottom-link {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #e0e0e0;
+}
+
+.spotlight-link:hover {
+    background-color: #f8f9fa;
+}
+
+.spotlight-link-text {
+    font-weight: 700;
+    color: #333;
+}
+
+.spotlight-icon-arrow {
+    color: #003366;
+    font-weight: 700;
+}
+
+
+@media (min-width: 768px) {
+    .spotlight-image-wrapper {
+        border-top-right-radius: 300px;
+        border-bottom-right-radius: 300px;
+        max-width: 450px;
+    }
+}

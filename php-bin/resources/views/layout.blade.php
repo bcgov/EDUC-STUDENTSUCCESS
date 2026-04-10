@@ -17,6 +17,8 @@
   @stack('css')
   <link href="/css/style.css{{ !App::environment('production', 'staging') ? '?cache_bust='.rand() : '' }}" rel="stylesheet" type="text/css">
   <link href="/css/studentsuccess.css" rel="stylesheet" type="text/css">
+  <link href="/css/common.css" rel="stylesheet" type="text/css">
+  <link href="/css/footer.css" rel="stylesheet" type="text/css">
   <!--  <link href="/css/bootstrap4.css" rel="stylesheet" type="text/css">-->
   <script src="/js/vega/promise.min.js"></script>
   <script src="/js/vega/symbol.min.js"></script>

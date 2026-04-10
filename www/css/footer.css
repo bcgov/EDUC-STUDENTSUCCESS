@@ -1,0 +1,78 @@
+/* General Footer and Acknowledgement Bar */
+.land-acknowledgement {
+    background: linear-gradient(90deg, #44899c 0%, #35c0bd 100%);
+    /* Adjust text size slightly to match the detailed small text in graphic */
+    font-size: 0.85rem;
+}
+
+#footer {
+    background: #253d61; /* Closer to the dark blue in the screenshot than #003366 */
+    min-height: auto; 
+    border-top: none; /* Removing old yellow border on top of footer, moving it to logo */
+    overflow: hidden;
+}
+
+/* Logo Details */
+.logo-divider {
+    width: 2px;
+    height: 60px;
+    background-color: #fcba19; /* BC Government Gold */
+}
+
+.logo-text {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.15rem;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+/* Headings and Links */
+.footer-heading {
+    font-size: 1.1rem;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    color: #253d61;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background-color 0.2s, transform 0.2s;
+    z-index: 100;
+}
+
+#back-to-top:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-50%) scale(1.05); /* Slight grow on hover */
+}
+
+/* Reposition absolute button on smaller screens to avoid overlapping text */
+@media screen and (max-width: 991px) {
+    #back-to-top {
+        position: static;
+        transform: none;
+        margin: 2rem auto 0 auto;
+    }
+    #back-to-top:hover {
+        transform: scale(1.05);
+    }
+}

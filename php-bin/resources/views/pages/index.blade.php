@@ -7,7 +7,9 @@
 @include('components.intro-text')
 @include('components/about-this-website')
 @include('components.available-reports')
+@include('components.spotlight')
 @include('components.learn-more')
+
 @endsection
 
 @push('css')

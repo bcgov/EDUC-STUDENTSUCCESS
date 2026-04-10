@@ -1,56 +1,57 @@
-<div class="restrain">
-    <div id="back-to-top"><span class="new-line"><i style="padding-top: 7px;" class="fa fa-chevron-up"
-                aria-hidden="true"></i></span><span id="back-to-top-trigger">{{ trans('esdr2.back_to_top') }}</span>
+<div class="land-acknowledgement w-100 text-white p-3">
+    <div class="container d-flex align-items-center">
+        <!-- Minimal map marker pin next to text -->
+        <i class="fa fa-map-marker fa-2x me-3" style="color: rgba(255, 255, 255, 0.4);" aria-hidden="true"></i>
+        <p class="mb-0 small pb-0" style="line-height: 1.4;">The B.C. Public Service acknowledges the territories of First Nations around B.C. and is grateful to carry out our work on these lands. We acknowledge the rights, interests, priorities, and concerns of all Indigenous Peoples - First Nations, Métis, and Inuit - respecting and acknowledging their distinct cultures, histories, rights, laws, and governments.</p>
     </div>
 </div>
 
-<div id="footer-bar-thing">
-    <div class="restrain">
+<footer id="footer" class="py-5 position-relative">
+    <div class="container relative-container position-relative">
+        <div class="row align-items-start">
+            <!-- Logo Area Column -->
+            <div class="col-12 col-lg-4 mb-4 mb-lg-0 d-flex align-items-center">
+                <a href="http://www2.gov.bc.ca/gov/content/home">
+                    <img src="/img/gov3_bc_logo.png" alt="British Columbia Logo" style="height: 60px;">
+                </a>
+            </div>
 
-        <div class="some-links">
+            <!-- DataBC Catalogue -->
+            <div class="col-12 col-md-4 col-lg-3 mb-4 mb-md-0">
+                <h5 class="text-white fw-bold mb-3 footer-heading">DataBC Catalogue</h5>
+                <a href="#" class="d-inline-block text-decoration-none">
+                    <!-- Placeholder Image for DataBC icons -->
+                    <div style="width: 150px; height: 50px; background-color: rgba(255,255,255,0.1); border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                        <span class="text-white-50 small">Placeholder Image</span>
+                    </div>
+                </a>
+            </div>
 
-            <!-- <a class="some-link" title="{{ trans('esdr2.share_this_page') }} Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//studentsuccess.gov.bc.ca/{{ Request::path() }}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <!-- Connect with Us -->
+            <div class="col-12 col-md-4 col-lg-2 mb-4 mb-md-0">
+                <h5 class="text-white fw-bold mb-3 footer-heading">Connect with Us</h5>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><a href="#" class="footer-link">Subscribe</a></li>
+                    <li class="mb-2"><a href="#" class="footer-link">Social and RSS</a></li>
+                    <li class="mb-2"><a href="mailto:educ.systemperformance@gov.bc.ca" class="footer-link">educ.systemperformance@gov.bc.ca</a></li>
+                </ul>
+            </div>
 
-      <a class="some-link" title="{{ trans('esdr2.share_this_page') }} Twitter" target="_blank" href="https://twitter.com/home?status=http%3A//studentsuccess.gov.bc.ca/{{ Request::path() }}%20Check%20out%20this%20page%20on%20the%20B.C.%20Education%20Performance%20Website%20%23bced"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-
-      <a class="some-link" title="{{ trans('esdr2.share_this_page') }} Pintrest" target="_blank" href="https://pinterest.com/pin/create/button/?url=http%3A//studentsuccess.gov.bc.ca/{{ Request::path() }}&media=http%3A//studentsuccess.gov.bc.ca/img/happy_people.png&description=Check%20out%20the%20great%20work%20being%20done%20by%20%23bced"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-
-      <a class="some-link" title="{{ trans('esdr2.share_this_page_email') }}" href="mailto:?body={{ Request::url() }}&subject={{ trans('esdr2.checkout_this_page') }}"><i class="fa fa-envelope" aria-hidden="true"></i></a> -->
+            <!-- More Information -->
+            <div class="col-12 col-md-4 col-lg-3">
+                <h5 class="text-white fw-bold mb-3 footer-heading">More Information</h5>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><a href="http://www2.gov.bc.ca/gov/content/home" class="footer-link">BC Government Site</a></li>
+                    <li class="mb-2"><a href="http://www2.gov.bc.ca/gov/content/home/disclaimer" class="footer-link">Disclaimer</a></li>
+                    <li class="mb-2"><a href="http://www2.gov.bc.ca/gov/content/home/privacy" class="footer-link">Privacy</a></li>
+                    <li class="mb-2"><a href="http://www2.gov.bc.ca/gov/content/home/copyright" class="footer-link">Copyright</a></li>
+                </ul>
+            </div>
         </div>
-
     </div>
-</div>
-
-<footer id="footer">
-    <div class="restrain">
-
-        <nav>
-            <ul>
-                <li><a href="http://www2.gov.bc.ca/gov/content/home">{{ trans('esdr2.footer_home_link') }}</a></li>
-                <li><a
-                        href="http://www2.gov.bc.ca/gov/content/about-gov-bc-ca">{{ trans('esdr2.footer_about_link') }}</a>
-                </li>
-                <li><a
-                        href="http://www2.gov.bc.ca/gov/content/home/disclaimer">{{ trans('esdr2.footer_disclaimer_link') }}</a>
-                </li>
-                <li><a
-                        href="http://www2.gov.bc.ca/gov/content/home/privacy">{{ trans('esdr2.footer_privacy_link') }}</a>
-                </li>
-                <li><a
-                        href="http://www2.gov.bc.ca/gov/content/home/accessibility">{{ trans('esdr2.footer_accessibility_link') }}</a>
-                </li>
-                <li><a
-                        href="http://www2.gov.bc.ca/gov/content/home/copyright">{{ trans('esdr2.footer_copywrite_link') }}</a>
-                </li>
-                <li><a
-                        href="http://www2.gov.bc.ca/gov/content/home/contact-us">{{ trans('esdr2.footer_contactus_link') }}</a>
-                </li>
-            </ul>
-        </nav>
-
-        <p class="white" style="padding: 2rem 0;">{{ trans('esdr2.footer_formore_questions') }} <a
-                style="text-decoration: underline;"
-                href="mailto:educ.systemperformance@gov.bc.ca">educ.systemperformance@gov.bc.ca</a>.</p>
-
-    </div>
+    
+    <!-- Floating Back to Top Anchor Link -->
+    <a href="#" id="back-to-top" class="d-flex align-items-center justify-content-center" title="{{ trans('esdr2.back_to_top') }}">
+        <i class="fa fa-arrow-up" aria-hidden="true" style="margin-top: 15px;"></i>
+    </a>
 </footer><!-- /#footer -->
