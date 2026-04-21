@@ -1,0 +1,159 @@
+/* our-partners.css */
+
+:root {
+    /* Define placeholder variables so they can easily be swapped */
+    --heading-color: #17365d;         /* Dark blue/navy for main title */
+    --title-highlight-bg: #e0fdfd;    /* Light cyan highlight underline */
+    --outline-text-stroke: #40c4c4;   /* Teal stroke for subheading */
+    --outline-text-fill: #ffffff;     /* Subheading fill color */
+    --outline-text-shadow: #e0fdfd;   /* Subheading shadow color */
+    
+    --card-bg-color: #7B24FF;         /* Purple background for the cards */
+    --card-text-color: #ffffff;       /* Text color inside cards */
+    --cta-bg-color: #1b365d;          /* Dark navy for the CTA button */
+    --cta-text-color: #ffffff;        /* CTA button text */
+    --btn-radius: 4px;                /* CTA button border radius */
+}
+
+/* Container & Header */
+.our-partners-section {
+    position: relative;
+    color: #333;
+}
+
+.section-title {
+    color: var(--heading-color);
+    font-weight: 700;
+    font-size: 2.2rem;
+    position: relative;
+    z-index: 2; 
+    margin-bottom: 0;
+}
+
+/* This creates the partial light blue highlight under the main title */
+.title-highlight {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 65%; /* Adjust to cover partial text like the design */
+    height: 18px;
+    background-color: var(--title-highlight-bg);
+    z-index: 1;
+}
+
+/* Main Image */
+.main-image-placeholder {
+    width: 100%;
+    max-width: 320px;
+    object-fit: cover;
+}
+
+/* Subheading with Outline effect */
+.subheading.outline-text {
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: var(--outline-text-fill);
+    /* Outline effect using text-stroke: */
+    -webkit-text-stroke: 1px var(--outline-text-stroke);
+    text-shadow: 2px 2px 0px var(--outline-text-shadow);
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+/* Purple Cards with Custom Shape */
+.custom-shape-card {
+    background-color: var(--card-bg-color);
+    color: var(--card-text-color);
+    /* Custom container shape (matches the attached image) */
+    /* Example: Top/Left sharp, Bottom/Right rounded. Defaulting to 40px radius on bottom corners */
+    border-radius: 5px 5px 40px 40px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Hardcoded padding so it works regardless of flex/bootstrap utility support */
+    padding: 3rem 1.5rem 3rem 1.5rem;
+    margin: 1.5rem;
+    min-height: 430px;  
+}
+
+.custom-shape-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(123, 36, 255, 0.2);
+}
+
+.custom-shape-card .card-title {
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Check Icons Overlapping Card Borders */
+.check-icon-placeholder {
+    top: -24px;
+    right: 30px;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    z-index: 5;
+}
+
+/* Bullet Lists in Cards */
+.custom-bullet-list {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.custom-bullet-list li {
+    position: relative;
+    /* Hardcoded margin to replace gap-3 and spacing utilities */
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+/* Custom Bullet Points */
+.custom-bullet-list li::before {
+    content: "\2022"; /* Bullet character */
+    color: var(--card-text-color);
+    font-weight: bold;
+    position: absolute;
+    left: -20px;
+    top: -2px;
+}
+
+/* Call to Action Button */
+.btn-cta {
+    background-color: var(--cta-bg-color);
+    color: var(--cta-text-color);
+    border: none;
+    border-radius: var(--btn-radius);
+    padding: 10px 15px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+.btn-cta:hover, .btn-cta:focus {
+    background-color: #122440; /* Darker navy hover */
+    color: #ffffff;
+}
+
+/* Responsive constraints */
+@media (max-width: 768px) {
+    .subheading.outline-text {
+        font-size: 2.5rem;
+    }
+    .check-icon-placeholder {
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        top: -20px;
+    }
+    .title-highlight {
+        width: 100%;
+    }
+    .section-title {
+        text-align: center;
+    }
+}

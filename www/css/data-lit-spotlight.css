@@ -1,0 +1,201 @@
+/* data-lit-spotlight.css */
+
+:root {
+    --spotlight-title-color: #003366;
+    --spotlight-highlight-bg: #e0fdfd;
+    --spotlight-outline-stroke: #40c4c4;
+    --spotlight-btn-bg: #003366;
+    --spotlight-btn-hover: #002244;
+}
+
+.spotlight-section {
+    position: relative;
+    padding: 3rem 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Arrow controls */
+.spotlight-prev, .spotlight-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    color: var(--spotlight-title-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.spotlight-prev:hover, .spotlight-next:hover {
+    background-color: #f0f8ff;
+    border-color: var(--spotlight-title-color);
+}
+
+.spotlight-prev {
+    left: -70px;
+}
+
+.spotlight-next {
+    right: -70px;
+}
+
+@media (max-width: 1250px) {
+    .spotlight-prev { left: 0px; z-index: 20; }
+    .spotlight-next { right: 0px; z-index: 20; }
+    .spotlight-section { padding: 3rem 40px; }
+}
+
+/* Carousel Inner */
+.spotlight-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.spotlight-item {
+    display: none;
+    animation: fadeSpotlight 0.6s ease-in-out;
+}
+
+.spotlight-item.active {
+    display: block;
+}
+
+@keyframes fadeSpotlight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Title block */
+.spotlight-title-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.spotlight-title {
+    color: var(--spotlight-title-color);
+    font-weight: 800;
+    font-size: 2.2rem;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+}
+
+.spotlight-title-highlight {
+    position: absolute;
+    bottom: 2px;
+    right: -5px; /* Highlight under 'light' */
+    width: 45%; 
+    height: 16px;
+    background-color: var(--spotlight-highlight-bg);
+    z-index: 1;
+}
+
+/* Image */
+.spotlight-img-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.spotlight-img {
+    width: 100%;
+    border-radius: 5px 60px 5px 5px; /* Top right curve */
+    object-fit: cover;
+    max-height: 400px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* The cyan pin and orange ring over the image */
+.spotlight-accent-pin {
+    position: absolute;
+    top: 30px;
+    right: -15px;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #00ffff 0%, #40c4c4 100%);
+    border-radius: 50% 50% 50% 0; /* teardrop shape pointing down-left */
+    transform: rotate(45deg);
+    z-index: 5;
+}
+
+.spotlight-accent-ring {
+    position: absolute;
+    top: 40px;
+    right: -25px;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #f4a261; /* orange-ish ring */
+    border-radius: 50%;
+    z-index: 4;
+}
+
+/* Subheading Outline Text */
+.spotlight-subheading {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    -webkit-text-stroke: 1px var(--spotlight-outline-stroke);
+    text-shadow: 2px 2px 0px #e0fdfd;
+    margin-bottom: 1.5rem;
+    margin-top: -10px;
+    line-height: 1;
+}
+
+/* Button & Indicators Alignment */
+.spotlight-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.spotlight-btn-cta {
+    background-color: var(--spotlight-btn-bg);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.spotlight-btn-cta:hover {
+    background-color: var(--spotlight-btn-hover);
+    color: #fff;
+}
+
+/* Indicators */
+.spotlight-indicators {
+    display: flex;
+    gap: 8px;
+}
+
+.spotlight-indicators button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #aeeaea;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.spotlight-indicators button.active {
+    background-color: #40c4c4;
+}

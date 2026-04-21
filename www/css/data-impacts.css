@@ -1,0 +1,68 @@
+/* data-impacts.css */
+.data-impacts-section {
+    background-color: #f4f6f7; /* Very light grey background matching the image */
+}
+
+.data-impacts-heading {
+    color: #1a365d; /* Dark blue */
+    line-height: 1.3;
+}
+
+.heading-highlight {
+    background-color: #e0f2f1; /* Light cyan highlight */
+    display: inline-block;
+    padding: 0 5px;
+    margin-left: -5px;
+}
+
+.data-impacts-paragraph {
+    color: #333333; /* Dark grey text */
+    line-height: 1.8;
+}
+
+.data-impacts-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid #d1d5db;
+    text-decoration: none;
+    color: #1a365d;
+    transition: all 0.2s ease-in-out;
+}
+
+.data-impacts-link.border-bottom-link {
+    border-bottom: 1px solid #d1d5db;
+}
+
+.data-impacts-link:hover {
+    color: #21a6a1;
+    background-color: rgba(33, 166, 161, 0.05);
+}
+
+.data-impacts-link span {
+    font-weight: 600;
+}
+
+/* Image styles to mimic the curved graphic */
+.data-impacts-image-wrapper {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.data-impacts-image {
+    /* Applying border radius to get the flat left, rounded right shape */
+    border-radius: 0 300px 300px 0;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .data-impacts-image {
+        border-radius: 20px; /* Standard rounded edges on mobile */
+        margin-top: 2rem;
+    }
+}

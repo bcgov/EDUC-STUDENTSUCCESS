@@ -16,7 +16,7 @@
     </div>
 
     <!-- Notice/Announcement Banner (Recreated from image) -->
-    <div class="notice-banner py-4 my-3">
+    <div class="notice-banner py-4 my-1">
         <div class="container d-flex justify-content-center position-relative">
             <div class="d-flex align-items-center text-center">
                 <span class="me-2 text-warning fw-bold fs-5">&#9888;</span> <!-- Caution Icon Placeholder -->
@@ -38,7 +38,7 @@
                     <li class="nav-item   d-lg-block"><span class="nav-separator">|</span></li>
 
                     <li class="nav-item">
-                        <a class="nav-link py-3 px-3 {{ request()->is('calendar') ? 'active-nav-link' : '' }}" href="/calendar">Calendar</a>
+                        <a class="nav-link py-3 px-3 {{ request()->is('calendar') ? 'active-nav-link' : '' }}" href="/calendar">ChildCare</a>
                     </li>
                     <li class="nav-item   d-lg-block"><span class="nav-separator">|</span></li>
 
@@ -48,7 +48,7 @@
                     <li class="nav-item   d-lg-block"><span class="nav-separator">|</span></li>
 
                     <li class="nav-item">
-                        <a class="nav-link py-3 px-3 {{ request()->is('enrolment') ? 'active-nav-link' : '' }}" href="/enrolment">K-12 Enrolment</a>
+                        <a class="nav-link py-3 px-3 {{ request()->is('enrolment') ? 'active-nav-link' : '' }}" href="/enrolment">In the Spotlight</a>
                     </li>
                     <li class="nav-item   d-lg-block"><span class="nav-separator">|</span></li>
 
@@ -58,7 +58,7 @@
                     <li class="nav-item   d-lg-block"><span class="nav-separator">|</span></li>
 
                     <li class="nav-item">
-                        <a class="nav-link py-3 px-3 {{ request()->is('all/school-districts') ? 'active-nav-link' : '' }}" href="/all/school-districts">School Profiles</a>
+                        <a class="nav-link py-3 px-3 {{ request()->is('all/school-districts') ? 'active-nav-link' : '' }}" href="/all/school-districts">School Districts</a>
                     </li>
                 </ul>
             </div>

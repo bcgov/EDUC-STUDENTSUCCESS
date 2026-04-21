@@ -134,3 +134,6 @@ Route::get('/fsa-districts', 'FsaController@getSchoolDistricts');
 Route::get('/constructed-response/{district}/{year}/{grade}/{subject}/{exam_language}/{gender}/{francophone}/{french_immersion}/{ell}/{indigenous}', 'FsaController@getConstructedResponse');
 Route::get('/cognitive-levels/{district}/{year}/{grade}/{subject}/{exam_language}/{gender}/{francophone}/{french_immersion}/{ell}/{indigenous}', 'FsaController@getCognitiveLevels');
 //Route::get('/cognitive-levels/{gender}','FsaController@getCognitiveLevels');
+
+// new look routes
+Route::get('/data-literacy', 'DataLiteracyController@showDataLiteracyPage');
