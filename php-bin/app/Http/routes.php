@@ -137,3 +137,4 @@ Route::get('/cognitive-levels/{district}/{year}/{grade}/{subject}/{exam_language
 
 // new look routes
 Route::get('/data-literacy', 'DataLiteracyController@showDataLiteracyPage');
+Route::get('/in-the-spotlight', 'InTheSpotlightController@showInTheSpotlightPage');

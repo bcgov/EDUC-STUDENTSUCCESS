@@ -3,14 +3,12 @@
 
 <header class="bg-white">
     <!-- Top Branding Area -->
-    <div class="container py-3 d-flex justify-content-between align-items-center">
+    <div class="container d-flex justify-content-between align-items-center">
         <!-- Logo Section -->
         <div class="d-flex align-items-center">
             <!-- BC Logo Placeholder replacing the actual logo as requested -->
             <a href="http://www2.gov.bc.ca/" class="text-decoration-none">
-                <div class="bc-logo-placeholder d-flex align-items-center justify-content-center text-center rounded">
-                    BC Logo<br>Placeholder
-                </div>
+                <img src="/img/BCID_H_RGB_pos.png" alt="BC Logo" height="50">
             </a>
         </div>
     </div>
@@ -48,7 +46,7 @@
                     <li class="nav-item   d-lg-block"><span class="nav-separator">|</span></li>
 
                     <li class="nav-item">
-                        <a class="nav-link py-3 px-3 {{ request()->is('enrolment') ? 'active-nav-link' : '' }}" href="/enrolment">In the Spotlight</a>
+                        <a class="nav-link py-3 px-3 {{ request()->is('in-the-spotlight') ? 'active-nav-link' : '' }}" href="/in-the-spotlight">In the Spotlight</a>
                     </li>
                     <li class="nav-item   d-lg-block"><span class="nav-separator">|</span></li>
 
