@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\ReportsController;
 
-// https://stackoverflow.com/a/32772686/1171790
 use Helper;
 
 use App\School;
@@ -27,10 +26,10 @@ class SchoolsController extends Controller {
     $cities = School::select('phy_city', DB::raw('count(*) as totalschools'))
       ->groupBy('phy_city')
       ->orderBy('phy_city')
-      ->remember(60) // https://www.neontsunami.com/posts/bringing-the-remember-method-back-to-laravel-5
+      ->remember(60) 
       ->get();
 
-    return view('pages.directory', compact('cities'));
+    return view('pages.city-directory', compact('cities'));
 
   }
 
@@ -39,7 +38,7 @@ class SchoolsController extends Controller {
     $cities = School::select('phy_city', DB::raw('count(*) as totalschools'))
       ->groupBy('phy_city')
       ->orderBy('phy_city')
-      ->remember(60) // https://www.neontsunami.com/posts/bringing-the-remember-method-back-to-laravel-5
+      ->remember(60) 
       ->get();
 
       return response()->json($cities, 200);

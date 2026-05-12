@@ -1,0 +1,131 @@
+/* www/css/school-directory-results.css */
+
+.sd-info-section {
+    background-color: #5190cd;
+}
+
+.sd-actions-section {
+    background-color: #40c0b1;
+}
+
+.btn-navy {
+    background-color: #102d5a;
+    border-color: #102d5a;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-navy:hover, .btn-navy:focus, .btn-navy:active {
+    background-color: #1a4282;
+    border-color: #1a4282;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+.text-navy {
+    color: #102d5a !important;
+}
+
+.navy-bg {
+    background-color: #102d5a;
+}
+
+.light-blue-bg {
+    background-color: #5190cd;
+}
+
+.report-card {
+    aspect-ratio: 1;
+    border-radius: 0;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.report-card:hover {
+    transform: translateY(-5px);
+}
+
+.report-icon img {
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+.underline-green {
+    border-bottom: 3px solid #40c0b1;
+    padding-bottom: 0.5rem;
+}
+
+.hexagon-map-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.hexagon-shape {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: #9cd4c5;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: 1;
+}
+
+.hexagon-shape-outer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 105%;
+    height: 105%;
+    background-color: #ffffff;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: 0;
+}
+
+.hexagon-map {
+    position: relative;
+    z-index: 2;
+    max-height: 85%;
+    max-width: 85%;
+    object-fit: contain;
+    filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.2));
+}
+
+.connecting-line-graphic {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: -20%;
+    transform: translateY(-50%);
+    height: 2px;
+    background-color: #b5ded8;
+    z-index: 0;
+}
+
+.connecting-line-graphic::after {
+    content: "";
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #b5ded8;
+}
+
+.reports-row-container {
+    position: relative;
+}
+
+/* Ensure report icons inside light blue background remain white */
+.report-card.light-blue-bg .text-navy {
+    color: white !important;
+}

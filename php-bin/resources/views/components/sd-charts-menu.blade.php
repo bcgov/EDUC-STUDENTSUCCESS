@@ -1,213 +1,222 @@
-<div class="restrain">
-    <nav id="table-of-contents">
-        <ul class="toc-sub-section">
-            <li class="toc-chart sd-chart">
-                <h4 class="toc slide-sub-heading">School District<br>Information</h4>
-                <img class="green-bar" style="margin:0px; float: left" src="{{URL::to('/')}}/img/green-bar-1.png"
-                    alt="" />
-            </li>
-            <li class="toc-chart sd-chart">
-                <div class='image'>
-                    <a href="/school-district/{{ $school_district->sd }}/report/contextual-information">
-                        <img alt="{{ trans('esdr2.alt_text_demographic') }}" class="toc-chart-thumbnail report-icon"
-                            src="/img/charts/icon-demographic-information.jpg" />
-                        <h4 class='bottom-left'><span class="spacer">Demographic</span> <br><span
-                                class="spacer">Information</span></h4>
-                    </a>
-                </div>
-            </li>
-            <li class="toc-chart sd-chart">
-                <div class='image'>
-                    <a href=" /governance/{{ $school_district->sd }}">
-                        <img alt="{{ trans('esdr2.alt_governance_information_heading') }}"
-                            class="toc-chart-thumbnail report-icon" src="/img/charts/icon-governance-information.png" />
-                        <h4 class='bottom-left'><span class="spacer">Key</span> <br><span class="spacer">Contacts</span>
-                        </h4>
-                    </a>
-                </div>
-            </li>
-            <li class="toc-chart sd-chart">
-                <div class='image'>
-                    <a href=" /finance/{{ $school_district->sd }}">
-                        <img alt="{{ trans('esdr2.alt_financial_information_heading') }}"
-                            class="toc-chart-thumbnail report-icon" src="/img/charts/icon-finance-information.png" />
-                        <h4 class='bottom-left'><span class="spacer">Financial</span> <br><span
-                                class="spacer">Information</span></h4>
-                    </a>
-                </div>
-            </li>
-        </ul>
-        <hr>
-        <ul class="toc-sub-section">
-            <li class="toc-chart sd-chart">
-                <h4 class="toc slide-sub-heading">Intellectual<br>Development</h4>
-                <img class="green-bar" style="margin:0px; float: left" src="{{URL::to('/')}}/img/green-bar-1.png"
-                    alt="" />
-            </li>
-            <li class="toc-chart sd-chart">
-                <div class='image'>
-                    <a href="/school-district/{{ $school_district->sd }}/report/completion-rates">
-                        <img alt="Image of a chart depicting Student Completion Rates."
-                            class="toc-chart-thumbnail report-icon" src="/img/charts/icon-completion-rate.jpg" />
-                        <h4 class='bottom-left'><span class="spacer">Completion</span> <br><span
-                                class="spacer">Rate</span></h4>
-                    </a>
-                </div>
-            </li>
-            <li class="toc-chart sd-chart">
-                <div class='image'>
-                    <a href="/school-district/{{ $school_district->sd }}/report/fsa">
-                        <img alt="Image of a chart depicting Student Growth Over Time."
-                            class="toc-chart-thumbnail report-icon"
-                            src="/img/charts/icon-foundation-skills-assessment.jpg" />
-                        <h4 class='bottom-left'><span class="spacer">Foundation Skills</span> <br><span
-                                class="spacer">Assessment</span></h4>
-                    </a>
-                </div>
-            </li>
-            <li class="toc-chart sd-chart">
-                <div class='image'>
-                    <a href="/school-district/{{ $school_district->sd }}/report/grade-to-grade-transitions">
-                        <img alt="Image of a chart depicting Student Grade to Grade Transitions."
-                            class="toc-chart-thumbnail report-icon"
-                            src="/img/charts/icon-grade-to-grade-transitions.jpg" />
-                        <h4 class='bottom-left'><span class="spacer">Grade-to-Grade</span> <br><span
-                                class="spacer">Transitions</span></h4>
-                    </a>
-                </div>
-            </li>
-            <li class="toc-chart sd-chart">
-                <div class='image'>
-                    <a href="/school-district/{{ $school_district->sd }}/report/grad-assess">
-                        <img alt="Image of a chart depicting BC Provincial Assessment Scores."
-                            class="toc-chart-thumbnail report-icon"
-                            src="/img/charts/icon-provincial-examinations.jpg" />
-                        <h4 class='bottom-left'><span class="spacer">Graduation</span> <br><span
-                                class="spacer">Assessments</span></h4>
-                    </a>
-                </div>
-            </li>
-        </ul>
-        <hr>
-        <ul class="toc-sub-section">
-            <li class="toc-chart sd-chart">
-                <h4 class="toc slide-sub-heading">Human<br>and Social<br>Development</h4>
-                <img class="green-bar" style="margin:0px; float: left" src="{{URL::to('/')}}/img/green-bar-1.png"
-                    alt="" />
-            </li>
-            <li class="toc-chart sd-chart">
-                <div class='image'>
-                    <a href="/school-district/{{ $school_district->sd }}/report/students-entering-school">
-                        <img alt="Image of a chart depicting education data." class="toc-chart-thumbnail report-icon"
-                            src="/img/charts/icon-characteristicsistudents-entering-school.jpg" />
-                        <h4 class='bottom-left'><span class="spacer">Characteristics of<br></span><span
-                                class="spacer">Students Entering <br>School</span></h4>
-                    </a>
-                </div>
-            </li>
-            <li class="toc-chart sd-chart"><a
-                    href="/school-district/{{ $school_district->sd }}/report/student-satisfaction">
-                    <div class='image'>
-                        <a href="/school-district/{{ $school_district->sd }}/report/student-satisfaction">
-                            <img alt="Image of a chart depicting Student Satisfaction."
-                                class="toc-chart-thumbnail report-icon"
-                                src="/img/charts/icon-student-satisfaction.jpg" />
-                            <h4 class='bottom-left'><span class="spacer">Student<br></span><span class="spacer">Learning
-                                    Survey</span></h4>
-                        </a>
-                    </div>
-            </li>
-        </ul>
-        <hr>
+<!-- Section 1: School District Information -->
+<div class="row align-items-center reports-row-container mb-5">
+  <div class="col-lg-3 col-md-4 mb-4 mb-md-0 z-1">
+    <h4 class="text-navy fw-bold underline-green d-inline-block lh-base mb-0">School District<br>Information</h4>
+  </div>
+  
+  <div class="col-lg-9 col-md-8 position-relative">
+    <div class="connecting-line-graphic d-none d-md-block"></div>
+    
+    <div class="row g-4 px-md-3 z-1">
+        <div class="col-6 col-md-4">
+          <a href="/school-district/{{ $school_district->sd }}/report/contextual-information" class="text-decoration-none">
+            <div class="report-card navy-bg text-white p-3 p-xl-4 d-flex flex-column justify-content-center align-items-center shadow">
+              <div class="report-icon mb-3">
+                  <img src="/img/icon-characteristics-of-students.png" onerror="this.src='/img/charts/icon-demographic-information.jpg';" alt="Demographic Information" class="img-fluid" style="height: 50px; width: auto;">
+              </div>
+              <h6 class="fw-bold mb-0 text-center lh-sm text-white fs-6" style="min-height: 2.4rem;">Demographic<br>Information</h6>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-6 col-md-4">
+          <a href="/governance/{{ $school_district->sd }}" class="text-decoration-none">
+            <div class="report-card light-blue-bg text-white p-3 p-xl-4 d-flex flex-column justify-content-center align-items-center shadow">
+              <div class="report-icon mb-3">
+                  <img src="/img/icon-governance-information.png" alt="Key Contacts" class="img-fluid" style="height: 50px; width: auto;">
+              </div>
+              <h6 class="fw-bold mb-0 text-center lh-sm text-white fs-6" style="min-height: 2.4rem;">Key<br>Contacts</h6>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-6 col-md-4">
+          <a href="/finance/{{ $school_district->sd }}" class="text-decoration-none">
+            <div class="report-card navy-bg text-white p-3 p-xl-4 d-flex flex-column justify-content-center align-items-center shadow">
+              <div class="report-icon mb-3">
+                  <img src="/img/icon-finance-information.png" alt="Financial Information" class="img-fluid" style="height: 50px; width: auto;">
+              </div>
+              <h6 class="fw-bold mb-0 text-center lh-sm text-white fs-6" style="min-height: 2.4rem;">Financial<br>Information</h6>
+            </div>
+          </a>
+        </div>
+    </div>
+  </div>
+</div>
 
-        <ul class="toc-sub-section">
-            <li class="toc-chart sd-chart">
-                <h4 class="toc slide-sub-heading">Career<br>Development</h4>
-                <img class="green-bar" style="margin:0px; float: left" src="{{URL::to('/')}}/img/green-bar-1.png"
-                    alt="" />
-            </li>
-            {{-- This is an excetion for Mission School District. See also: SchoolDistrictsController@getSdReport and pages.sd-report --}}
-            @if ($school_district->sd != '075')
-            <li class="toc-chart sd-chart">
-                <div class='image'>
-                    <a href="/school-district/{{ $school_district->sd }}/report/post-secondary-career-prep">
-                        <img alt="Image of a chart depicting Post-Secondary and Career Preparation values."
-                            class="toc-chart-thumbnail report-icon"
-                            src="/img/charts/icon-post-secondary-career-prep.jpg" />
-                        <h4 class='bottom-left'><span class="spacer">Post-Secondary<br></span><span class="spacer">and
-                                Career Preparation</span></h4>
-                    </a>
-                </div>
-            </li>
+<!-- Section 2: Intellectual Development -->
+<div class="row align-items-center reports-row-container mb-5">
+  <div class="col-lg-3 col-md-4 mb-4 mb-md-0 z-1">
+    <h4 class="text-navy fw-bold underline-green d-inline-block lh-base mb-0">Intellectual<br>Development</h4>
+  </div>
+  
+  <div class="col-lg-9 col-md-8 position-relative">
+    <div class="connecting-line-graphic d-none d-md-block"></div>
+    
+    <div class="row g-4 px-md-3 z-1">
+        <div class="col-6 col-md-3">
+          <a href="/school-district/{{ $school_district->sd }}/report/completion-rates" class="text-decoration-none">
+            <div class="report-card light-blue-bg text-white p-2 p-xl-3 d-flex flex-column justify-content-center align-items-center shadow">
+              <div class="report-icon mb-3">
+                  <img src="/img/icon-completion-rate.png" onerror="this.src='/img/charts/icon-completion-rate.jpg';" class="img-fluid" style="height: 40px; width: auto;">
+              </div>
+              <h6 class="fw-bold mb-0 text-center lh-sm text-white" style="min-height: 2.4rem; font-size: 0.85rem !important;">Completion<br>Rate</h6>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-6 col-md-3">
+          <a href="/school-district/{{ $school_district->sd }}/report/fsa" class="text-decoration-none">
+            <div class="report-card navy-bg text-white p-2 p-xl-3 d-flex flex-column justify-content-center align-items-center shadow">
+              <div class="report-icon mb-3">
+                  <img src="/img/icons-foundation-skills-assessment.png" onerror="this.src='/img/charts/icon-foundation-skills-assessment.jpg';" class="img-fluid" style="height: 40px; width: auto;">
+              </div>
+              <h6 class="fw-bold mb-0 text-center lh-sm text-white" style="min-height: 2.4rem; font-size: 0.85rem !important;">Foundation Skills<br>Assessment</h6>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-6 col-md-3">
+          <a href="/school-district/{{ $school_district->sd }}/report/grade-to-grade-transitions" class="text-decoration-none">
+            <div class="report-card light-blue-bg text-white p-2 p-xl-3 d-flex flex-column justify-content-center align-items-center shadow">
+              <div class="report-icon mb-3">
+                  <img src="/img/icon-grade-to-grade.png" onerror="this.src='/img/charts/icon-grade-to-grade-transitions.jpg';" class="img-fluid" style="height: 40px; width: auto;">
+              </div>
+              <h6 class="fw-bold mb-0 text-center lh-sm text-white" style="min-height: 2.4rem; font-size: 0.85rem !important;">Grade-to-Grade<br>Transitions</h6>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-6 col-md-3">
+          <a href="/school-district/{{ $school_district->sd }}/report/grad-assess" class="text-decoration-none">
+            <div class="report-card navy-bg text-white p-2 p-xl-3 d-flex flex-column justify-content-center align-items-center shadow">
+              <div class="report-icon mb-3">
+                  <img src="/img/icon-provincial-examinations.png" onerror="this.src='/img/charts/icon-provincial-examinations.jpg';" class="img-fluid" style="height: 40px; width: auto;">
+              </div>
+              <h6 class="fw-bold mb-0 text-center lh-sm text-white" style="min-height: 2.4rem; font-size: 0.85rem !important;">Graduation<br>Assessments</h6>
+            </div>
+          </a>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 3: Human and Social Development -->
+<div class="row align-items-center reports-row-container mb-5">
+  <div class="col-lg-3 col-md-4 mb-4 mb-md-0 z-1">
+    <h4 class="text-navy fw-bold underline-green d-inline-block lh-base mb-0">Human and Social<br>Development</h4>
+  </div>
+  
+  <div class="col-lg-9 col-md-8 position-relative">
+    <div class="connecting-line-graphic d-none d-md-block"></div>
+    
+    <div class="row g-4 px-md-3 z-1">
+        <div class="col-6 col-md-4">
+          <a href="/school-district/{{ $school_district->sd }}/report/students-entering-school" class="text-decoration-none">
+            <div class="report-card navy-bg text-white p-3 p-xl-4 d-flex flex-column justify-content-center align-items-center shadow">
+              <div class="report-icon mb-3">
+                  <img src="/img/icon-characteristics-of-students.png" onerror="this.src='/img/charts/icon-characteristicsistudents-entering-school.jpg';" class="img-fluid" style="height: 50px; width: auto;">
+              </div>
+              <h6 class="fw-bold mb-0 text-center lh-sm text-white" style="min-height: 2.4rem; font-size: 0.9rem !important;">Characteristics of<br>Students Entering<br>School</h6>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-6 col-md-4">
+          <a href="/school-district/{{ $school_district->sd }}/report/student-satisfaction" class="text-decoration-none">
+            <div class="report-card light-blue-bg text-white p-3 p-xl-4 d-flex flex-column justify-content-center align-items-center shadow">
+              <div class="report-icon mb-3">
+                  <img src="/img/icons-satisfaction-survey.png" onerror="this.src='/img/charts/icon-student-satisfaction.jpg';" class="img-fluid" style="height: 50px; width: auto;">
+              </div>
+              <h6 class="fw-bold mb-0 text-center lh-sm text-white" style="min-height: 2.4rem; font-size: 0.9rem !important;">Student Learning<br>Survey</h6>
+            </div>
+          </a>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 4: Career Development -->
+<div class="row align-items-center reports-row-container mb-5">
+  <div class="col-lg-3 col-md-4 mb-4 mb-md-0 z-1">
+    <h4 class="text-navy fw-bold underline-green d-inline-block lh-base mb-0">Career<br>Development</h4>
+  </div>
+  
+  <div class="col-lg-9 col-md-8 position-relative">
+    <div class="connecting-line-graphic d-none d-md-block"></div>
+    
+    <div class="row g-4 px-md-3 z-1">
+        @if ($school_district->sd != '075')
+        <div class="col-6 col-md-4">
+          <a href="/school-district/{{ $school_district->sd }}/report/post-secondary-career-prep" class="text-decoration-none">
+            <div class="report-card navy-bg text-white p-3 p-xl-4 d-flex flex-column justify-content-center align-items-center shadow">
+              <div class="report-icon mb-3">
+                  <img src="/img/icons-post-secondary.png" onerror="this.src='/img/charts/icon-post-secondary-career-prep.jpg';" class="img-fluid" style="height: 50px; width: auto;">
+              </div>
+              <h6 class="fw-bold mb-0 text-center lh-sm text-white" style="min-height: 2.4rem; font-size: 0.9rem !important;">Post-Secondary<br>and Career Prep</h6>
+            </div>
+          </a>
+        </div>
+        @endif
+        
+        <div class="col-6 col-md-4">
+          <a href="/school-district/{{ $school_district->sd }}/report/transition-to-post-secondary" class="text-decoration-none">
+            <div class="report-card light-blue-bg text-white p-3 p-xl-4 d-flex flex-column justify-content-center align-items-center shadow">
+              <div class="report-icon mb-3">
+                  <img src="/img/icon-transition-post-secondary.png" onerror="this.src='/img/charts/icon-transition-bc-post-secondary.jpg';" class="img-fluid" style="height: 50px; width: auto;">
+              </div>
+              <h6 class="fw-bold mb-0 text-center lh-sm text-white" style="min-height: 2.4rem; font-size: 0.9rem !important;">Transition to B.C.<br>Post-Secondary</h6>
+            </div>
+          </a>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 5: Particular Reports -->
+<div class="row align-items-center reports-row-container mb-5">
+  <div class="col-lg-3 col-md-4 mb-4 mb-md-0 z-1">
+    <h4 class="text-navy fw-bold underline-green d-inline-block lh-base mb-0">{{ trans('esdr2.particular_reports_heading1') }}</h4>
+  </div>
+  
+  <div class="col-lg-9 col-md-8 position-relative">
+    <div class="connecting-line-graphic d-none d-md-block"></div>
+    
+    <div class="row g-4 px-md-3 z-1">
+        <div class="col-6 col-md-4">
+          @if ($school_district->sd != '099')
+          <a id="ahawd-download-report-link" data-sd="{{ $school_district->sd }}" href="https://www2.gov.bc.ca/assets/gov/education/administration/kindergarten-to-grade-12/reports/ab-hawd/ab-hawd-school-district-{{ $school_district->sd }}.pdf" target="_blank" class="text-decoration-none">
+          @else
+          <a id="ahawd-download-report-link" data-sd="{{ $school_district->sd }}" href="https://www2.gov.bc.ca/assets/gov/education/administration/kindergarten-to-grade-12/reports/ab-hawd/ab-hawd-school-district-public.pdf" target="_blank" class="text-decoration-none">
+          @endif
+            <div class="report-card navy-bg text-white p-3 p-xl-4 d-flex flex-column justify-content-center align-items-center shadow">
+              <div class="report-icon mb-3">
+                  <img src="/img/charts/ahawd.png" onerror="this.src='/img/charts/HowWeDoingIcon.png';" class="img-fluid" style="height: 50px; width: auto;">
+              </div>
+              <h6 class="fw-bold mb-0 text-center lh-sm text-white" style="min-height: 2.4rem; font-size: 0.9rem !important;">Aboriginal Students:<br>How Are We Doing?</h6>
+            </div>
+          </a>
+          <div class="text-center mt-2">
+            @if ($school_district->sd != '099')
+            <a href="https://www2.gov.bc.ca/assets/gov/education/administration/kindergarten-to-grade-12/reports/ab-hawd/ab-hawd-school-district-{{ $school_district->sd }}.xlsx" target="_blank" class="fw-bold text-navy" style="font-size:0.85rem;">Download XLSX</a>
+            @else
+            <a href="https://www2.gov.bc.ca/assets/download/CFC6AF49B7B04849B6164FF022A157D4" target="_blank" class="fw-bold text-navy" style="font-size:0.85rem;">Download XLSX</a>
             @endif
-            <li class="toc-chart sd-chart">
-                <div class='image'>
-                    <a href="/school-district/{{ $school_district->sd }}/report/transition-to-post-secondary">
-                        <img alt="Small image of a infographic depicting values pertinent to students transitioning to post-secondary education."
-                            class="toc-chart-thumbnail report-icon"
-                            src="/img/charts/icon-transition-bc-post-secondary.jpg" />
-                        <h4 class='bottom-left'><span class="spacer">Transition to B.C.<br></span><span
-                                class="spacer">Post-Secondary</span></h4>
-                    </a>
-                </div>
-            </li>
-        </ul>
-        <hr>
-        <ul class="toc-sub-section">
-            <li class="toc-chart sd-chart">
-                <h4 class="toc slide-sub-heading">{{ trans('esdr2.particular_reports_heading1') }}</h4>
-                <img class="green-bar" style="margin:0px; float: left" src="{{URL::to('/')}}/img/green-bar-1.png"
-                    alt="" />
-            </li>
-            <li class="toc-chart sd-chart">
-                <div class='image'>
-                    {{-- This is an excetion for Mission School District. See also: SchoolDistrictsController@getSdReport and pages.sd-report --}}
-                    @if ($school_district->sd != '099')
-                    <a id="ahawd-download-report-link" data-sd="{{ $school_district->sd }}"
-                        href="https://www2.gov.bc.ca/assets/gov/education/administration/kindergarten-to-grade-12/reports/ab-hawd/ab-hawd-school-district-{{ $school_district->sd }}.pdf"
-                        target="_blank">
-                        <img alt="Image of a chart depicting Aboriginal: How Are We Doing reports."
-                            class="toc-chart-thumbnail report-icon" src="/img/charts/ahawd.png" />
-                        <h4 class='bottom-left'><span class="spacer" style="color:white;">Aboriginal Students:
-                                <br></span><span class="spacer" style="color:white;">How Are We Doing?</span><br> <span
-                                style="color:white;">(PDF)
-                    </a></span><span style="color:white;">(<a
-                            href="https://www2.gov.bc.ca/assets/gov/education/administration/kindergarten-to-grade-12/reports/ab-hawd/ab-hawd-school-district-{{ $school_district->sd }}.xlsx"
-                            target="_blank"><span style="color:white;">XLSX</span></a>)</span></h4>
-                    <br><br>
-                </div>
-                @else
-                <a id="ahawd-download-report-link" data-sd="{{ $school_district->sd }}"
-                    href="https://www2.gov.bc.ca/assets/gov/education/administration/kindergarten-to-grade-12/reports/ab-hawd/ab-hawd-school-district-public.pdf"
-                    target="_blank">
-                    <img alt="Image of a chart depicting Aboriginal: How Are We Doing reports."
-                        class="toc-chart-thumbnail report-icon" src="/img/charts/ahawd.png" />
-                    <h4 class='bottom-left'><span class="spacer" style="color:white;">Aboriginal Students:
-                            <br></span><span class="spacer" style="color:white;">How Are We Doing?</span><br> <span
-                            style="color:white;">(PDF)
-                </a></span><span style="color:white;">(<a
-                        href="https://www2.gov.bc.ca/assets/download/CFC6AF49B7B04849B6164FF022A157D4"
-                        target="_blank"><span style="color:white;">XLSX</span></a>)</span></h4>
-                <br><br>
-                @endif
-            </li>
-            <li class="toc-chart sd-chart">
-                <div class='image'>
-                    {{-- This is an excetion for Mission School District. See also: SchoolDistrictsController@getSdReport and pages.sd-report --}}
-                    @if ($school_district->sd == '099')
-                    <a id="ahawd-download-report-link" data-sd="{{ $school_district->sd }}"
-                        href="/assets/reports/cyic_hawd.pdf" target="_blank">
-                        <img alt="Image of a chart depicting Children and Youth In Care: How Are We Doing reports."
-                            class="toc-chart-thumbnail report-icon" src="/img/charts/cyic-report-page-thumb.png" />
-                        <h4 class='bottom-left'><span class="spacer" style="color:white;">Children and Youth In Care:
-                                <br></span><span class="spacer" style="color:white;">How Are We Doing?</span><br> <span
-                                style="color:white;">(PDF)
-                    </a></span>
-                    </h4>
-                    <br><br>
-                </div>
-                @endif
-            </li>
-        </ul>
-    </nav>
+          </div>
+        </div>
+        
+        @if ($school_district->sd == '099')
+        <div class="col-6 col-md-4">
+          <a id="ahawd-download-report-link" data-sd="{{ $school_district->sd }}" href="/assets/reports/cyic_hawd.pdf" target="_blank" class="text-decoration-none">
+            <div class="report-card light-blue-bg text-white p-3 p-xl-4 d-flex flex-column justify-content-center align-items-center shadow">
+              <div class="report-icon mb-3">
+                  <img src="/img/charts/cyic-report-page-thumb.png" class="img-fluid" style="height: 50px; width: auto;">
+              </div>
+              <h6 class="fw-bold mb-0 text-center lh-sm text-white" style="min-height: 2.4rem; font-size: 0.9rem !important;">Children & Youth In Care:<br>How Are We Doing?</h6>
+            </div>
+          </a>
+        </div>
+        @endif
+    </div>
+  </div>
 </div>

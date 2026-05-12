@@ -20,7 +20,7 @@
                 </div>
             </div>
             
-            <div class="col-lg-6 d-flex mt-5 mt-lg-0">
+            <div class="col-lg-6 d-flex mt-5">
                 <div class="w-100 d-flex flex-column">
                     
                     <img class="img-fluid mb-4 w-100" src="https://placehold.co/600x400/e6f2f2/003366?text=Continuous+Improvement+Graphic" alt="Continuous Improvement Graphic placeholder" />

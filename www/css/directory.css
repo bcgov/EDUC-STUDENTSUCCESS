@@ -1,0 +1,63 @@
+/* Directory Page specific custom styles */
+
+/* Colors */
+.text-navy { 
+    color: #003366 !important; 
+}
+
+.bg-navy { 
+    background-color: #003366 !important; 
+    border-color: #003366 !important; 
+}
+
+.border-navy { 
+    border-color: #003366 !important; 
+}
+
+.badge-navy {
+    background-color: #003366;
+}
+
+/* Custom Links & Hover States */
+.hover-primary:hover { 
+    color: #003366 !important; 
+}
+
+/* Navigation Pills override */
+.directory-nav-pills .nav-link:hover { 
+    background-color: #f8f9fa; 
+}
+
+.directory-nav-pills .nav-link.active,
+.directory-nav-pills .show > .nav-link { 
+    background-color: #003366; 
+}
+
+.directory-letter-nav .nav-link {
+    min-width: 40px;
+    text-align: center;
+}
+
+/* Cards */
+.provincial-card {
+    border: 2px solid #003366;
+}
+
+/* Card Animations */
+.directory-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.directory-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.view-report i {
+    margin-left: 5px;
+    transition: transform 0.2s;
+}
+
+.view-report:hover i {
+    transform: translateX(4px);
+}
