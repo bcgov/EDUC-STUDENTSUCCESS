@@ -1,80 +1,72 @@
 @extends('layout')
 @section('subtitle'){{ trans('esdr2.glossary_heading') }}@endsection
 
+@push('css')
+  <link href="/css/glossary.css" rel="stylesheet" type="text/css">
+@endpush
+
 @section('content')
 
-  <div class="aqua-bg directory-masthead">
-    <div class="restrain">
-    
-      <h2 id="directory-main-heading" class="ministry-blue slide-title">{{ trans('esdr2.glossary_heading_long') }}</h2>
-
+  <div class="aqua-bg directory-masthead py-5">
+    <div class="container">
+      <h2 id="directory-main-heading" class="ministry-blue mb-0">{{ trans('esdr2.glossary_heading_long') }}</h2>
     </div>
   </div>
 
-  <section class="slide">
-    <div class="slide-content restrain" id="glossary">
+  <section class="py-5 bg-light">
+    <div class="container" id="glossary">
 
-      <ul class="directory_alpha_menu">
+      <div class="row justify-content-center mb-4">
+        <div class="col-12 text-center">
+          <ul class="directory_alpha_menu d-flex flex-wrap justify-content-center m-0 p-0">
+            @foreach ($glossary_entries as $glossary_letter => $glossary_item)
+              @if ($glossary_letter == '#')
+                <li class="letter-selection"><a href="#1">{{ $glossary_letter }}</a></li>
+              @else
+                <li class="letter-selection"><a href="#{{ $glossary_letter }}">{{ $glossary_letter }}</a></li>
+              @endif
+            @endforeach
+          </ul>
+        </div>
+      </div>
 
-        @foreach ($glossary_entries as $glossary_letter => $glossary_item)
-          @if ($glossary_letter == '#')
-            <li class="letter-selection center"><a href="#1">{{ $glossary_letter }}</a></li>
-          @else
-            <li class="letter-selection center"><a href="#{{ $glossary_letter }}">{{ $glossary_letter }}</a></li>
-          @endif
-        @endforeach
- 
-      </ul>
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-8 col-lg-6">
+          <div class="glossary-search-wrapper input-group shadow-sm position-relative">
+            <input type="text" class="form-control form-control-lg border-0 rounded" placeholder="{{ trans('esdr2.search_glossary_lable') }}" id="glossarySearch">
+            <span class="clear-search position-absolute" style="right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; z-index: 10;" aria-hidden="true" id="clear-search" title="{{ trans('esdr2.clear_search_label') }}">&times;</span>
+          </div>
+        </div>
+      </div>
 
-      <input type="text" class="search" placeholder="{{ trans('esdr2.search_glossary_lable') }}" id="glossarySearch">
-      <span aria-hidden="true" id="clear-search" title="{{ trans('esdr2.clear_search_label') }}">&times;</span>
+      <div class="row">
+        <div class="col-12">
+          <ul class="glossary directory-wrapper list-unstyled">
+            @foreach ($glossary_entries as $glossary_letter => $glossary_item)
+              @if ($glossary_letter == '#')
+                <li id="1" class="directory-letter-section">
+              @else
+                <li id="{{ $glossary_letter }}" class="directory-letter-section">
+              @endif
+                <span class="directory letter border-bottom border-primary border-3 d-block pb-2 mb-3 fs-2 fw-bold text-dark">{{ $glossary_letter }}</span>
 
-      {{-- This is a *BIG* CSS styling hack. The first glossary-permalink will not position itself correctly and I am going crazy. --}}
-      @php
-        $myHackCounterThing = 0;
-      @endphp
+                <ul class="row list-unstyled m-0">
+                  @foreach ($glossary_item as $glossary_entry)
+                    <li id="{{ $glossary_entry['gid'] }}" class="col-12 bg-white p-4 mb-4 rounded shadow-sm border">
+                      <div class="d-flex align-items-center mb-3">
+                        <h3 class="glossary-title mb-0 fs-4 text-primary fw-semibold">{{ $glossary_entry['title'] }}</h3>
+                        <a title="{{ trans('esdr2.permalink_for') }} {{ $glossary_entry['title'] }}" href="#{{ $glossary_entry['gid'] }}" class="fa fa-link glossary-permalink ms-2 text-secondary text-decoration-none" style="opacity: 0.5;"></a>
+                      </div>
+                      <div class="glossary-definition text-secondary" style="line-height: 1.6;">{!! $glossary_entry['definition'] !!}</div>
+                    </li>
+                  @endforeach
+                </ul>
 
-      <ul class="glossary directory-wrapper">
-
-        @foreach ($glossary_entries as $glossary_letter => $glossary_item)
-          @if ($glossary_letter == '#')
-            <li id="1" class="directory-letter-section">
-          @else
-            <li id="{{ $glossary_letter }}" class="directory-letter-section">
-          @endif
-            <span class="directory letter">{{ $glossary_letter }}</span>
-
-            <ul>
-              @foreach ($glossary_item as $glossary_entry)
-                <li id="{{ $glossary_entry['gid'] }}">
-
-                  <h3 class="glossary-title">{{ $glossary_entry['title'] }}</h3>
-
-                  @php
-                    $myHackCounterThing++;
-                  @endphp
-                  
-                  @if ($myHackCounterThing !== 1)
-                    <a title="{{ trans('esdr2.permalink_for') }} {{ $glossary_entry['title'] }}" href="#{{ $glossary_entry['gid'] }}" class="fa fa-link glossary-permalink"></a>
-                  @else 
-                    <a style="position: relative; right: -18px;" title="{{ trans('esdr2.permalink_for') }} {{ $glossary_entry['title'] }}" href="#{{ $glossary_entry['gid'] }}" class="fa fa-link glossary-permalink"></a>
-                  @endif
-
-                  {{-- 
-                    Using `!!` ensures that Laravel doesn't sanitize HTML. Markup is passed directly to template. 
-                    This is kind of a security concern. We trust that folks updating the data/markup in the database will 
-                    not put anything malicous in there..
-                  --}}
-                  <div class="glossary-definition">{!! $glossary_entry['definition'] !!}</div>
-
-                </li>
-              @endforeach
-            </ul>
-
-          </li>
-        @endforeach
-
-      </ul>
+              </li>
+            @endforeach
+          </ul>
+        </div>
+      </div>
 
     </div>
   </section>
@@ -124,9 +116,9 @@
             var searchTerm = $(this).text().toLowerCase();
 
             if (searchTerm.indexOf(thisVal) !== -1) {
-              $(this).parent('li').show();
+              $(this).closest('li').show();
             } else {
-              $(this).parent('li').hide();
+              $(this).closest('li').hide();
             }
 
           });

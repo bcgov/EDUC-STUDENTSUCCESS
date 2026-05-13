@@ -43,7 +43,18 @@ class ReportsController extends Controller {
     );
 
   }
+  public function show($slug)
+  {
+      // 1. You would typically fetch the report metadata from the DB using the $slug
+      // $report = Report::where('slug', $slug)->firstOrFail();
+      
+      // Mock data for demonstration
+      $reportTitle = str_replace('-', ' ', $slug);
 
+      // 2. Return the detail view
+      return view('pages.report-detail', compact('slug', 'reportTitle'));
+  }
+    
   public function getSchoolDbFlagNames() {
 
     return array(

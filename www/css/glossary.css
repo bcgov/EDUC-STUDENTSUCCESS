@@ -1,0 +1,110 @@
+/* Custom styles for the Glossary Page */
+
+.glossary-masthead {
+    background-color: #f8f9fa; /* Example background if .aqua-bg doesn't apply nicely */
+}
+
+/* Alpha Menu Styling */
+.directory_alpha_menu {
+    list-style: none;
+    padding-left: 0;
+}
+
+.directory_alpha_menu .letter-selection a {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    color: #0056b3;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.directory_alpha_menu .letter-selection a:hover {
+    background-color: #e2e6ea;
+    color: #004494;
+}
+
+/* Glossary Search */
+.glossary-search-wrapper {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.glossary-search-wrapper .clear-search {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+    z-index: 5;
+}
+
+.glossary-search-wrapper .clear-search:hover {
+    color: #343a40;
+}
+
+/* Glossary Definitions */
+.directory-wrapper {
+    list-style: none;
+    padding-left: 0;
+}
+
+.directory-letter-section {
+    margin-bottom: 2rem;
+}
+
+.directory-letter-section > span.letter {
+    display: inline-block;
+    font-weight: 700;
+    color: #333;
+    border-bottom: 3px solid #0056b3;
+    margin-bottom: 1rem;
+    padding-bottom: 0.25rem;
+    width: 100%;
+}
+
+.directory-letter-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.directory-letter-section ul li {
+    margin-bottom: 1.5rem;
+    background: #fff;
+    padding: 1.25rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+}
+
+.glossary-title {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #0056b3;
+    display: inline-block;
+}
+
+.glossary-permalink {
+    color: #6c757d;
+    text-decoration: none;
+    margin-left: 0.5rem;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.glossary-permalink:hover {
+    opacity: 1;
+    color: #0056b3;
+}
+
+.glossary-definition {
+    line-height: 1.6;
+    color: #495057;
+}
+
+.glossary-definition p:last-child {
+    margin-bottom: 0;
+}
