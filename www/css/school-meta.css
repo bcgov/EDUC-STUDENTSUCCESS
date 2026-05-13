@@ -1,0 +1,38 @@
+/* Custom styles for School Meta Component */
+
+.school-meta-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.school-meta-section a {
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.school-meta-section a:hover {
+    opacity: 0.8;
+}
+
+.key-image-map {
+    max-height: 280px;
+    object-fit: contain;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.key-image-map:hover {
+    transform: scale(1.02);
+}
+
+.school-meta-list li {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.school-meta-list li strong {
+    font-weight: 600;
+    opacity: 0.9;
+    margin-right: 0.25rem;
+}

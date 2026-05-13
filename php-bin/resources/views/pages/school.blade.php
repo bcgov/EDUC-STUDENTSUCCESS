@@ -5,21 +5,19 @@
 
   @include('components.school-meta')
 
-  <section class="slide aqua-bg options-row">
-    <div class="slide-content restrain">
-
-      <div class="sd-sub-nav">
-
+  <section class="aqua-bg py-4 border-bottom">
+    <div class="container">
+      <div class="d-flex justify-content-center justify-content-md-end">
         @if (!$school->independent)
-          <a class="big button" href="/school-district/{{ $school->sd }}">{{ trans('esdr2.about_sd_label') }} {{ Helper::removeLeadingZeros($school->sd) }}</a>
+          <a class="btn btn-light btn-lg px-4 shadow-sm fw-bold text-primary border" href="/school-district/{{ $school->sd }}">
+            {{ trans('esdr2.about_sd_label') }} {{ Helper::removeLeadingZeros($school->sd) }}
+          </a>
         @endif
-        
       </div>
-
     </div>
   </section>
 
-  <section class="slide light-gray-bg" style="padding-top: 3rem; padding-bottom: 3rem;">
+  <section class="bg-light">
     @include('components.school-charts-menu')
   </section>
 

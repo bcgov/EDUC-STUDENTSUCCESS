@@ -1,0 +1,55 @@
+/* Custom styles for the School Charts Menu */
+
+.toc-chart-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,0.125);
+    height: 100%;
+}
+
+.toc-chart-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.toc-chart-card .toc-chart-thumbnail {
+    object-fit: cover;
+    max-height: 150px;
+    width: auto;
+    max-width: 100%;
+}
+
+.toc-chart-card .toc-title {
+    color: #0056b3;
+    font-weight: 600;
+    margin-top: 0.75rem;
+}
+
+.toc-chart-card:hover .toc-title {
+    color: #004494;
+    text-decoration: underline;
+}
+
+.toc-link-group a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: 500;
+}
+
+.toc-link-group a:hover {
+    background-color: #f8f9fa;
+    color: #004494;
+}
+
+.toc-link-group .toc-icon-thumbnail {
+    max-width: 60px;
+    height: auto;
+}
