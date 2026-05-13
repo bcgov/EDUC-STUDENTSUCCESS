@@ -55,9 +55,9 @@
                     <li id="{{ $glossary_entry['gid'] }}" class="col-12 bg-white p-4 mb-4 rounded shadow-sm border">
                       <div class="d-flex align-items-center mb-3">
                         <h3 class="glossary-title mb-0 fs-4 text-primary fw-semibold">{{ $glossary_entry['title'] }}</h3>
-                        <a title="{{ trans('esdr2.permalink_for') }} {{ $glossary_entry['title'] }}" href="#{{ $glossary_entry['gid'] }}" class="fa fa-link glossary-permalink ms-2 text-secondary text-decoration-none" style="opacity: 0.5;"></a>
+                        <a title="{{ trans('esdr2.permalink_for') }} {{ $glossary_entry['title'] }}" href="#{{ $glossary_entry['gid'] }}" class="fa fa-link glossary-permalink ms-2 text-decoration-none" style="opacity: 0.5;"></a>
                       </div>
-                      <div class="glossary-definition text-secondary" style="line-height: 1.6;">{!! $glossary_entry['definition'] !!}</div>
+                      <div class="glossary-definition" style="line-height: 1.6;">{!! $glossary_entry['definition'] !!}</div>
                     </li>
                   @endforeach
                 </ul>
