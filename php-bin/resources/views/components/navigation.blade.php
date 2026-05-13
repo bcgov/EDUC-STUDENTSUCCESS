@@ -27,33 +27,41 @@
     <!-- Main Navigation Bar -->
     <nav class="navbar navbar-expand-lg bg-white shadow-sm py-0">
         <div class="container">
+            <!-- Hamburger Menu Button -->
+            <button class="navbar-toggler w-100 border-0 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-uppercase fw-bold text-secondary">Menu</span>
+                    <span class="navbar-toggler-icon"></span>
+                </div>
+            </button>
+
             <!-- Accessible Navigation Links -->
-            <div class="justify-content-center" id="mainNavigation">
-                <ul class="navbar-nav text-uppercase fw-bold align-items-center">
+            <div class="collapse navbar-collapse justify-content-center" id="mainNavigation">
+                <ul class="navbar-nav text-uppercase fw-bold align-items-center text-center">
                     <li class="nav-item">
                         <a class="nav-link py-3 px-3 {{ request()->is('/') ? 'active-nav-link' : '' }}" href="/">Home</a>
                     </li>
-                    <li class="nav-item   d-lg-block"><span class="nav-separator">|</span></li>
+                    <li class="nav-item d-none d-lg-block"><span class="nav-separator">|</span></li>
 
                     <li class="nav-item">
                         <a class="nav-link py-3 px-3 {{ request()->is('calendar') ? 'active-nav-link' : '' }}" href="/calendar">ChildCare</a>
                     </li>
-                    <li class="nav-item   d-lg-block"><span class="nav-separator">|</span></li>
+                    <li class="nav-item d-none d-lg-block"><span class="nav-separator">|</span></li>
 
                     <li class="nav-item">
                         <a class="nav-link py-3 px-3 {{ request()->is('data-literacy') ? 'active-nav-link' : '' }}" href="/data-literacy">Data Literacy</a>
                     </li>
-                    <li class="nav-item   d-lg-block"><span class="nav-separator">|</span></li>
+                    <li class="nav-item d-none d-lg-block"><span class="nav-separator">|</span></li>
 
                     <li class="nav-item">
                         <a class="nav-link py-3 px-3 {{ request()->is('in-the-spotlight') ? 'active-nav-link' : '' }}" href="/in-the-spotlight">In the Spotlight</a>
                     </li>
-                    <li class="nav-item   d-lg-block"><span class="nav-separator">|</span></li>
+                    <li class="nav-item d-none d-lg-block"><span class="nav-separator">|</span></li>
 
                     <li class="nav-item">
                         <a class="nav-link py-3 px-3 {{ request()->is('reporting') ? 'active-nav-link' : '' }}" href="/reporting">Reports</a>
                     </li>
-                    <li class="nav-item   d-lg-block"><span class="nav-separator">|</span></li>
+                    <li class="nav-item d-none d-lg-block"><span class="nav-separator">|</span></li>
 
                     <li class="nav-item">
                         <a class="nav-link py-3 px-3 {{ request()->is('all/school-districts') ? 'active-nav-link' : '' }}" href="/all/school-districts">School Districts</a>

@@ -3,16 +3,32 @@
 
 @section('content')
 @include('components/hero')
-@include('components/main-search')
-@include('components.intro-text')
-@include('components/about-this-website')
-@include('components.available-reports')
-@include('components.spotlight')
-@include('components.learn-more')
+
+<div class="delayed-components">
+  @include('components/main-search')
+  @include('components.intro-text')
+  @include('components/about-this-website')
+  @include('components.available-reports')
+  @include('components.spotlight')
+  @include('components.learn-more')
+</div>
 
 @endsection
 
 @push('css')
+  <style>
+    .delayed-components {
+      opacity: 0;
+      visibility: hidden;
+      animation: fadeInAnimation 0.5s ease-in forwards;
+      animation-delay: 1s;
+    }
+    @keyframes fadeInAnimation {
+      0% { opacity: 0; visibility: hidden; }
+      1% { visibility: visible; }
+      100% { opacity: 1; visibility: visible; }
+    }
+  </style>
   <link href="/css/easy-autocomplete.min.css" rel="stylesheet" type="text/css">
 @endpush
 
