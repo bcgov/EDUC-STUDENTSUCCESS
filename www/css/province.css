@@ -1,0 +1,15 @@
+.reports-heading-grey {
+    margin-top: -5px;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    background-image: url('../img/bg-images/bg-narrow-grey-1.jpg');
+    background-repeat: no-repeat;
+}
+
+.reports-heading-foot {
+    margin-top: -5px;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    background-image: url('../img/bg-images/bg-district-foot.jpg');
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,15 @@
+.tableau-overlay-half {
+    background: white;
+    margin-top: -41px;
+    position: absolute;
+    height: 27px;
+    width: 50%;
+}
+
+.tableau-overlay-full {
+    background: white;
+    margin-top: -41px;
+    position: absolute;
+    height: 27px;
+    width: 100%;
+}
