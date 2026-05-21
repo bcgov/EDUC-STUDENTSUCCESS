@@ -82,23 +82,20 @@
   </div>
 </div>
 
-<div style="margin-top: -5px; padding-top:4rem; padding-bottom: 5rem; background-image: url('{{URL::to('/')}}/img/bg-images/bg-district-foot.jpg');background-repeat: repeat-x;" class="reports-heading">
-  <div class="restrain">
+<div class="reports-heading reports-heading-foot">
+  <div class="container restrain">
     <div class="row">
-      <div class="col-sm-12 col-md-5">
+      <div class="col-12 col-md-5">
         <img src="/img/reports-pic.png" alt="picture of reports" width="auto" height="190px">
       </div>
-      <div class="col-sm-12 col-md-7">
-        <p>
-        <h3 class="dark-blue">FSA Item Analysis</h3>
-        </p>
-        <p><img class="green-bar" style="margin:0px; float: left" src="{{URL::to('/')}}/img/green-bar-2.png" alt="" /><br></p>
+      <div class="col-12 col-md-7">
+        <p><h3 class="dark-blue">FSA Item Analysis</h3></p>
+        <p><img class="green-bar m-0 float-start" src="{{URL::to('/')}}/img/green-bar-2.png" alt=""/><br></p>
         <p>Reports for educators to help interpret and understand<br>
           students' results for the provincial Grades 4 and 7 Foundation<br>
           Skills Assessment.
         </p>
-        <p><a class="btn btn-primary btn-lg" style="border-radius:0px;" href="/fsa/index.html">View the Data
-            +</a></p>
+        <p><a class="btn btn-primary btn-lg rounded-0" href="/fsa/index.html">View the Data+</a></p>
       </div>
     </div>
   </div>

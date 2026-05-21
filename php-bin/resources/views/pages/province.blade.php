@@ -89,7 +89,7 @@
     </div>
   </div>
 </div>
-  <div class="reports-heading reports-heading-foot">
+<div class="reports-heading reports-heading-foot">
   <div class="container restrain">
     <div class="row">
       <div class="col-12 col-md-5">
