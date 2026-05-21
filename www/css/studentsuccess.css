@@ -379,3 +379,17 @@ table th {
 .ahawd-table th{
   text-align: left !important;
 }
+
+/* Custom AHAWD Classes */
+.ahawd-masthead {
+  padding-top: 0.7em;
+  padding-bottom: 0em;
+}
+
+.ahawd-subtitle {
+  color: white;
+}
+
+.ahawd-data-table {
+  width: 100% !important;
+}

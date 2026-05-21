@@ -3,21 +3,42 @@
 
 @section('content')
 
-<div class="blue-bg directory-masthead childcare" style="padding-top:0.7em; padding-bottom:0em">
-        <div class="restrain">
-                <img src="/img/indigenous-hex.png" alt="" class="key-image thirds">
-                <h2 id="directory-main-heading" class="ministry-blue slide-title">Aboriginal Students: How Are We Doing
-                        2024/2025</h2>
-                <h4 style="color:white">The Aboriginal: How Are We Doing Report is an annual, public-facing report focusing on
-                        Indigenous students in B.C. The data in this report provides teachers, schools, school districts and the
-                        Ministry of Education and Child Care with important information on how Indigenous students are developing
-                        and identifies areas for interventions or further action.</h4><br><br>
-                <br>
+<link rel="stylesheet" href="/css/school-directory-results.css">
+
+<style>
+    .directory-masthead { display: none !important; }
+</style>
+
+<div class="ahawd-header">
+  <div class="sd-info-section text-white py-5">
+    <div class="container restrain">
+      <div class="row align-items-center">
+        <div class="col-md-7 col-lg-8 mb-4 mb-md-0">
+          <p class="mb-1 text-uppercase">Report</p>
+          <h1 id="directory-main-heading" class="display-5 fw-bold mb-4 text-white">
+              Aboriginal Students: How Are We Doing 2024/2025
+          </h1>
+          <p class="ahawd-subtitle">
+            The Aboriginal: How Are We Doing Report is an annual, public-facing report focusing on
+            Indigenous students in B.C. The data in this report provides teachers, schools, school districts and the
+            Ministry of Education and Child Care with important information on how Indigenous students are developing
+            and identifies areas for interventions or further action.
+          </p>
         </div>
+        <div class="col-md-5 col-lg-4 text-center position-relative">
+          <div class="hexagon-map-container">
+            <div class="hexagon-shape-outer"></div>
+            <div class="hexagon-shape"></div>
+            <img src="/img/indigenous-hex.png" alt="Indigenous Hexagon" class="img-fluid hexagon-map">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<section class="container ahawd-table">
-        <table class="table table-striped" style="width:50% !important; margin-left: 58px; font-size: 1.5rem;">
+<section class="container restrain ahawd-table my-5">
+        <table class="table table-striped ahawd-data-table">
                 <thead>
                         <tr>
                                 <th scope="col">District</th>

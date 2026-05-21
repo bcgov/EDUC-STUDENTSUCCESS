@@ -90,7 +90,7 @@
   </div>
 </div>
   <div class="reports-heading reports-heading-foot">
-  <div class="restrain">
+  <div class="container restrain">
     <div class="row">
       <div class="col-12 col-md-5">
         <img src="/img/reports-pic.png" alt="picture of reports" width="auto" height="190px">

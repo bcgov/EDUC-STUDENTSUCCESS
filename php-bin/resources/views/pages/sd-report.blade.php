@@ -94,8 +94,8 @@ $(function() {
 });
 </script>
 
-  <section class="slide fill-viewport pt-5 bg-light">
-    <div class="slide-content restrain">
+  <section class="py-5 bg-light">
+    <div class="container restrain">
 
       @if ($report_slug == 'contextual-information')
         @foreach ($labels as $key=>$label)

@@ -8,8 +8,10 @@
 
 .reports-heading-foot {
     margin-top: -5px;
-    padding-top: 4rem;
-    padding-bottom: 5rem;
     background-image: url('../img/bg-images/bg-district-foot.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
 }
