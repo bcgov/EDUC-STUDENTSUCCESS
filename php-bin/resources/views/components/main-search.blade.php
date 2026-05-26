@@ -7,7 +7,7 @@
       <input class="search" id="main-search" type="text" placeholder="{{ trans('esdr2.search_placeholder') }}" />
       <!-- Ensure original clear-search ID is preserved -->
       <span aria-hidden="true" title="{{ trans('esdr2.clear_search_label') }}" id="clear-search">
-        <i class="fa fa-search"></i>
+        <i class="fas fa-search"></i>
       </span>
     </div>
 

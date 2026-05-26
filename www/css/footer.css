@@ -6,7 +6,7 @@
 }
 
 #footer {
-    background: #253d61; /* Closer to the dark blue in the screenshot than #003366 */
+    background: #003366; /* Closer to the dark blue in the screenshot than #003366 */
     min-height: auto; 
     border-top: none; /* Removing old yellow border on top of footer, moving it to logo */
     overflow: hidden;

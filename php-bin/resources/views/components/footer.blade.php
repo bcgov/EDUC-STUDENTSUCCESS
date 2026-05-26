@@ -51,7 +51,7 @@
     </div>
     
     <!-- Floating Back to Top Anchor Link -->
-    <a href="#" id="back-to-top" class="d-flex align-items-center justify-content-center" title="{{ trans('esdr2.back_to_top') }}">
-        <i class="fa fa-arrow-up" aria-hidden="true" style="margin-top: 15px;"></i>
+    <a href="javascript:void(0);" id="back-to-top" class="d-flex align-items-center justify-content-center" title="Back to Top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </a>
 </footer><!-- /#footer -->

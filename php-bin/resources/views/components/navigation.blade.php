@@ -17,9 +17,9 @@
     <div class="notice-banner py-4 my-1">
         <div class="container d-flex justify-content-center position-relative">
             <div class="d-flex align-items-center text-center">
-                <span class="me-2 text-warning fw-bold fs-5">&#9888;</span> <!-- Caution Icon Placeholder -->
+                <i class="fa-solid fa-triangle-exclamation me-2 fa-lg text-warning"></i>
                 <span>Check out new insights for student transitions for 2024 to 2025!</span>
-                <a href="#" class="ms-2 text-white fw-bold">More &rarr;</a>
+                <a href="#" class="ms-2 text-white fw-bold">More <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </div>

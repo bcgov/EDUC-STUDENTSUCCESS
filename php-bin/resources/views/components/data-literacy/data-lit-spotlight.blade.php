@@ -6,11 +6,11 @@
     
     <!-- Arrows -->
     <button class="spotlight-prev" onclick="spotlightPrevSlide()" aria-label="Previous slide">
-        &larr;
+        <i class="fa-solid fa-arrow-left fa-lg"></i>
     </button>
     
     <button class="spotlight-next" onclick="spotlightNextSlide()" aria-label="Next slide">
-        &rarr;
+        <i class="fa-solid fa-arrow-right fa-lg"></i>   
     </button>
 
     <div class="spotlight-carousel">
