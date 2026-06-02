@@ -12,7 +12,7 @@
             <!-- Logo Area Column -->
             <div class="col-12 col-lg-4 mb-4 mb-lg-0 d-flex align-items-center">
                 <a href="http://www2.gov.bc.ca/gov/content/home">
-                    <img src="/img/gov3_bc_logo.png" alt="British Columbia Logo" style="height: 60px;">
+                    <img src="/img/refresh-img/BC_ECC_H_RGB_rev.png" alt="British Columbia Logo" style="height: 150px;">
                 </a>
             </div>
 
@@ -22,23 +22,23 @@
                 <a href="#" class="d-inline-block text-decoration-none">
                     <!-- Placeholder Image for DataBC icons -->
                     <div style="width: 150px; height: 50px; background-color: rgba(255,255,255,0.1); border-radius: 4px; display: flex; align-items: center; justify-content: center;">
-                        <span class="text-white-50 small">Placeholder Image</span>
+                        <img src="/img/refresh-img/footer-databc-icons.png" alt="DataBC Catalogue" style="height: 50px;">
                     </div>
                 </a>
             </div>
 
             <!-- Connect with Us -->
-            <div class="col-12 col-md-4 col-lg-2 mb-4 mb-md-0">
+            <div class="col-12 col-md-4 col-lg-3 mb-4 mb-md-0">
                 <h5 class="text-white fw-bold mb-3 footer-heading">Connect with Us</h5>
                 <ul class="list-unstyled mb-0">
                     <li class="mb-2"><a href="#" class="footer-link">Subscribe</a></li>
                     <li class="mb-2"><a href="#" class="footer-link">Social and RSS</a></li>
-                    <li class="mb-2"><a href="mailto:educ.systemperformance@gov.bc.ca" class="footer-link">educ.systemperformance@gov.bc.ca</a></li>
+                    <li class="mb-2"><a href="mailto:educ.systemperformance@gov.bc.ca" class="footer-link text-break">educ.systemperformance@gov.bc.ca</a></li>
                 </ul>
             </div>
 
             <!-- More Information -->
-            <div class="col-12 col-md-4 col-lg-3">
+            <div class="col-12 col-md-4 col-lg-2">
                 <h5 class="text-white fw-bold mb-3 footer-heading">More Information</h5>
                 <ul class="list-unstyled mb-0">
                     <li class="mb-2"><a href="http://www2.gov.bc.ca/gov/content/home" class="footer-link">BC Government Site</a></li>

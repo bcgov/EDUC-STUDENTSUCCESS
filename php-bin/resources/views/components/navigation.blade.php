@@ -8,7 +8,7 @@
         <div class="d-flex align-items-center">
             <!-- BC Logo Placeholder replacing the actual logo as requested -->
             <a href="http://www2.gov.bc.ca/" class="text-decoration-none">
-                <img src="/img/BCID_H_RGB_pos.png" alt="BC Logo" height="50">
+                <img src="/img/reBC_ECC_H_RGB_rev.png" alt="BC Logo" height="70">
             </a>
         </div>
     </div>
