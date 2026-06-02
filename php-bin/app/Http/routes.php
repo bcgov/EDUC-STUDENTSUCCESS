@@ -139,3 +139,4 @@ Route::get('/cognitive-levels/{district}/{year}/{grade}/{subject}/{exam_language
 Route::get('/data-literacy', 'DataLiteracyController@showDataLiteracyPage');
 Route::get('/in-the-spotlight', 'InTheSpotlightController@showInTheSpotlightPage');
 Route::get('/reports/{slug}', 'ReportsController@show');
+Route::get('/fesl', 'FeslController@showFeslPage');

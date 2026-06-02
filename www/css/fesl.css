@@ -1,0 +1,124 @@
+.fesl-banner {
+    background: linear-gradient(135deg, #e6d3f9 0%, #c1f0f0 50%, #dff6f0 100%);
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+.fesl-banner h1 {
+    color: #1a365d; /* Dark blue text */
+    font-weight: 700;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.3;
+}
+/* Simple placeholder graphic */
+.fesl-graphic-placeholder {
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    background-color: #4fd1c5;
+    border-radius: 50% 50% 50% 0;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fesl-graphic-placeholder::after {
+    content: '';
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ed8936;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Topics to Explore Component Styles */
+.btn-navy-custom {
+    background-color: #1a365d;
+    color: white;
+    font-weight: 500;
+    border: none;
+    transition: background-color 0.2s;
+}
+.btn-navy-custom:hover {
+    background-color: #2a4365;
+    color: white;
+}
+
+.topic-heading {
+    color: #1a365d;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+.topic-heading::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    bottom: 5px;
+    height: 12px;
+    width: 60%;
+    background-color: #e0f7f4;
+    z-index: -1;
+}
+
+.topic-link {
+    text-decoration: none;
+    color: #1a202c;
+    transition: transform 0.2s;
+}
+.topic-link:hover {
+    transform: translateX(5px);
+    color: #1a365d;
+}
+
+.topic-icon-wrap {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+.topic-icon-wrap .icon-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+.topic-icon-wrap .icon-shadow {
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #c1f0f0, transparent);
+    z-index: 0;
+}
+
+.topic-image-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: #e2e8f0;
+    border-radius: 0 200px 200px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: linear-gradient(to right, #4a5568, #2d3748);
+    color: white;
+}
+.topic-image-decoration {
+    position: absolute;
+    left: -40px;
+    top: 60px;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #4fd1c5, transparent);
+    border-radius: 50%;
+    opacity: 0.9;
+}
