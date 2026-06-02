@@ -55,6 +55,7 @@
 }
 
 .nav-pills.reports-tabs .nav-link {
+    width: 100%;
     color: #6c757d;
     font-weight: 600;
     padding: 12px 15px;
@@ -72,7 +73,7 @@
     background: linear-gradient(135deg, #f05252, #e83e8c);
     color: #fff;
     /* Custom tab active shape */
-    border-radius: 8px 20px 8px 8px !important; 
+    border-radius: 8px 8px 20px 8px !important; 
     box-shadow: 0 4px 10px rgba(240, 82, 82, 0.3);
 }
 
@@ -189,6 +190,10 @@
     .col-lg-1-5 {
         flex: 0 0 20%;
         max-width: 20%;
+    }
+    .col-lg-2-5 {
+        flex: 0 0 40%;
+        max-width: 40%;
     }
 }
 

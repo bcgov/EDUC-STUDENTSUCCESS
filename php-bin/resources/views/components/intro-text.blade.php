@@ -7,9 +7,9 @@
             
             <!-- Text Content Column -->
             <div class="col-lg-6 col-md-12 mb-5 mb-lg-0 pe-lg-5">
-                <h2 class="intro-heading fw-bold mb-4">
+                <h2 class="spotlight-title fw-bold mb-4">
                     Explore B.C. K-12<br/>
-                    <span class="intro-heading-highlight">Public School Data</span>
+                    <span class="spotlight-title">Public School Data</span>
                 </h2>
                 
                 <p class="intro-paragraph mb-0">
@@ -21,7 +21,7 @@
             <div class="col-lg-6 col-md-12 text-center text-lg-end">
                 <div class="intro-image-container position-relative">
                     <!-- The image src points to a placeholder path. Swap the src path here once the asset is ready -->
-                    <img src="/img/intro-charts.png" alt="Explore B.C. K-12 Public School Data Image" class="img-fluid intro-image-shape" onerror="this.src='https://placehold.co/600x500/003366/FFFFFF?text=Intro+Data+Image'" />
+                    <img src="/img/refresh-img/ss-home-explore-graphic.png" alt="Explore B.C. K-12 Public School Data Image" class="img-fluid intro-image-shape" onerror="this.src='https://placehold.co/600x500/003366/FFFFFF?text=Intro+Data+Image'" />
                 </div>
             </div>
 

@@ -15,7 +15,7 @@
             <div class="spotlight-image-container">
                 <div class="spotlight-image-wrapper">
                     <!-- Placeholder image matching the vibe of the mock -->
-                    <img src="https://via.placeholder.com/600x600/6A5ACD/FFFFFF?text=%23WEBSITE+LAUNCH" alt="Spotlight Feature" class="img-fluid spotlight-image">
+                    <img src="/img/refresh-img/ss-home-spotlight-graphic.png"alt="Spotlight Feature" class="img-fluid spotlight-image">
                 </div>
                 <!-- Decorative Elements -->
                 <div class="decorative-shape">
@@ -27,7 +27,7 @@
 
         <!-- Right Content Column -->
         <div class="col-12 col-md-7 ps-md-5">
-            <h3 class="spotlight-heading mb-3">Student Success has a fresh new look - shaped by you.</h3>
+            <h2 class="spotlight-heading mb-3">Student Success has a fresh new look - shaped by you.</h2>
             <p class="spotlight-text mb-4">
                 The Student Success website has a new look and feel – same great site, 
                 with updated dashboards, visual stories and insights designed to help 

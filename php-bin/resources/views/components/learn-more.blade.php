@@ -3,35 +3,47 @@
 <div class="light-gray-bg learn-more-section">
     <div class="container">
         
-        <div class="row g-5">
+        <div class="learn-more-grid">
             
-            <div class="col-lg-6 d-flex">
-                <div class="w-100 d-flex flex-column">
-                    
-                    <img class="img-fluid mb-4 w-100" src="https://placehold.co/600x400/e6f2f2/003366?text=Data+Literacy+Graphic" alt="Data Literacy Graphic placeholder" />
-                    
-                    <h4 class="fw-bold mb-3" style="color: #333;">How data supports students</h4>
-                    
-                    <p class="body-color mb-5">Students succeed when caregivers, educators, administrators and policymakers have the right information to make decisions and take action. Learn how the ministry, districts and stakeholders use data to support student learning.</p>
-                    
-                    <div class="mt-auto">
-                        <a class="search-btn-blue" href="/ahawd">LEARN MORE +</a>
-                    </div>
+            <!-- Top Left Section -->
+            <div class="lm-top-left d-flex flex-column pe-lg-4">   
+                <div class="mb-4"><h2 class="learn-more-heading">Data Literacy</h2></div>   
+                
+                <div class="position-relative mb-4 me-md-3 mt-2">
+                    <img class="img-fluid w-100" src="/img/refresh-img/ss-home-data-literacy-graphic.png" alt="Data Literacy Graphic" />
+                    <img class="data-literacy-icon-overlap d-none d-md-block" src="/img/refresh-img/data-literacy-icon.png" alt="Data literacy icon" />     
                 </div>
             </div>
             
-            <div class="col-lg-6 d-flex mt-5">
-                <div class="w-100 d-flex flex-column">
-                    
-                    <img class="img-fluid mb-4 w-100" src="https://placehold.co/600x400/e6f2f2/003366?text=Continuous+Improvement+Graphic" alt="Continuous Improvement Graphic placeholder" />
-                    
-                    <h4 class="fw-bold mb-3" style="color: #333;">Improving equity in learning</h4>
-                    
-                    <p class="body-color mb-5">The Continuous Improvement Program for Enhancing Student Learning operationalizes the Framework for Enhancing Student Learning and allows the Ministry to provide provincial oversight.</p>
-                    
-                    <div class="mt-auto">
-                        <a class="search-btn-blue" href="{{URL::to('/')}}/cyic">LEARN MORE +</a>
-                    </div>
+            <!-- Bottom Left Section -->
+            <div class="lm-bottom-left pe-lg-4">
+                <h3 class="learn-more-subheading mb-3">How data supports students</h3>
+                
+                <p class="body-color mb-4">Students succeed when caregivers, educators, administrators and policymakers have the right information to make decisions and take action. Learn how the ministry, districts and stakeholders use data to support student learning.</p>
+                
+                <div>
+                    <a class="search-btn-blue" href="/ahawd">LEARN MORE +</a>
+                </div>
+            </div>
+            
+            <!-- Top Right Section -->
+            <div class="lm-top-right d-flex flex-column ps-lg-4">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h2 class="learn-more-heading pe-3">Continuous <br>Improvement<br> Program for<br> Enhancing Student Learning</h2>
+                    <img class="img-fluid enhanced-learning-icon d-none d-md-block mt-4" src="/img/refresh-img/continuous-improvement-icon.png" alt="Continuous Improvement arrow icon" />
+                </div>
+                
+                <img class="img-fluid continuous-improvement-arrow mt-auto mb-4" src="/img/refresh-img/enhanced-learning-visual.png" alt="Continuous Improvement Graphic icon" />
+            </div>
+            
+            <!-- Bottom Right Section -->
+            <div class="lm-bottom-right ps-lg-4">
+                <h3 class="learn-more-subheading mb-3">Improving equity in learning</h3>
+                
+                <p class="body-color mb-4">The Continuous Improvement Program for Enhancing Student Learning operationalizes the Framework for Enhancing Student Learning and allows the Ministry to provide provincial oversight.</p>
+                
+                <div>
+                    <a class="search-btn-blue" href="{{URL::to('/')}}/cyic">LEARN MORE +</a>
                 </div>
             </div>
             
