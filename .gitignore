@@ -92,3 +92,6 @@ php-bin/resources/assets/scss/_notes/dwsync.xml
 php-bin/resources/assets/scss/breakpoints/_notes/dwsync.xml
 php-bin/resources/assets/scss/components/_notes/dwsync.xml
 php-bin/resources/lang/en/_notes/dwsync.xml
+
+# VS Code
+.vscode/settings.json
