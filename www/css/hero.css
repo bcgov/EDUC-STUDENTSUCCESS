@@ -3,39 +3,7 @@
 .custom-hero-carousel {
     position: relative;
     width: 100%;
-    overflow: hidden;
-    background-color: #f8f9fa; /* Fallback background */
-}
-
-/* Inner wrapper controls the height */
-.custom-hero-inner {
-    position: relative;
-    width: 100%;
-    height: 400px; 
-}
-
-/* Each slide overlaps completely, fading via opacity */
-.custom-hero-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-    z-index: 1;
-}
-
-.custom-hero-item.active {
-    opacity: 1;
-    z-index: 2;
-}
-
-/* Force inner images to cover consistently */
-.custom-hero-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    /* background-color: #f8f9fa; */ /* Fallback background */
 }
 
 /* Custom rounded indicators to match design mockup */
@@ -49,22 +17,25 @@
     z-index: 10;
 }
 
-.custom-carousel-indicators button {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    margin: 0 6px;
-    background-color: rgba(255, 255, 255, 0.6);
-    border: none;
+.custom-carousel-indicators [data-bs-target] {
+    width: 14px !important;
+    height: 14px !important;
+    border-radius: 50% !important;
+    margin: 0 6px !important;
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    border: none !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
     cursor: pointer;
     transition: background-color 0.3s ease;
     padding: 0;
+    box-sizing: border-box !important;
 }
 
 /* Active Indicator state */
-.custom-carousel-indicators button.active {
-    background-color: #ffffff;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+.custom-carousel-indicators [data-bs-target].active {
+    background-color: #ffffff !important;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3) !important;
 }
 
 /* Style the text overlay */
@@ -92,9 +63,6 @@
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-    .custom-hero-inner {
-        height: 300px;
-    }
     .custom-carousel-caption {
         left: 5%;
         max-width: 90%;

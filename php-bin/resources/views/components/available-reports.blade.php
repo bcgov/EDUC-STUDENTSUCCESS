@@ -33,7 +33,7 @@
                         <rect x="9" y="7" width="5" height="17" rx="1"></rect>
                         <rect x="16" y="2" width="5" height="22" rx="1"></rect>
                     </svg>
-                    Report Categories
+                    <h3>Report Categories</h3>
                 </div>
             </div>
             <div class="col-12">
@@ -82,21 +82,21 @@
                 <!-- District Cards -->
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="district intellectual">
                     <a href="/reports/demographic-information" class="report-card bg-gradient-teal">
-                        <img src="https://placehold.co/50x50/transparent/ffffff?text=Icon" class="report-card-icon" alt="Icon">
-                        <p class="report-card-title">Demographic<br>Information</p>
+                        <img src="/img/refresh-img/demographic-icon.png" class="report-card-icon" alt="Icon">
+                        <h3 class="report-card-title">Demographic<br>Information</h3>
                     </a>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="district human-social">
                     <a href="/reports/key-contacts" class="report-card bg-gradient-teal">
-                        <img src="https://placehold.co/50x50/transparent/ffffff?text=Icon" class="report-card-icon" alt="Icon">
+                        <img src="/img/refresh-img/key-contacts.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Key<br>Contacts</h3>
                     </a>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="district">
                     <a href="/reports/financial-information" class="report-card bg-gradient-teal">
-                        <img src="https://placehold.co/50x50/transparent/ffffff?text=Icon" class="report-card-icon" alt="Icon">
+                        <img src="/img/refresh-img/financial-info.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Financial<br>Information</h3>
                     </a>
                 </div>
@@ -104,28 +104,28 @@
                 <!-- Intellectual Cards (Pink) -->
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="intellectual career">
                     <a href="/reports/completion-rate" class="report-card bg-gradient-pink">
-                        <img src="https://placehold.co/50x50/transparent/ffffff?text=Icon" class="report-card-icon" alt="Icon">
+                        <img src="/img/refresh-img/completion-rate.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Completion<br>Rate</h3>
                     </a>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="intellectual">
                     <a href="/reports/foundation-skills-assessment" class="report-card bg-gradient-pink">
-                        <img src="https://placehold.co/50x50/transparent/ffffff?text=Icon" class="report-card-icon" alt="Icon">
+                        <img src="/img/refresh-img/fsa.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Foundation Skills<br>Assessment</h3>
                     </a>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="intellectual career">
                     <a href="/reports/grade-to-grade-transition" class="report-card bg-gradient-pink">
-                        <img src="https://placehold.co/50x50/transparent/ffffff?text=Icon" class="report-card-icon" alt="Icon">
+                        <img src="/img/refresh-img/grade-to-grade.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Grade-to-Grade<br>Transitions</h3>
                     </a>
                 </div>
                 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="intellectual">
                     <a href="/reports/graduation-assessment" class="report-card bg-gradient-pink">
-                        <img src="https://placehold.co/50x50/transparent/ffffff?text=Icon" class="report-card-icon" alt="Icon">
+                        <img src="/img/refresh-img/grad-assessments.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Graduation<br>Assessments</h3>
                     </a>
                 </div>
@@ -133,70 +133,70 @@
                 <!-- Other Cards -->
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="district focus">
                     <a href="/reports/students-entering-school" class="report-card bg-gradient-teal">
-                        <img src="https://placehold.co/50x50/transparent/ffffff?text=Icon" class="report-card-icon" alt="Icon">
+                        <img src="/img/refresh-img/student-characteristics.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Student<br>Characteristics<br>Entering School</h3>
                     </a>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="intellectual human-social focus">
                     <a href="/reports/student-learning-survey" class="report-card bg-gradient-teal">
-                        <img src="https://placehold.co/50x50/transparent/ffffff?text=Icon" class="report-card-icon" alt="Icon">
+                        <img src="/img/refresh-img/student-learning-survey.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Student Learning<br>Survey</h3>
                     </a>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="career">
                     <a href="/reports/post-secondary-career-prep" class="report-card bg-gradient-teal">
-                        <img src="https://placehold.co/50x50/transparent/ffffff?text=Icon" class="report-card-icon" alt="Icon">
+                        <img src="/img/refresh-img/postsec-career-prep.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Post-Secondary<br>+ Career Prep</h3>
                     </a>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="career">
                     <a href="/reports/transition-to-post-secondary" class="report-card bg-gradient-teal">
-                        <img src="https://placehold.co/50x50/transparent/ffffff?text=Icon" class="report-card-icon" alt="Icon">
+                        <img src="/img/refresh-img/transition-postsec.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Transition to B.C.<br>Post-Secondary</h3>
                     </a>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="focus">
                     <a href="/reports/aboriginal-students" class="report-card bg-gradient-teal">
-                        <img src="https://placehold.co/50x50/transparent/ffffff?text=Icon" class="report-card-icon" alt="Icon">
+                        <img src="/img/refresh-img/indigenous.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Aboriginal Students:<br>How Are We Doing?</h3>
                     </a>
                 </div>
                 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="focus">
                     <a href="/reports/children-in-care" class="report-card bg-gradient-teal">
-                        <img src="https://placehold.co/50x50/transparent/ffffff?text=Icon" class="report-card-icon" alt="Icon">
+                        <img src="/img/refresh-img/cyic.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Children + Youth<br>In Care: How Are<br>We Doing?</h3>
                     </a>
                 </div>
                 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="childcare">
                     <a href="/reports/child-care-spaces" class="report-card bg-gradient-teal">
-                        <img src="https://placehold.co/50x50/transparent/ffffff?text=Icon" class="report-card-icon" alt="Icon">
+                        <img src="/img/refresh-img/child-care.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Child Care<br>Spaces</h3>
                     </a>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="childcare">
                     <a href="/reports/supporting-families" class="report-card bg-gradient-teal">
-                        <img src="https://placehold.co/50x50/transparent/ffffff?text=Icon" class="report-card-icon" alt="Icon">
+                        <img src="/img/refresh-img/supporting-families.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Supporting<br>Families</h3>
                     </a>
                 </div>
                 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="childcare">
                     <a href="/reports/supporting-workers" class="report-card bg-gradient-teal">
-                        <img src="https://placehold.co/50x50/transparent/ffffff?text=Icon" class="report-card-icon" alt="Icon">
+                        <img src="/img/refresh-img/supporting-workers.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Supporting<br>Workers</h3>
                     </a>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="childcare">
                     <a href="/reports/accelerated-creation" class="report-card bg-gradient-teal">
-                        <img src="https://placehold.co/50x50/transparent/ffffff?text=Icon" class="report-card-icon" alt="Icon">
+                        <img src="/img/refresh-img/accelerated-creation.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Accelerated<br>Creation</h3>
                     </a>
                 </div>                

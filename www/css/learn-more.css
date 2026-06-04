@@ -3,6 +3,7 @@
 .learn-more-section {
     padding-top: 40px;
     padding-bottom: 60px;
+    background-color: #f7f8fa;
 }
 
 /* Custom Grid for aligning top and bottom sections across columns */
@@ -77,3 +78,4 @@
     font-size: 1.5rem;
     font-weight: 700;
 }
+
