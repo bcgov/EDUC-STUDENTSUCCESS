@@ -8,7 +8,7 @@
         <div class="d-flex align-items-center">
             <!-- BC Logo Placeholder replacing the actual logo as requested -->
             <a href="http://www2.gov.bc.ca/" class="text-decoration-none">
-                <img src="/img/reBC_ECC_H_RGB_rev.png" alt="BC Logo" height="70">
+                <img src="/img/BCID_H_RGB_pos.png" alt="BC Logo" height="70">
             </a>
         </div>
     </div>
@@ -44,7 +44,7 @@
                     <li class="nav-item d-none d-lg-block"><span class="nav-separator">|</span></li>
 
                     <li class="nav-item">
-                        <a class="nav-link py-3 px-3 {{ request()->is('calendar') ? 'active-nav-link' : '' }}" href="/calendar">ChildCare</a>
+                        <a class="nav-link py-3 px-3 {{ request()->is('calendar') ? 'active-nav-link' : '' }}" href="/calendar">Child Care</a>
                     </li>
                     <li class="nav-item d-none d-lg-block"><span class="nav-separator">|</span></li>
 
