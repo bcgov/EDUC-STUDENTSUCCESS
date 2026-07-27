@@ -28,31 +28,42 @@ class ReportsController extends Controller {
   public function getSdReportSlugs() {
 
     return array(
-
-      'contextual-information', 
-      'students-entering-school',
       'completion-rates',
-      'fsa',
+      'contextual-information',
+      'foundation-skills-assessment',
+      'grad-assess',
       'grade-to-grade-transitions',
-      'student-satisfaction',
       'post-secondary-career-prep',
       'prov-exams',
-      'grad-assess',
+      'student-satisfaction',
+      'students-entering-school',
       'transition-to-post-secondary'
-
     );
 
   }
+  /**
+   * Map of report slug → Power BI embed URL.
+   * Add new reports here as single-line entries.
+   */
+  private const EMBED_URLS = [
+      'completion-rates'             => '',  // TODO: add embed URL
+      'contextual-information'       => '',  // TODO: add embed URL
+      'foundation-skills-assessment' => 'https://app.powerbi.com/view?r=eyJrIjoiZTY5YTdlNDEtNThhNy00NjkzLWJhNTUtNzI5YzM3MDJmMjk1IiwidCI6IjZmZGI1MjAwLTNkMGQtNGE4YS1iMDM2LWQzNjg1ZTM1OWFkYyJ9&pageName=bb597b00d8e7047e2da5',
+      'grad-assess'                  => '',  // TODO: add embed URL
+      'grade-to-grade-transitions'   => '',  // TODO: add embed URL
+      'post-secondary-career-prep'   => '',  // TODO: add embed URL
+      'prov-exams'                   => '',  // TODO: add embed URL
+      'student-satisfaction'         => '',  // TODO: add embed URL
+      'students-entering-school'     => '',  // TODO: add embed URL
+      'transition-to-post-secondary' => '',  // TODO: add embed URL
+  ];
+
   public function show($slug)
   {
-      // 1. You would typically fetch the report metadata from the DB using the $slug
-      // $report = Report::where('slug', $slug)->firstOrFail();
-      
-      // Mock data for demonstration
       $reportTitle = str_replace('-', ' ', $slug);
+      $embedUrl    = self::EMBED_URLS[$slug] ?? null;
 
-      // 2. Return the detail view
-      return view('pages.report-detail', compact('slug', 'reportTitle'));
+      return view('pages.report-detail', compact('slug', 'reportTitle', 'embedUrl'));
   }
     
   public function getSchoolDbFlagNames() {
