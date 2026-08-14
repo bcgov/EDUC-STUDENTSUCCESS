@@ -95,3 +95,8 @@ php-bin/resources/lang/en/_notes/dwsync.xml
 
 # VS Code
 .vscode/settings.json
+AGENTS.md
+CLAUDE.md
+CONTEXT.md
+MEMORY.md 
+USERS.md      

@@ -58,12 +58,33 @@ class ReportsController extends Controller {
       'transition-to-post-secondary' => '',  // TODO: add embed URL
   ];
 
+  /**
+   * Reports that have multiple Power BI pages.
+   * Each entry maps a report slug to an array of ['label' => ..., 'pageName' => ...].
+   */
+  private const REPORT_PAGES = [
+      'foundation-skills-assessment' => [
+          ['label' => 'FSA District by Year', 'pageName' => '780ec6d7c3f5946114be'],
+          ['label' => 'FSA District by Demographic', 'pageName' => '03404235b3a58ba7bf3d'],
+          ['label' => 'FSA Comparison by Year', 'pageName' => '4a7aa4fe4266a8b0b936'],
+          ['label' => 'FSA Comparison by Demographic', 'pageName' => '4c6525aa6b31e06d2cdb'],
+      ],
+  ];
+
   public function show($slug)
   {
-      $reportTitle = str_replace('-', ' ', $slug);
-      $embedUrl    = self::EMBED_URLS[$slug] ?? null;
+      $reportTitle  = str_replace('-', ' ', $slug);
+      $baseEmbedUrl = self::EMBED_URLS[$slug] ?? null;
+      $pages        = self::REPORT_PAGES[$slug] ?? [];
 
-      return view('pages.report-detail', compact('slug', 'reportTitle', 'embedUrl'));
+      // Build the initial embed URL: append first page if pages exist
+      if ($baseEmbedUrl && !empty($pages)) {
+          $embedUrl = $baseEmbedUrl . '&pageName=' . $pages[0]['pageName'];
+      } else {
+          $embedUrl = $baseEmbedUrl;
+      }
+
+      return view('pages.report-detail', compact('slug', 'reportTitle', 'embedUrl', 'baseEmbedUrl', 'pages'));
   }
     
   public function getSchoolDbFlagNames() {
