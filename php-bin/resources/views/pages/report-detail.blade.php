@@ -52,28 +52,6 @@
                         <div class="fsa-toggle-buttons mb-3" data-iframe-target="fsa-iframe-2">
                             <button type="button"
                                     class="btn btn-fsa-toggle active"
-                                    data-page="{{ $pages[0]['pageName'] }}">
-                                {{ $pages[0]['label'] }}
-                            </button>
-                            <button type="button"
-                                    class="btn btn-fsa-toggle"
-                                    data-page="{{ $pages[1]['pageName'] }}">
-                                {{ $pages[1]['label'] }}
-                            </button>
-                        </div>
-                        <iframe id="fsa-iframe-2"
-                                title="{{ $pages[0]['label'] }}"
-                                class="fsa-report-iframe"
-                                src="{{ $baseEmbedUrl }}&pageName={{ $pages[0]['pageName'] }}"
-                                frameborder="0"
-                                allowFullScreen="true"></iframe>
-                    </div>
-
-                    {{-- Iframe 3: FSA Comparison --}}
-                    <div class="fsa-iframe-section mb-5">
-                        <div class="fsa-toggle-buttons mb-3" data-iframe-target="fsa-iframe-3">
-                            <button type="button"
-                                    class="btn btn-fsa-toggle active"
                                     data-page="{{ $pages[2]['pageName'] }}">
                                 {{ $pages[2]['label'] }}
                             </button>
@@ -83,10 +61,32 @@
                                 {{ $pages[3]['label'] }}
                             </button>
                         </div>
-                        <iframe id="fsa-iframe-3"
+                        <iframe id="fsa-iframe-2"
                                 title="{{ $pages[2]['label'] }}"
                                 class="fsa-report-iframe"
                                 src="{{ $baseEmbedUrl }}&pageName={{ $pages[2]['pageName'] }}"
+                                frameborder="0"
+                                allowFullScreen="true"></iframe>
+                    </div>
+
+                    {{-- Iframe 3: FSA Comparison --}}
+                    <div class="fsa-iframe-section mb-5">
+                        <div class="fsa-toggle-buttons mb-3" data-iframe-target="fsa-iframe-3">
+                            <button type="button"
+                                    class="btn btn-fsa-toggle active"
+                                    data-page="{{ $pages[4]['pageName'] }}">
+                                {{ $pages[4]['label'] }}
+                            </button>
+                            <button type="button"
+                                    class="btn btn-fsa-toggle"
+                                    data-page="{{ $pages[5]['pageName'] }}">
+                                {{ $pages[5]['label'] }}
+                            </button>
+                        </div>
+                        <iframe id="fsa-iframe-3"
+                                title="{{ $pages[4]['label'] }}"
+                                class="fsa-report-iframe"
+                                src="{{ $baseEmbedUrl }}&pageName={{ $pages[4]['pageName'] }}"
                                 frameborder="0"
                                 allowFullScreen="true"></iframe>
                     </div>

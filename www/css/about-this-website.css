@@ -1,0 +1,31 @@
+/* About This Website Section Styles */
+
+#about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Light cyan highlighter effect for the about section heading */
+.about-heading-highlight {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.about-heading-highlight::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    width: 195px;
+    height: 20px;
+    background-color: #dff4f3;
+    z-index: -1;
+}
+
+.about-title{
+    color: #002244;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}

@@ -159,10 +159,10 @@ a.btn.btn-primary.btn-lg.get-in-touch {
    margin-bottom: 8rem;
 }
 
-section#about {
+/* section#about {
    padding-top: 0px !important;
    margin-top: -20px !important;
-}
+} */
 
 .tablet-image{
    width: auto;
@@ -392,4 +392,4 @@ table th {
 
 .ahawd-data-table {
   width: 100% !important;
-}
+}

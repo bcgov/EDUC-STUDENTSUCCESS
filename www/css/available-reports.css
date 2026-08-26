@@ -3,6 +3,8 @@
 .available-reports-section {
     background-color: #f7f9fa;
     padding: 60px 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .reports-heading-container {
@@ -22,10 +24,11 @@
 .reports-heading::after {
     content: '';
     position: absolute;
-    bottom: 5px;
+    bottom: -1px;
     left: 0;
     right: 0;
     height: 15px;
+    width: 195px;
     background-color: #d1f4f9;
     z-index: -1;
 }
@@ -57,7 +60,6 @@
 .nav-pills.reports-tabs .nav-link {
     width: 100%;
     color: #6c757d;
-    font-weight: 600;
     padding: 12px 15px;
     border-radius: 8px !important;
     white-space: nowrap;
@@ -70,11 +72,11 @@
 }
 
 .nav-pills.reports-tabs .nav-link.active {
-    background: linear-gradient(135deg, #f05252, #e83e8c);
+    background: linear-gradient(135deg, #32b5ab, #1f7b88);
     color: #fff;
     /* Custom tab active shape */
-    border-radius: 8px 8px 20px 8px !important; 
-    box-shadow: 0 4px 10px rgba(240, 82, 82, 0.3);
+    border-radius: 0px 0px 20px 0px !important; 
+    box-shadow: 0 4px 10px rgba(50, 181, 171, 0.3);
 }
 
 /* Report Cards */
@@ -91,6 +93,7 @@
     padding: 20px;
     text-align: center;
     aspect-ratio: 1 / 1;
+    border-radius: 0px 0px 20px 0px !important; 
     color: #fff;
     text-decoration: none;
     transition: transform 0.3s ease, opacity 0.4s ease, box-shadow 0.3s ease;
@@ -117,6 +120,14 @@
     background: linear-gradient(135deg, #4ed3c7, #2f9d93);
 }
 
+.bg-gradient-navy {
+    background: linear-gradient(135deg, #1a3a6b, #0e2345);
+}
+
+.bg-gradient-orange {
+    background: linear-gradient(135deg, #e8943a, #d4702a);
+}
+
 /* Calendar Card specific styling */
 .calendar-card {
     background: #fff;
@@ -135,6 +146,12 @@
     font-weight: 500;
     margin-bottom: 15px;
     line-height: 1.4;
+}
+
+@media (min-width: 992px) {
+    .calendar-card {
+        aspect-ratio: 2.06 / 1;
+    }
 }
 
 .calendar-btn {

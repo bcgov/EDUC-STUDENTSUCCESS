@@ -1,12 +1,9 @@
 <section id="about">
     <div style="position:relative;">
-        {{-- <img src="/img/bg-images/BCmapSuccessHomeCropped.png" alt="image of a map of B.C."
-            style="position:absolute; top:119px"> --}}
+<link href="/css/about-this-website.css" rel="stylesheet" type="text/css">
 
         <div class="container">
-            <h2 class="dark-blue tp" style="text-align:left;">Overview of B.C. Public School Data</h2>
-            <img class="green-bar" style="margin-left: 4px; margin-top: 7px; position: relative;"
-                src="{{URL::to('/')}}/img/green-bar-2.png" alt="" />
+            <h2 class="about-title" style="text-align:left;"><span class="about-heading-highlight">Overview of B.C. Public School Data</span></h2>
         </div>
         <div class="container">
             <div class="row frontPage-charts justify-content-center">

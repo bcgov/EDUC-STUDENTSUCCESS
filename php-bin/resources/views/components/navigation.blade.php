@@ -37,7 +37,7 @@
 
             <!-- Accessible Navigation Links -->
             <div class="collapse navbar-collapse justify-content-start" id="mainNavigation">
-                <ul class="navbar-nav text-uppercase fw-bold align-items-center">
+                <ul class="navbar-nav text-uppercase align-items-center">
                     <li class="nav-item">
                         <a class="nav-link py-3 px-3 {{ request()->is('/') ? 'active-nav-link' : '' }}" href="/">Home</a>
                     </li>

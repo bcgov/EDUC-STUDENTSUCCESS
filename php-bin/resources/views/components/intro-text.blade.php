@@ -9,7 +9,7 @@
             <div class="col-lg-6 col-md-12 mb-5 mb-lg-0 pe-lg-5">
                 <h2 class="spotlight-title fw-bold mb-4">
                     Explore B.C. K-12<br/>
-                    <span class="spotlight-title">Public School Data</span>
+                    <span class="spotlight-title intro-heading-highlight">Public School Data</span>
                 </h2>
                 
                 <p class="intro-paragraph mb-0">

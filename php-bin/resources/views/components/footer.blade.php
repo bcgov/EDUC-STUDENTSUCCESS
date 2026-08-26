@@ -1,7 +1,7 @@
 <div class="land-acknowledgement w-100 text-white p-3">
     <div class="container d-flex align-items-center">
         <!-- Minimal map marker pin next to text -->
-        <i class="fa fa-map-marker fa-2x me-3" style="color: rgba(255, 255, 255, 0.4);" aria-hidden="true"></i>
+         <img src="/img/refresh-img/ss_land-acknowledgement.png" alt="pin marker image" style="height:28px;" class="me-3">
         <p class="mb-0 small pb-0" style="line-height: 1.4;">The B.C. Public Service acknowledges the territories of First Nations around B.C. and is grateful to carry out our work on these lands. We acknowledge the rights, interests, priorities, and concerns of all Indigenous Peoples - First Nations, Métis, and Inuit - respecting and acknowledging their distinct cultures, histories, rights, laws, and governments.</p>
     </div>
 </div>
@@ -21,7 +21,7 @@
                 <h5 class="text-white fw-bold mb-3 footer-heading">DataBC Catalogue</h5>
                 <a href="#" class="d-inline-block text-decoration-none">
                     <!-- Placeholder Image for DataBC icons -->
-                    <div style="width: 150px; height: 50px; background-color: rgba(255,255,255,0.1); border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                    <div style="width: 150px; height: 50px; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
                         <img src="/img/refresh-img/footer-databc-icons.png" alt="DataBC Catalogue" style="height: 50px;">
                     </div>
                 </a>

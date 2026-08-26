@@ -31,22 +31,22 @@
 }
 
 /* Specific text highlight used in section titles */
-.title-highlight {
+.learn-more-title-highlight {
     position: relative;
     display: inline-block;
     z-index: 1;
 }
 
-.title-highlight::after {
+.learn-more-title-highlight::after {
     content: "";
     position: absolute;
-    bottom: 0.1em;
-    left: -5%;
-    width: 110%;
-    height: 0.4em;
-    background-color: #d1f4f4; /* Subtle cyan */
+    bottom:-7px;
+    left: 0px;
+    width: 195px;
+    height: 20px;
+    background-color: #dff4f3; 
     z-index: -1;
-}
+} 
 
 .data-literacy-icon-overlap {
     position: absolute;
@@ -54,11 +54,6 @@
     right: -30px;
     width: 110px;
     z-index: 2;
-}
-
-.enhanced-learning-icon {
-    width: 110px;
-    flex-shrink: 0;
 }
 
 .continuous-improvement-arrow {

@@ -66,6 +66,8 @@ class ReportsController extends Controller {
       'foundation-skills-assessment' => [
           ['label' => 'FSA District by Year', 'pageName' => '780ec6d7c3f5946114be'],
           ['label' => 'FSA District by Demographic', 'pageName' => '03404235b3a58ba7bf3d'],
+          ['label' => 'FSA District Split by Year', 'pageName' => '689b6e51d6e3805c2b45'],
+          ['label' => 'FSA District Split by Demographic', 'pageName' => 'c20e8c0ac1fc2869422d'],
           ['label' => 'FSA Comparison by Year', 'pageName' => '4a7aa4fe4266a8b0b936'],
           ['label' => 'FSA Comparison by Demographic', 'pageName' => '4c6525aa6b31e06d2cdb'],
       ],

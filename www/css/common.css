@@ -41,7 +41,7 @@
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 3px 3px 16px 3px;
+    border-radius: 0 0 16px 0;
     padding: 10px 24px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -67,6 +67,16 @@
 .search-btn-teal:focus,
 .search-btn-blue:focus {
     outline: none;
+}
+
+/* Reusable title highlight underline */
+.title-highlight {
+    position: absolute;
+    background-color: #dff4f3;
+    height: 20px;
+    width: 195px;
+    bottom: -8px;
+    z-index: 0;
 }
 
 /* Global Typography Scale */

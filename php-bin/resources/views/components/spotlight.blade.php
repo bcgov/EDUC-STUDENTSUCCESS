@@ -4,8 +4,8 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="spotlight-title">
-                    In the <span class="highlight-cyan">Spotlight...</span>
+                <h2 class="spotlight-title spotlight-heading">
+                    In the Spotlight...
                 </h2>
             </div>
         </div>
@@ -27,7 +27,7 @@
 
         <!-- Right Content Column -->
         <div class="col-12 col-md-7 ps-md-5">
-            <h2 class="spotlight-heading mb-3">Student Success has a fresh new look - shaped by you.</h2>
+            <h2 class="spotlight-sub-heading mb-3">Student Success has a fresh new look - shaped by you.</h2>
             <p class="spotlight-text mb-4">
                 The Student Success website has a new look and feel – same great site, 
                 with updated dashboards, visual stories and insights designed to help 

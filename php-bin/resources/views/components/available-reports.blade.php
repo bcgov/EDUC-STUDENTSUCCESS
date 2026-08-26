@@ -1,13 +1,20 @@
 <link href="/css/available-reports.css" rel="stylesheet" type="text/css">
 
 <section class="available-reports-section">
-    <div class="container">
+    <div class="container position-relative">
+        <!-- Top Right Background Decorative Icons -->
+        <div class="d-none d-lg-block position-absolute" style="top: 340px; right: -373px; width: 35%; opacity: 0.35; pointer-events: none; z-index: 0;">
+            <img src="/img/refresh-img/available-reports-grey-icon-set.png" class="img-fluid" alt="Decorative background icons">
+        </div>
+        <!-- Bottom Left Background Decorative Icons -->
+        <div class="d-none d-lg-block position-absolute" style="bottom: 56px; left: -222px; width: 35%; opacity: 0.35; pointer-events: none; z-index: 0;">
+            <img src="/img/refresh-img/available-reports-grey-icon-set.png" class="img-fluid" alt="Decorative background icons">
+        </div>
         
         <div class="mb-4 position-relative w-100 d-flex align-items-end" style="min-height: 70px;">
             <!-- Left side: Heading with highlight -->
             <div class="position-relative">
-                <div class="position-absolute" style="background-color: #dff4f3; height: 20px; width: 140px; bottom: 4px; left: -4px; z-index: 0;"></div>
-                <h2 class="spotlight-title m-0 position-relative" style="z-index: 1;">Available Reports</h2>
+                <h2 class="spotlight-title m-0 position-relative reports-heading" style="z-index: 1;">Available Reports</h2>
             </div>
 
  
@@ -69,7 +76,7 @@
             <div class="row">
                 
                 <!-- Calendar Card -->
-                <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="all district intellectual human-social career focus childcare">
+                <div class="col-6 col-md-4 col-lg-2-5 mb-4 report-wrapper highlight" data-categories="all district intellectual human-social career focus childcare">
                     <div class="calendar-card h-100">
                         <div class="d-flex align-items-center justify-content-center mb-3" style="gap: 15px;">
                             <i class="fas fa-calendar-check fa-2x" style="color: #1a365d;"></i>
@@ -79,23 +86,23 @@
                     </div>
                 </div>
 
-                <!-- District Cards -->
+                <!-- District Cards (Navy) -->
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="district intellectual">
-                    <a href="/reports/demographic-information" class="report-card bg-gradient-teal">
+                    <a href="/reports/demographic-information" class="report-card bg-gradient-navy">
                         <img src="/img/refresh-img/demographic-icon.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Demographic<br>Information</h3>
                     </a>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="district human-social">
-                    <a href="/reports/key-contacts" class="report-card bg-gradient-teal">
+                    <a href="/reports/key-contacts" class="report-card bg-gradient-navy">
                         <img src="/img/refresh-img/key-contacts.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Key<br>Contacts</h3>
                     </a>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="district">
-                    <a href="/reports/financial-information" class="report-card bg-gradient-teal">
+                    <a href="/reports/financial-information" class="report-card bg-gradient-navy">
                         <img src="/img/refresh-img/financial-info.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Financial<br>Information</h3>
                     </a>
@@ -130,13 +137,14 @@
                     </a>
                 </div>
 
-                <!-- Other Cards -->
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="district focus">
-                    <a href="/reports/students-entering-school" class="report-card bg-gradient-teal">
+                    <a href="/reports/students-entering-school" class="report-card bg-gradient-pink">
                         <img src="/img/refresh-img/student-characteristics.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Student<br>Characteristics<br>Entering School</h3>
                     </a>
                 </div>
+
+                <!-- Other Cards (Teal) -->
 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="intellectual human-social focus">
                     <a href="/reports/student-learning-survey" class="report-card bg-gradient-teal">
@@ -173,35 +181,35 @@
                     </a>
                 </div>
                 
+                <!-- Child Care Cards (Orange) -->
+                <div class="col-lg-1-5 d-none d-lg-block mb-4"></div>
+
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="childcare">
-                    <a href="/reports/child-care-spaces" class="report-card bg-gradient-teal">
+                    <a href="/reports/child-care-spaces" class="report-card bg-gradient-orange">
                         <img src="/img/refresh-img/child-care.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Child Care<br>Spaces</h3>
                     </a>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="childcare">
-                    <a href="/reports/supporting-families" class="report-card bg-gradient-teal">
+                    <a href="/reports/supporting-families" class="report-card bg-gradient-orange">
                         <img src="/img/refresh-img/supporting-families.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Supporting<br>Families</h3>
                     </a>
                 </div>
                 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="childcare">
-                    <a href="/reports/supporting-workers" class="report-card bg-gradient-teal">
+                    <a href="/reports/supporting-workers" class="report-card bg-gradient-orange">
                         <img src="/img/refresh-img/supporting-workers.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Supporting<br>Workers</h3>
                     </a>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-1-5 mb-4 report-wrapper highlight" data-categories="childcare">
-                    <a href="/reports/accelerated-creation" class="report-card bg-gradient-teal">
+                    <a href="/reports/accelerated-creation" class="report-card bg-gradient-orange">
                         <img src="/img/refresh-img/accelerated-creation.png" class="report-card-icon" alt="Icon">
                         <h3 class="report-card-title">Accelerated<br>Creation</h3>
                     </a>
-                </div>                
-                <div class="col-12 col-md-8 col-lg-2-5 mb-4 report-wrapper highlight" data-categories="childcare text-center">             
-                    <img src="/img/refresh-img/available-reports-grey-icon-set.png" class="img-fluid w-100 rounded" style="object-fit: cover; max-height: 100%;">
                 </div>
             </div>
         </div>
