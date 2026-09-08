@@ -14,7 +14,7 @@
         <div class="mb-4 position-relative w-100 d-flex align-items-end" style="min-height: 70px;">
             <!-- Left side: Heading with highlight -->
             <div class="position-relative">
-                <h2 class="spotlight-title m-0 position-relative reports-heading" style="z-index: 1;">Available Reports</h2>
+                <h2 id="reports" class="spotlight-title m-0 position-relative reports-heading" style="z-index: 1;">Available Reports</h2>
             </div>
 
  
@@ -79,7 +79,7 @@
                 <div class="col-6 col-md-4 col-lg-2-5 mb-4 report-wrapper highlight" data-categories="all district intellectual human-social career focus childcare">
                     <div class="calendar-card h-100">
                         <div class="d-flex align-items-center justify-content-center mb-3" style="gap: 15px;">
-                            <i class="fas fa-calendar-check fa-2x" style="color: #1a365d;"></i>
+                            <img src="/img/refresh-img/available-reports-calendar-icon.png" class="h-50" alt="Icon">
                             <p class="calendar-title m-0 text-start">Ministry data release<br>calendar 2025 / 2026</p>
                         </div>
                         <a href="#" class="search-btn-blue">SEE CALENDAR +</a>

@@ -34,4 +34,63 @@
         
     </div>
 
+    <!-- Hero Overlay Navigation -->
+    <div class="position-absolute w-100 pb-3 pb-md-4" style="bottom: 0; z-index: 20;">
+        <div class="container-fluid px-3 px-xl-5" style="max-width: 1400px;">
+            <div class="row justify-content-center align-items-center g-3 g-xl-0">
+                <div class="col-6 col-md-4 col-xl-auto d-flex justify-content-center">
+                    <a href="#explore-data" class="hero-overlay-link">
+                        <img src="/img/refresh-img/ss-header-cookie-explore-icon.png" alt="Explore">
+                        <span>EXPLORE<br>B.C. K-12 DATA</span>
+                    </a>
+                </div>
+                <div class="col-auto d-none d-xl-block">
+                    <div class="hero-overlay-separator"></div>
+                </div>
+                <div class="col-6 col-md-4 col-xl-auto d-flex justify-content-center">
+                    <a href="#dashboard" class="hero-overlay-link">
+                        <img src="/img/refresh-img/ss_header-cookie-dashboard-icon.png" alt="Dashboard">
+                        <span>DASHBOARD OF<br>PROVINCIAL DATA</span>
+                    </a>
+                </div>
+                <div class="col-auto d-none d-xl-block">
+                    <div class="hero-overlay-separator"></div>
+                </div>
+                <div class="col-6 col-md-4 col-xl-auto d-flex justify-content-center">
+                    <a href="#reports" class="hero-overlay-link">
+                        <img src="/img/refresh-img/header-cookie-available-reports-icon.png" alt="Available Reports">
+                        <span>AVAILABLE<br>REPORTS</span>
+                    </a>
+                </div>
+                <div class="col-auto d-none d-xl-block">
+                    <div class="hero-overlay-separator"></div>
+                </div>
+                <div class="col-6 col-md-4 col-xl-auto d-flex justify-content-center">
+                    <a href="#spotlight" class="hero-overlay-link">
+                        <img src="/img/refresh-img/header-cookie-in-the-spotlight-icon.png" alt="In The Spotlight">
+                        <span>IN THE<br>SPOTLIGHT</span>
+                    </a>
+                </div>
+                <div class="col-auto d-none d-xl-block">
+                    <div class="hero-overlay-separator"></div>
+                </div>
+                <div class="col-6 col-md-4 col-xl-auto d-flex justify-content-center">
+                    <a href="#data-literacy" class="hero-overlay-link">
+                        <img src="/img/refresh-img/header-cookie-data-literacy-icon.png" alt="Data Literacy">
+                        <span>DATA<br>LITERACY</span>
+                    </a>
+                </div>
+                <div class="col-auto d-none d-xl-block">
+                    <div class="hero-overlay-separator"></div>
+                </div>
+                <div class="col-6 col-md-4 col-xl-auto d-flex justify-content-center">
+                    <a href="#student-learning" class="hero-overlay-link">
+                        <img src="/img/refresh-img/header-cookie-contin-improvement-icon.png" alt="Continuous Improvement Program">
+                        <span>STUDENT <br> LEARNING</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>

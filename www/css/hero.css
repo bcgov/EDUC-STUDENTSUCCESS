@@ -9,8 +9,8 @@
 /* Custom rounded indicators to match design mockup */
 .custom-carousel-indicators {
     position: absolute;
-    right: 5%;
-    bottom: 2rem;
+    right: -8%;
+    bottom: 4rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -72,5 +72,55 @@
     }
     .custom-carousel-caption p {
         font-size: 1rem;
+    }
+}
+
+.hero-overlay-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hero-overlay-link:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+    color: #ffffff;
+}
+
+.hero-overlay-link img {
+    height: 40px; 
+    width: auto;
+    margin-right: 12px;
+}
+
+.hero-overlay-link span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.hero-overlay-separator {
+    width: 25px;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 0 15px;
+    opacity: 0.8;
+}
+
+/* Reduce size by 30% on smaller laptop screens and below */
+@media (max-width: 1800px) {
+    .hero-overlay-link img {
+        height: 28px; /* Reduced from 40px */
+    }
+    .hero-overlay-link span {
+        font-size: 0.6rem; /* Reduced from 0.85rem */
+    }
+    .hero-overlay-separator {
+        width: 15px;
+        margin: 0 10px;
     }
 }

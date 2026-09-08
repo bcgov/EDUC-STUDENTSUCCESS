@@ -44,31 +44,11 @@
     display: inline-block;
 }
 
-.spotlight-image-wrapper {
-    position: relative;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 200px;
-    border-bottom-right-radius: 200px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 100%;
-    max-width: 350px;
-}
 
 .spotlight-image {
     width: 100%;
     height: auto;
     display: block;
-}
-
-.decorative-shape {
-    position: absolute;
-    bottom: -15px;
-    right: 25px;
-    width: 80px;
-    height: 80px;
-    z-index: 10;
 }
 
 .decorative-circle {
@@ -154,13 +134,4 @@
 .spotlight-icon-arrow {
     color: #003366;
     font-weight: 700;
-}
-
-
-@media (min-width: 768px) {
-    .spotlight-image-wrapper {
-        border-top-right-radius: 300px;
-        border-bottom-right-radius: 300px;
-        max-width: 450px;
-    }
 }

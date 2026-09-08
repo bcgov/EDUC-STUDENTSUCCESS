@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="spotlight-title spotlight-heading">
+                <h2 id="spotlight" class="spotlight-title spotlight-heading">
                     In the Spotlight...
                 </h2>
             </div>
@@ -12,17 +12,7 @@
         <div class="row align-items-center mt-4">
         <!-- Left Image Column -->
         <div class="col-12 col-md-5 mb-5 mb-md-0 d-flex justify-content-center">
-            <div class="spotlight-image-container">
-                <div class="spotlight-image-wrapper">
-                    <!-- Placeholder image matching the vibe of the mock -->
-                    <img src="/img/refresh-img/ss-home-spotlight-graphic.png"alt="Spotlight Feature" class="img-fluid spotlight-image">
-                </div>
-                <!-- Decorative Elements -->
-                <div class="decorative-shape">
-                    <div class="decorative-circle"></div>
-                    <div class="decorative-square"></div>
-                </div>
-            </div>
+            <img src="/img/refresh-img/ss-home-spotlight-graphic.png"alt="Spotlight Feature" class="img-fluid spotlight-image">
         </div>
 
         <!-- Right Content Column -->

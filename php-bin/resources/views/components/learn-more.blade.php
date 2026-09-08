@@ -7,7 +7,7 @@
             
             <!-- Top Left Section -->
             <div class="lm-top-left d-flex flex-column pe-lg-4">   
-                <div class="mb-4"><h2 class="learn-more-heading learn-more-title-highlight">Data Literacy</h2></div>   
+                <div class="mb-4"><h2 id="data-literacy" class="learn-more-heading learn-more-title-highlight">Data Literacy</h2></div>   
                 
                 <div class="position-relative mb-4 me-md-3 mt-2">
                     <img class="img-fluid w-100" src="/img/refresh-img/ss-home-data-literacy-graphic.png" alt="Data Literacy Graphic" />
@@ -28,7 +28,7 @@
             
             <!-- Top Right Section -->
             <div class="lm-top-right d-flex flex-column ps-lg-4">
-                <h2 class="learn-more-heading pe-3 learn-more-title-highlight">Student Learning</h2>
+                <h2 id="student-learning" class="learn-more-heading pe-3 learn-more-title-highlight">Student Learning</h2>
                 <img class="img-fluid enhanced-learning-icon d-none d-md-block mt-4" src="/img/refresh-img/student-learning-image.png" alt="Student Learning image" />          
             </div>
             

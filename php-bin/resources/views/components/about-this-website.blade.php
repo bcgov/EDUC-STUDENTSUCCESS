@@ -3,7 +3,7 @@
 <link href="/css/about-this-website.css" rel="stylesheet" type="text/css">
 
         <div class="container">
-            <h2 class="about-title" style="text-align:left;"><span class="about-heading-highlight">Overview of B.C. Public School Data</span></h2>
+            <h2 id="dashboard" class="about-title" style="text-align:left;"><span class="about-heading-highlight">Overview of B.C. Public School Data</span></h2>
         </div>
         <div class="container">
             <div class="row frontPage-charts justify-content-center">
