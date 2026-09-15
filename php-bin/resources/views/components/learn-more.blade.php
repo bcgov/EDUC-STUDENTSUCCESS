@@ -29,7 +29,10 @@
             <!-- Top Right Section -->
             <div class="lm-top-right d-flex flex-column ps-lg-4">
                 <h2 id="student-learning" class="learn-more-heading pe-3 learn-more-title-highlight">Student Learning</h2>
-                <img class="img-fluid enhanced-learning-icon d-none d-md-block mt-4" src="/img/refresh-img/student-learning-image.png" alt="Student Learning image" />          
+                <div class="fesl-image-wrapper mt-4">
+                    <img class="fesl-icon d-none d-md-block" src="/img/refresh-img/SS_FESLicon.png" alt="Student Success FESL Icon" />
+                    <img class="img-fluid enhanced-learning-icon d-none d-md-block" src="/img/refresh-img/student-learning-image.png" alt="Student Learning image" />
+                </div>          
             </div>
             
             <!-- Bottom Right Section -->

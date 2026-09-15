@@ -1,8 +1,9 @@
 @extends('layout') @section('content')
+<link href="/css/report-detail.css" rel="stylesheet" type="text/css">
 <div class="container py-5">
     <nav aria-label="breadcrumb" class="mb-4">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Available Reports</a></li>
+            <li class="breadcrumb-item"><a href="/#reports">Available Reports</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{ ucwords($reportTitle) }}</li>
         </ol>
     </nav>
@@ -93,12 +94,93 @@
 
                 </div>
 
+            @elseif($slug === 'graduation-assessment' && !empty($pages) && count($pages) >= 4)
+                {{-- ===== Graduation Assessment: 2 iframe sections with toggle buttons ===== --}}
+
+                {{-- Iframe 1: Grad Assessment District --}}
+                <div class="ga-iframe-section mb-5">
+                    <div class="ga-toggle-buttons mb-3" data-iframe-target="ga-iframe-1">
+                        <button type="button"
+                                class="btn btn-ga-toggle active"
+                                data-page="{{ $pages[0]['pageName'] }}">
+                            {{ $pages[0]['label'] }}
+                        </button>
+                        <button type="button"
+                                class="btn btn-ga-toggle"
+                                data-page="{{ $pages[1]['pageName'] }}">
+                            {{ $pages[1]['label'] }}
+                        </button>
+                    </div>
+                    <iframe id="ga-iframe-1"
+                            title="{{ $pages[0]['label'] }}"
+                            class="ga-report-iframe"
+                            src="{{ $baseEmbedUrl }}&pageName={{ $pages[0]['pageName'] }}"
+                            frameborder="0"
+                            allowFullScreen="true"></iframe>
+                </div>
+
+                {{-- Show More / Hide toggle --}}
+                <div class="text-center mb-4">
+                    <button type="button" id="ga-show-more-btn" class="btn btn-ga-show-more">
+                        <span id="ga-show-more-text">Show More</span>
+                        <span id="ga-show-more-icon" class="ga-chevron-icon">&#9660;</span>
+                    </button>
+                </div>
+
+                {{-- Collapsible container for iframe 2 --}}
+                <div id="ga-extra-iframes" class="ga-collapsible">
+
+                    {{-- Iframe 2: Grad Assessment District Split --}}
+                    <div class="ga-iframe-section mb-5">
+                        <div class="ga-toggle-buttons mb-3" data-iframe-target="ga-iframe-2">
+                            <button type="button"
+                                    class="btn btn-ga-toggle active"
+                                    data-page="{{ $pages[2]['pageName'] }}">
+                                {{ $pages[2]['label'] }}
+                            </button>
+                            <button type="button"
+                                    class="btn btn-ga-toggle"
+                                    data-page="{{ $pages[3]['pageName'] }}">
+                                {{ $pages[3]['label'] }}
+                            </button>
+                        </div>
+                        <iframe id="ga-iframe-2"
+                                title="{{ $pages[2]['label'] }}"
+                                class="ga-report-iframe"
+                                src="{{ $baseEmbedUrl }}&pageName={{ $pages[2]['pageName'] }}"
+                                frameborder="0"
+                                allowFullScreen="true"></iframe>
+                    </div>
+                    {{-- Iframe 3: Grad Assessment Comparison --}}
+                    <div class="ga-iframe-section mb-5">
+                        <div class="ga-toggle-buttons mb-3" data-iframe-target="ga-iframe-3">
+                            <button type="button"
+                                    class="btn btn-ga-toggle active"
+                                    data-page="{{ $pages[4]['pageName'] }}">
+                                {{ $pages[4]['label'] }}
+                            </button>
+                            <button type="button"
+                                    class="btn btn-ga-toggle"
+                                    data-page="{{ $pages[5]['pageName'] }}">
+                                {{ $pages[5]['label'] }}
+                            </button>
+                        </div>
+                        <iframe id="ga-iframe-3"
+                                title="{{ $pages[4]['label'] }}"
+                                class="ga-report-iframe"
+                                src="{{ $baseEmbedUrl }}&pageName={{ $pages[4]['pageName'] }}"
+                                frameborder="0"
+                                allowFullScreen="true"></iframe>
+                    </div>
+
+                </div>
+
             @else
                 {{-- ===== Default: dropdown page selector + single iframe ===== --}}
                 @if(!empty($pages) && count($pages) > 1)
                     <div class="mb-3">
                         <label for="page-selector" class="form-label fw-semibold">Select Page</label>
-                        <select id="page-selector" class="form-select" style="max-width: 300px;">
+                        <select id="page-selector" class="form-select">
                             @foreach($pages as $page)
                                 <option value="{{ $page['pageName'] }}">{{ $page['label'] }}</option>
                             @endforeach
@@ -106,12 +188,13 @@
                     </div>
                 @endif
                 @if($embedUrl)
-                    <iframe id="report-iframe"
-                            title="{{ ucwords($reportTitle) }}"
-                            style="width: 100%; height: auto; aspect-ratio: 16 / 9; border: none;"
-                            src="{{ $embedUrl }}"
-                            frameborder="0"
-                            allowFullScreen="true"></iframe>
+                    <div id="report-iframe-wrapper">
+                        <iframe id="report-iframe"
+                                title="{{ ucwords($reportTitle) }}"
+                                src="{{ $embedUrl }}"
+                                frameborder="0"
+                                allowFullScreen="true"></iframe>
+                    </div>
                 @else
                     <p>No report available yet.</p>
                 @endif
@@ -122,92 +205,7 @@
 
 {{-- ===== FSA toggle button script ===== --}}
 @if($slug === 'foundation-skills-assessment' && !empty($pages) && count($pages) >= 4)
-<style>
-    .fsa-report-iframe {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
-        border: none;
-    }
 
-    .fsa-toggle-buttons {
-        display: flex;
-        gap: 0;
-    }
-
-    .btn-fsa-toggle {
-        background-color: #f4f6f9;
-        color: #003366;
-        border: 1px solid #e0e0e0;
-        padding: 10px 24px;
-        font-weight: 600;
-        font-size: 0.95rem;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        transition: background-color 0.2s ease, color 0.2s ease;
-        cursor: pointer;
-    }
-
-    .btn-fsa-toggle:first-child {
-        border-radius: 3px 0 0 3px;
-    }
-
-    .btn-fsa-toggle:last-child {
-        border-radius: 0 3px 16px 0;
-    }
-
-    .btn-fsa-toggle:hover {
-        background-color: #e0fdfd;
-        color: #003366;
-    }
-
-    .btn-fsa-toggle.active {
-        background-color: #003366;
-        color: #ffffff;
-        border-color: #003366;
-    }
-
-    /* Show More / Hide collapsible */
-    .fsa-collapsible {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease;
-    }
-
-    .fsa-collapsible.expanded {
-        max-height: 5000px;
-    }
-
-    .btn-fsa-show-more {
-        background-color: #003366;
-        color: #ffffff;
-        border: none;
-        padding: 10px 30px;
-        font-weight: 600;
-        font-size: 0.95rem;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        border-radius: 3px 3px 16px 3px;
-        transition: background-color 0.2s ease;
-        cursor: pointer;
-    }
-
-    .btn-fsa-show-more:hover {
-        background-color: #0d2140;
-        color: #ffffff;
-    }
-
-    .fsa-chevron-icon {
-        display: inline-block;
-        margin-left: 8px;
-        font-size: 0.75rem;
-        transition: transform 0.3s ease;
-    }
-
-    .fsa-chevron-icon.rotated {
-        transform: rotate(180deg);
-    }
-</style>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var baseUrl = @json($baseEmbedUrl);
@@ -235,6 +233,45 @@
         var extraIframes = document.getElementById('fsa-extra-iframes');
         var showMoreText = document.getElementById('fsa-show-more-text');
         var showMoreIcon = document.getElementById('fsa-show-more-icon');
+
+        showMoreBtn.addEventListener('click', function () {
+            var isExpanded = extraIframes.classList.toggle('expanded');
+            showMoreText.textContent = isExpanded ? 'Hide' : 'Show More';
+            showMoreIcon.classList.toggle('rotated', isExpanded);
+        });
+    });
+</script>
+
+{{-- ===== Graduation Assessment toggle button script ===== --}}
+@elseif($slug === 'graduation-assessment' && !empty($pages) && count($pages) >= 4)
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var baseUrl = @json($baseEmbedUrl);
+
+        document.querySelectorAll('.ga-toggle-buttons').forEach(function (group) {
+            var iframeId = group.getAttribute('data-iframe-target');
+            var iframe   = document.getElementById(iframeId);
+            var buttons  = group.querySelectorAll('.btn-ga-toggle');
+
+            buttons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    // Update active state within this button group
+                    buttons.forEach(function (b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+
+                    // Switch the iframe src
+                    iframe.src = baseUrl + '&pageName=' + btn.getAttribute('data-page');
+                    iframe.title = btn.textContent.trim();
+                });
+            });
+        });
+
+        // Show More / Hide toggle
+        var showMoreBtn  = document.getElementById('ga-show-more-btn');
+        var extraIframes = document.getElementById('ga-extra-iframes');
+        var showMoreText = document.getElementById('ga-show-more-text');
+        var showMoreIcon = document.getElementById('ga-show-more-icon');
 
         showMoreBtn.addEventListener('click', function () {
             var isExpanded = extraIframes.classList.toggle('expanded');

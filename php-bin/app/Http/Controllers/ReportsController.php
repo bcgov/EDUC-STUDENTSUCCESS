@@ -18,7 +18,7 @@ class ReportsController extends Controller {
       'student-satisfaction',
       'post-secondary-career-prep',
       'prov-exams',
-	    'grad-assess',		
+	    'graduation-assessment',		
       'transition-to-post-secondary'
 
     );
@@ -31,7 +31,7 @@ class ReportsController extends Controller {
       'completion-rates',
       'contextual-information',
       'foundation-skills-assessment',
-      'grad-assess',
+      'graduation-assessment',
       'grade-to-grade-transitions',
       'post-secondary-career-prep',
       'prov-exams',
@@ -49,7 +49,7 @@ class ReportsController extends Controller {
       'completion-rates'             => '',  // TODO: add embed URL
       'contextual-information'       => '',  // TODO: add embed URL
       'foundation-skills-assessment' => 'https://app.powerbi.com/view?r=eyJrIjoiZTY5YTdlNDEtNThhNy00NjkzLWJhNTUtNzI5YzM3MDJmMjk1IiwidCI6IjZmZGI1MjAwLTNkMGQtNGE4YS1iMDM2LWQzNjg1ZTM1OWFkYyJ9&pageName=bb597b00d8e7047e2da5',
-      'grad-assess'                  => '',  // TODO: add embed URL
+      'graduation-assessment'        => 'https://app.powerbi.com/view?r=eyJrIjoiYzUyMDc1NzYtMTc1My00OThhLTgzNTQtMTYwODRkMDgyNTNmIiwidCI6IjZmZGI1MjAwLTNkMGQtNGE4YS1iMDM2LWQzNjg1ZTM1OWFkYyJ9&pageName=780ec6d7c3f5946114be',  // TODO: add embed URL
       'grade-to-grade-transitions'   => '',  // TODO: add embed URL
       'post-secondary-career-prep'   => '',  // TODO: add embed URL
       'prov-exams'                   => '',  // TODO: add embed URL
@@ -63,6 +63,14 @@ class ReportsController extends Controller {
    * Each entry maps a report slug to an array of ['label' => ..., 'pageName' => ...].
    */
   private const REPORT_PAGES = [
+      'graduation-assessment' => [
+          ['label' => 'Grad Assessment District by Year', 'pageName' => '780ec6d7c3f5946114be'],
+          ['label' => 'Grad Assessment District by Demographic', 'pageName' => '03404235b3a58ba7bf3d'],
+          ['label' => 'Grad Assessment District Split by Year', 'pageName' => '689b6e51d6e3805c2b45'],
+          ['label' => 'Grad Assessment District Split by Demographic', 'pageName' => 'c20e8c0ac1fc2869422d'],
+          ['label' => 'Grad Assessment Comparison by Year', 'pageName' => '4a7aa4fe4266a8b0b936'],
+          ['label' => 'Grad Assessment Comparison by Demographic', 'pageName' => '4c6525aa6b31e06d2cdb'],
+      ],
       'foundation-skills-assessment' => [
           ['label' => 'FSA District by Year', 'pageName' => '780ec6d7c3f5946114be'],
           ['label' => 'FSA District by Demographic', 'pageName' => '03404235b3a58ba7bf3d'],

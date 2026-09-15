@@ -6,6 +6,25 @@
     background-color: #f7f8fa;
 }
 
+.fesl-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.fesl-icon {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: -20px;
+    right: 6px;
+    z-index: 2;
+}
+
+@media (max-width: 767.98px) {
+    .fesl-icon {
+        display: none;
+    }
+}
 /* Custom Grid for aligning top and bottom sections across columns */
 .learn-more-grid {
     display: flex;

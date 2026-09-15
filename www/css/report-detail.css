@@ -1,0 +1,228 @@
+/* =============================================
+   Report Detail Page Styles
+   ============================================= */
+
+/* --- Default report iframe --- */
+#report-iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+/* Default iframe footer overlay */
+#report-iframe-wrapper {
+    position: relative;
+}
+
+#report-iframe-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 67px;
+    background: white;
+    pointer-events: none;
+}
+
+/* --- Default page selector --- */
+#page-selector {
+    max-width: 300px;
+}
+
+/* =============================================
+   FSA (Foundation Skills Assessment) Styles
+   ============================================= */
+
+/* Iframe footer overlay – hides the Power BI status bar */
+.fsa-iframe-section,
+.ga-iframe-section {
+    position: relative;
+}
+
+.fsa-iframe-section::after,
+.ga-iframe-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 67px;
+    background: white;
+    pointer-events: none;       /* allow clicks to pass through if needed */
+}
+
+.fsa-report-iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+.fsa-toggle-buttons {
+    display: flex;
+    gap: 0;
+}
+
+.btn-fsa-toggle {
+    background-color: #f4f6f9;
+    color: #003366;
+    border: 1px solid #e0e0e0;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-fsa-toggle:first-child {
+    border-radius: 3px 0 0 3px;
+}
+
+.btn-fsa-toggle:last-child {
+    border-radius: 0 3px 16px 0;
+}
+
+.btn-fsa-toggle:hover {
+    background-color: #e0fdfd;
+    color: #003366;
+}
+
+.btn-fsa-toggle.active {
+    background-color: #003366;
+    color: #ffffff;
+    border-color: #003366;
+}
+
+/* Show More / Hide collapsible */
+.fsa-collapsible {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.fsa-collapsible.expanded {
+    max-height: 5000px;
+}
+
+.btn-fsa-show-more {
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 10px 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 3px 3px 16px 3px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-fsa-show-more:hover {
+    background-color: #0d2140;
+    color: #ffffff;
+}
+
+.fsa-chevron-icon {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.fsa-chevron-icon.rotated {
+    transform: rotate(180deg);
+}
+
+/* =============================================
+   GA (Graduation Assessment) Styles
+   ============================================= */
+
+.ga-report-iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+.ga-toggle-buttons {
+    display: flex;
+    gap: 0;
+}
+
+.btn-ga-toggle {
+    background-color: #f4f6f9;
+    color: #003366;
+    border: 1px solid #e0e0e0;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-ga-toggle:first-child {
+    border-radius: 3px 0 0 3px;
+}
+
+.btn-ga-toggle:last-child {
+    border-radius: 0 3px 16px 0;
+}
+
+.btn-ga-toggle:hover {
+    background-color: #e0fdfd;
+    color: #003366;
+}
+
+.btn-ga-toggle.active {
+    background-color: #003366;
+    color: #ffffff;
+    border-color: #003366;
+}
+
+/* Show More / Hide collapsible */
+.ga-collapsible {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.ga-collapsible.expanded {
+    max-height: 5000px;
+}
+
+.btn-ga-show-more {
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 10px 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 3px 3px 16px 3px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-ga-show-more:hover {
+    background-color: #0d2140;
+    color: #ffffff;
+}
+
+.ga-chevron-icon {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.ga-chevron-icon.rotated {
+    transform: rotate(180deg);
+}
