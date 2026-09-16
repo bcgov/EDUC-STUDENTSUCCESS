@@ -166,7 +166,7 @@ public function getSelectedResponse( $district, $year, $grade, $subject, $exam_l
   }
   public function getSchoolDistrictsID($district){
 	$schoolDistrictsID = DB::table('EDW_RESEARCH.FSA_ILR_SCHOOL_OR_DISTRICT_ID')
-	->where('district', '=', $district)
+	->where('district', '=', $district . ' Public Schools')
 	->orderBy('school_or_district_name','asc')
 	->get();
     return response()->json($schoolDistrictsID, 200);
