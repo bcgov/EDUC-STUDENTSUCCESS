@@ -93,6 +93,10 @@ php-bin/resources/assets/scss/breakpoints/_notes/dwsync.xml
 php-bin/resources/assets/scss/components/_notes/dwsync.xml
 php-bin/resources/lang/en/_notes/dwsync.xml
 
+# Graphify
+graphify-out/
+**/graphify-out/
+
 # VS Code
 .vscode/settings.json
 AGENTS.md
