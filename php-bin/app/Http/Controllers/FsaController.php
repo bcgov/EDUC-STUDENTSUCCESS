@@ -2,194 +2,110 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Http\Controllers\ReportsController;
-
-// https://stackoverflow.com/a/32772686/1171790
-use Helper;
-
-use App\Fsa;
-use App\FSASchoolOrDistrictID;
 use App\FSASchoolOrDistrictIDAGG;
-use App\FSASchoolYear;
 use DB;
 
 class FsaController extends Controller
 {
+	// A_SELECTED_RESPONSE stores gender as Man/Boy and Woman/Girl
+	private static $selectedResponseGenders = [
+		'Male'   => 'Man/Boy',
+		'Female' => 'Woman/Girl',
+	];
 
-
-	//public function getSelectedResponse($school_type,$district,$year,$grade,$subject,$exam_language,$gender,$francophone,$french_immersion,$ell,$indigenous) {
 	public function getSchoolDistricts()
 	{
-		$selectedResponse = DB::table('EDW_RESEARCH.FSA_ILR_SCHOOL_OR_DISTRICT_ID')->get();
-		return response()->json($selectedResponse, 200);
+		return response()->json(DB::table('EDW_RESEARCH.FSA_ILR_SCHOOL_OR_DISTRICT_ID')->get(), 200);
 	}
+
 	public function getSchoolYears()
 	{
-		$selectedResponse = DB::table('EDW_RESEARCH.fsa_ilr_school_year')->get();
-		return response()->json($selectedResponse, 200);
+		return response()->json(DB::table('EDW_RESEARCH.fsa_ilr_school_year')->get(), 200);
 	}
 
 	public function getSelectedResponse($district, $year, $grade, $subject, $exam_language, $gender, $francophone, $french_immersion, $ell, $indigenous)
 	{
-		// Man/Boy and Woman/Girl
-		$fixedYear = str_replace('-', '/', $year);
-
-		if ($gender == 'all') {
-			$gender = null;
+		if (isset(self::$selectedResponseGenders[$gender])) {
+			$gender = self::$selectedResponseGenders[$gender];
 		}
 
-		if ($gender == 'Male') {
-			$gender = "Man/Boy";
-		}
-
-		if ($gender == 'Female') {
-			$gender = "Woman/Girl";
-		}
-
-		if ($francophone == 'all') {
-			$francophone = null;
-		}
-
-		if ($french_immersion == 'all') {
-			$french_immersion = null;
-		}
-
-		if ($ell == 'all') {
-			$ell = null;
-		}
-
-		if ($indigenous == 'all') {
-			$indigenous = null;
-		}
-
-		$selectedResponse = DB::table('EDW_RESEARCH.A_SELECTED_RESPONSE')
-
-			->where('SCHOOL_OR_DISTRICT_ID', '=', $district)
-			->where('YEAR', '=', $fixedYear)
-			->where('GRADE', '=', $grade)
-			->where('SUBJECT', '=', $subject)
-			->where('EXAM_LANGUAGE', '=', $exam_language)
-			->where('GENDER', '=', $gender)
-			->where('FRANCOPHONE', '=', $francophone)
-			->where('FRENCH_IMMERSION', '=', $french_immersion)
-			->where('ELL', '=', $ell)
-			->where('INDIGENOUS', '=', $indigenous)
-			->get();
-
-		return response()->json($selectedResponse, 200);
+		return $this->fsaResults('EDW_RESEARCH.A_SELECTED_RESPONSE', $district, $year, $grade, $subject, $exam_language, $gender, $francophone, $french_immersion, $ell, $indigenous);
 	}
+
 	public function getConstructedResponse($district, $year, $grade, $subject, $exam_language, $gender, $francophone, $french_immersion, $ell, $indigenous)
 	{
-		$fixedYear = str_replace('-', '/', $year);
-
-		if ($gender == 'all') {
-			$gender = null;
-		}
-
-		if ($francophone == 'all') {
-			$francophone = null;
-		}
-
-		if ($french_immersion == 'all') {
-			$french_immersion = null;
-		}
-
-		if ($ell == 'all') {
-			$ell = null;
-		}
-
-		if ($indigenous == 'all') {
-			$indigenous = null;
-		}
-
-		$constructedResponse = DB::table('EDW_RESEARCH.B_CONSTRUCTED_RESPONSE')
-			->where('SCHOOL_OR_DISTRICT_ID', '=', $district)
-			->where('YEAR', '=', $fixedYear)
-			->where('GRADE', '=', $grade)
-			->where('SUBJECT', '=', $subject)
-			->where('EXAM_LANGUAGE', '=', $exam_language)
-			->where('GENDER', '=', $gender)
-			->where('FRANCOPHONE', '=', $francophone)
-			->where('FRENCH_IMMERSION', '=', $french_immersion)
-			->where('ELL', '=', $ell)
-			->where('INDIGENOUS', '=', $indigenous)
-			->get();
-
-		return response()->json($constructedResponse, 200);
+		return $this->fsaResults('EDW_RESEARCH.B_CONSTRUCTED_RESPONSE', $district, $year, $grade, $subject, $exam_language, $gender, $francophone, $french_immersion, $ell, $indigenous);
 	}
 
 	public function getCognitiveLevels($district, $year, $grade, $subject, $exam_language, $gender, $francophone, $french_immersion, $ell, $indigenous)
 	{
-		$fixedYear = str_replace('-', '/', $year);
-
-		if ($gender == 'all') {
-			$gender = null;
-		}
-
-		if ($francophone == 'all') {
-			$francophone = null;
-		}
-
-		if ($french_immersion == 'all') {
-			$french_immersion = null;
-		}
-
-		if ($ell == 'all') {
-			$ell = null;
-		}
-
-		if ($indigenous == 'all') {
-			$indigenous = null;
-		}
-
-		$constructedResponse = DB::table('EDW_RESEARCH.C_COGNITIVE_LEVELS')
-			->where('SCHOOL_OR_DISTRICT_ID', '=', $district)
-			->where('YEAR', '=', $fixedYear)
-			->where('GRADE', '=', $grade)
-			->where('SUBJECT', '=', $subject)
-			->where('EXAM_LANGUAGE', '=', $exam_language)
-			->where('GENDER', '=', $gender)
-			->where('FRANCOPHONE', '=', $francophone)
-			->where('FRENCH_IMMERSION', '=', $french_immersion)
-			->where('ELL', '=', $ell)
-			->where('INDIGENOUS', '=', $indigenous)
-			->get();
-
-		return response()->json($constructedResponse, 200);
+		return $this->fsaResults('EDW_RESEARCH.C_COGNITIVE_LEVELS', $district, $year, $grade, $subject, $exam_language, $gender, $francophone, $french_immersion, $ell, $indigenous);
 	}
+
 	public function getSchoolDistrictsAgg()
 	{
 		$schoolDistrictsAgg = FSASchoolOrDistrictIDAGG::select('school_or_district_id', 'school_or_district_name', 'district')
 			->orderBy('school_or_district_id', 'asc')
-			->remember(30) // Cache the result as we are on production server. 
+			->remember(30) // Cache the result as we are on production server.
 			->get()
 			->sortBy('school_or_district_id', SORT_NATURAL | SORT_FLAG_CASE);
 
 		return response()->json($schoolDistrictsAgg, 200);
 	}
+
 	public function getAllSchoolDistrictsAgg()
 	{
 		$allSchoolDistrictsAgg = FSASchoolOrDistrictIDAGG::select('school_or_district_id', 'school_or_district_name', 'district')
-			->where('district', '=', null)
+			->whereNull('district')
 			->orderBy('school_or_district_id', 'desc')
-			->remember(30) // Cache the result as we are on production server. 
+			->remember(30) // Cache the result as we are on production server.
 			->get()
 			->sortBy('school_or_district_id', SORT_NATURAL | SORT_FLAG_CASE);
 
 		return response()->json($allSchoolDistrictsAgg, 200);
 	}
+
 	public function getSchoolDistrictsID($district)
 	{
 		// e.g. "010Public%20Schools" -> "010 Public Schools"
-		$formattedDistrict = urldecode($district);
-		$formattedDistrict = preg_replace('/^(\d+)\s*/', '$1 ', trim($formattedDistrict));
-		$formattedDistrict = preg_replace('/\s+/', ' ', $formattedDistrict);
+		$formattedDistrict = preg_replace(
+			['/^(\d+)\s*/', '/\s+/'],
+			['$1 ', ' '],
+			trim(urldecode($district))
+		);
+
 		$schoolDistrictsID = DB::table('EDW_RESEARCH.FSA_ILR_SCHOOL_OR_DISTRICT_ID')
 			->where('district', '=', $formattedDistrict)
 			->orderBy('school_or_district_name', 'asc')
 			->get();
+
 		return response()->json($schoolDistrictsID, 200);
+	}
+
+	/**
+	 * Run a filtered query against one of the FSA results tables.
+	 * 'all' on a demographic filter matches rows where that column IS NULL.
+	 */
+	private function fsaResults($table, $district, $year, $grade, $subject, $exam_language, $gender, $francophone, $french_immersion, $ell, $indigenous)
+	{
+		$filters = [
+			'SCHOOL_OR_DISTRICT_ID' => $district,
+			'YEAR'                  => str_replace('-', '/', $year),
+			'GRADE'                 => $grade,
+			'SUBJECT'               => $subject,
+			'EXAM_LANGUAGE'         => $exam_language,
+			'GENDER'                => $gender,
+			'FRANCOPHONE'           => $francophone,
+			'FRENCH_IMMERSION'      => $french_immersion,
+			'ELL'                   => $ell,
+			'INDIGENOUS'            => $indigenous,
+		];
+
+		$query = DB::table($table);
+		foreach ($filters as $column => $value) {
+			$query->where($column, '=', $value === 'all' ? null : $value);
+		}
+
+		return response()->json($query->get(), 200);
 	}
 }
