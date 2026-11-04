@@ -28,9 +28,9 @@
   <script src="/js/vega/fetch.min.js"></script>
   <!--<script src="/js/vega/vega.min.js"></script>
   <script src="/js/vega/vega5.js"></script>-->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.33.1/build/vega.min.js" integrity="sha384-NMXhl2TbCXxcN7o4ROC56Funm78m4AylL8gMg/7Kn4YU+wrm23K9l7cY8lDRXQ9d" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.4.0/build/vega-lite.min.js" integrity="sha384-RvXAU3HR7iMA2oPQ8X8jX5KHTpuShIEiFdtfJFd20PnrUGLOPx0E4Em5gsJsbTlj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@5.1.3/build/vega-embed.min.js" integrity="sha384-FelsZmUBj3bc+x2yOv5ZFHE9E0CRyXEM+nN9mZoUIDTHEGoKLnpA20iaseeKTRYy" crossorigin="anonymous"></script>
   {{-- Include Snowplow Analytics on every page. --}}
   @if (App::environment('production'))
   <script type="text/javascript">
@@ -109,7 +109,7 @@
 </head>
 
 <body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" integrity="sha384-UM1JrZIpBwVf5jj9dTKVvGiiZPZTLVoq4sfdvIe9SBumsvCuv6AHDNtEiIb5h1kU" crossorigin="anonymous"></script>
   <script>
     $(function() {
       // bind change event to select

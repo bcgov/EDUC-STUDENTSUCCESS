@@ -46,8 +46,6 @@ Route::get('/provincial-results', 'SchoolDistrictsController@getProvinicialData'
 // Directory page /all/[cities | school-districts]
 Route::get('/all/cities', 'SchoolsController@getAllSchoolCities');
 //Route::get('/all/cities-api', 'SchoolsController@getAllSchoolCitiesApi');
-// Test
-Route::get('/district-test', 'SchoolDistrictsController@index');
 Route::get('/all/school-districts', 'SchoolDistrictsController@getAllSchoolDistricts');
 //Route::get('/all/school-districts-api', 'SchoolDistrictsController@getAllSchoolDistrictsApi');
 
@@ -111,7 +109,6 @@ Route::get('/school-district-api/{sdID}', 'SchoolDistrictsController@getSchoolDi
 Route::get('/glossary-api', 'GlossaryController@getAllTermsApi');
 
 Route::get('/school-district-api/{sdID}/report/{report_type}', 'SchoolDistrictsController@getSdReportApi');
-Route::get('/test-school-district-api/{sdID}/report/{report_type}', 'SchoolDistrictsController@testGetSdReportApi');
 
 Route::get('/school-district-api/{sdID}/report', 'SchoolDistrictsController@getAllReportApi');
 
@@ -125,15 +122,18 @@ Route::get('/school-api/{mincode}/report/{report_type}', 'SchoolsController@getS
 
 // API for FSA
 // Selected Response
-Route::get('/fsa-school-years', 'FsaController@getSchoolYears');
-Route::get('/fsa-school-districts-agg', 'FsaController@getSchoolDistrictsAgg');
-Route::get('/fsa-all-school-districts-agg', 'FsaController@getAllSchoolDistrictsAgg');
-Route::get('/fsa-school-districtsID/{district}', 'FsaController@getSchoolDistrictsID');
-Route::get('/selected-response/{district}/{year}/{grade}/{subject}/{exam_language}/{gender}/{francophone}/{french_immersion}/{ell}/{indigenous}', 'FsaController@getSelectedResponse');
-Route::get('/fsa-districts', 'FsaController@getSchoolDistricts');
-Route::get('/constructed-response/{district}/{year}/{grade}/{subject}/{exam_language}/{gender}/{francophone}/{french_immersion}/{ell}/{indigenous}', 'FsaController@getConstructedResponse');
-Route::get('/cognitive-levels/{district}/{year}/{grade}/{subject}/{exam_language}/{gender}/{francophone}/{french_immersion}/{ell}/{indigenous}', 'FsaController@getCognitiveLevels');
-//Route::get('/cognitive-levels/{gender}','FsaController@getCognitiveLevels');
+// Rate limited because most of these query Oracle uncached. 300 allows for many users behind one school network IP.
+Route::group(['middleware' => 'throttle:300,1'], function () {
+    Route::get('/fsa-school-years', 'FsaController@getSchoolYears');
+    Route::get('/fsa-school-districts-agg', 'FsaController@getSchoolDistrictsAgg');
+    Route::get('/fsa-all-school-districts-agg', 'FsaController@getAllSchoolDistrictsAgg');
+    Route::get('/fsa-school-districtsID/{district}', 'FsaController@getSchoolDistrictsID');
+    Route::get('/selected-response/{district}/{year}/{grade}/{subject}/{exam_language}/{gender}/{francophone}/{french_immersion}/{ell}/{indigenous}', 'FsaController@getSelectedResponse');
+    Route::get('/fsa-districts', 'FsaController@getSchoolDistricts');
+    Route::get('/constructed-response/{district}/{year}/{grade}/{subject}/{exam_language}/{gender}/{francophone}/{french_immersion}/{ell}/{indigenous}', 'FsaController@getConstructedResponse');
+    Route::get('/cognitive-levels/{district}/{year}/{grade}/{subject}/{exam_language}/{gender}/{francophone}/{french_immersion}/{ell}/{indigenous}', 'FsaController@getCognitiveLevels');
+    //Route::get('/cognitive-levels/{gender}','FsaController@getCognitiveLevels');
+});
 
 // new look routes
 Route::get('/data-literacy', 'DataLiteracyController@showDataLiteracyPage');

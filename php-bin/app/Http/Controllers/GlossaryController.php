@@ -70,9 +70,6 @@ class GlossaryController extends Controller {
     if ($locale != 'en') {
       ksort($glossary_entries, SORT_LOCALE_STRING);
     }
-	ini_set('display_errors', 1);
-	ini_set('display_startup_errors', 1);
-	error_reporting(E_ALL);  
 	  
     return view('pages.glossary', compact('glossary_entries'));
 
