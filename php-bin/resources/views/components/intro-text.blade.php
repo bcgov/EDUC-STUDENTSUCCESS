@@ -20,7 +20,6 @@
             <!-- Image Column -->
             <div class="col-lg-6 col-md-12 text-center text-lg-end">
                 <div class="intro-image-container position-relative">
-                    <!-- The image src points to a placeholder path. Swap the src path here once the asset is ready -->
                     <img src="/img/refresh-img/ss-home-explore-graphic.png" alt="Explore B.C. K-12 Public School Data Image" class="img-fluid intro-image-shape" onerror="this.src='https://placehold.co/600x500/003366/FFFFFF?text=Intro+Data+Image'" />
                 </div>
             </div>

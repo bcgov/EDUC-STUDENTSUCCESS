@@ -1,0 +1,78 @@
+/* data-release-cycles.css */
+.data-release-section {
+    background-color: #f4f6f7;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.data-release-heading {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    color: #003366;
+}
+
+/* Light cyan highlighter effect under the text */
+.data-release-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 48%;
+    height: 20px;
+    background-color: #dff4f3;
+    z-index: -1;
+}
+
+.data-release-text {
+    color: #333333;
+    line-height: 1.8;
+}
+
+.data-release-callout {
+    color: #003366;
+    font-weight: 600;
+}
+
+/* common.css loads after this file, so these overrides are scoped to the section */
+.data-release-section .search-btn-blue {
+    padding: 16px 30px;
+}
+
+/* common.css removes the focus outline on this button */
+.data-release-section .search-btn-blue:focus-visible {
+    outline: 3px solid #40c4c4;
+    outline-offset: 2px;
+}
+
+.data-release-graphic {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+/* Flat left, rounded right */
+.data-release-image {
+    border-radius: 0 300px 300px 0;
+}
+
+/* Decorative accent overlapping the graphic's lower-left */
+.data-release-accent {
+    position: absolute;
+    left: -30px;
+    bottom: 12%;
+    width: 130px;
+    height: auto;
+    border-radius: 5px 5px 5px 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .data-release-image {
+        border-radius: 20px; /* Standard rounded edges on mobile */
+    }
+
+    .data-release-accent {
+        display: none;
+    }
+}

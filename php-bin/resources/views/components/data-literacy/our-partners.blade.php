@@ -2,7 +2,7 @@
 <link href="/css/our-partners.css" rel="stylesheet" type="text/css">
 @endpush
 
-<section class="container our-partners-section my-5">
+<section class="container our-partners-section">
     <!-- Header -->
     <div class="row align-items-center mb-5 mt-4">
         <div class="col-12 text-center text-md-start">
@@ -14,10 +14,9 @@
     </div>
     
     <!-- Row 1 -->
-    <div class="row mb-5 align-items-center">
-        <!-- Left: Image placeholder -->
+    <div class="row align-items-center">
         <div class="col-md-5 text-center mb-4 mb-md-0 position-relative">
-            <img src="https://via.placeholder.com/300" alt="Main Image Placeholder" class="img-fluid rounded-circle main-image-placeholder">
+            <img src="/img/refresh-img/working-with-partners-graphic.png" alt="Working With Partners Graphic" class="img-fluid rounded-circle main-image-placeholder">
         </div>
         <!-- Right: Subheading followed by short paragraph -->
         <div class="col-md-7 ps-md-4">
@@ -27,11 +26,11 @@
     </div>
 
     <!-- Row 2 -->
-    <div class="row g-4 g-lg-5 my-5">
+    <div class="row g-4 g-lg-5">
         <!-- Col 1 -->
         <div class="col-md-4 d-flex flex-column">
             <div class="custom-shape-card flex-grow-1 position-relative text-white mt-4 mb-3">
-                <img src="https://via.placeholder.com/64" alt="Check Icon" class="check-icon-placeholder position-absolute">
+                <img src="/img/refresh-img/working-partners-check-icons.png" alt="Check Icon" class="check-icon-placeholder position-absolute">
                 <h4 class="card-title fw-bold">As data custodians, our goal is to...</h4>
                 <ul class="custom-bullet-list">
                     <li>Inform strategies and start conversations</li>
@@ -46,7 +45,7 @@
         <!-- Col 2 -->
         <div class="col-md-4 d-flex flex-column">
             <div class="custom-shape-card flex-grow-1 position-relative text-white mt-4 mb-3">
-                <img src="https://via.placeholder.com/64" alt="Check Icon" class="check-icon-placeholder position-absolute">
+                <img src="/img/refresh-img/working-partners-check-icons.png" alt="Check Icon" class="check-icon-placeholder position-absolute">
                 <h4 class="card-title fw-bold">We use our expertise to...</h4>
                 <ul class="custom-bullet-list">
                     <li>Collect and prepare appropriate, complete and transparent data and analysis to meet our unique client needs</li>
@@ -59,7 +58,7 @@
         <!-- Col 3 -->
         <div class="col-md-4 d-flex flex-column">
             <div class="custom-shape-card flex-grow-1 position-relative text-white d-flex flex-column mt-4 mb-3">
-                <img src="https://via.placeholder.com/64" alt="Check Icon" class="check-icon-placeholder position-absolute">
+                <img src="/img/refresh-img/working-partners-check-icons.png" alt="Check Icon" class="check-icon-placeholder position-absolute">
                 <h4 class="card-title fw-bold">Learn more...</h4>
                 <ul class="custom-bullet-list flex-grow-1">
                     <li>Attend a <strong><a href="#" class="text-white text-decoration-underline">Data Analytics Information Sharing Session</a></strong> for ministry staff / superintendents. If you work for a school district, contact your superintendent to learn more</li>
@@ -67,7 +66,7 @@
                     <li>Ask someone for help with a data question or request via email:</li>
                 </ul>
                 <div class="mt-auto">
-                    <a href="mailto:educ.systemperformance@gov.bc.ca" class="btn btn-cta w-100 py-2">educ.systemperformance@gov.bc.ca</a>
+                    <a href="mailto:educ.systemperformance@gov.bc.ca" class="search-btn-blue">educ.systemperformance@gov.bc.ca</a>
                 </div>
             </div>
         </div>

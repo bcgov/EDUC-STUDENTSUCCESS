@@ -1,15 +1,14 @@
 <link href="/css/using-student-data.css" rel="stylesheet" type="text/css">
 
-<section class="using-student-data-section my-5">
+<section class="using-student-data-section">
     <div class="using-student-data-container container py-5">
         <!-- Row 1: Content -->
         <div class="row align-items-center mb-5">
             <div class="col-lg-5 mb-4 mb-lg-0 text-center">
-                <!-- Image Placeholder -->
-                <img src="https://via.placeholder.com/500x500/e0f7fa/0056b3?text=Main+Graphic+Placeholder" alt="Using Student Data Graphic" class="img-fluid w-100 rounded" style="max-width: 450px;">
+                <img src="/img/refresh-img/using-student-data.png" alt="Using Student Data Graphic" class="img-fluid w-100 rounded" style="max-width: 450px;">
             </div>
             <div class="col-lg-7 ps-lg-5">
-                <h2 class="usd-title mb-4 fw-bold text-start">Using Student Data</h2>
+                <h2 class="usd-title intro-heading-highlight mb-4 fw-bold text-start">Using Student Data</h2>
                 <p class="usd-text mb-3">
                     Students succeed when caregivers, educators, and decision makers have the right information to guide their actions. Data helps them:
                 </p>
@@ -30,9 +29,9 @@
         <!-- Row 2: Action Buttons -->
         <div class="row g-3">
             <div class="col-md-4">
-                <a href="#">
+                <a href="#" class="usd-btn">
                     <div class="usd-btn-graphic">
-                        <img src="https://via.placeholder.com/80x80/26c6da/ffffff?text=Icon" alt="Data Use In Education Placeholder" class="img-fluid">
+                        <img src="/img/refresh-img/data-use-education.png" alt="Data Use In Education icon" class="img-fluid">
                     </div>
                     <div class="search-btn-blue">
                         DATA USE IN EDUCATION +
@@ -40,9 +39,9 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a href="#">
+                <a href="#" class="usd-btn">
                     <div class="usd-btn-graphic">
-                        <img src="https://via.placeholder.com/80x80/26c6da/ffffff?text=Icon" alt="Where To Find The Data Placeholder" class="img-fluid">
+                        <img src="/img/refresh-img/where-to-find-data.png" alt="Where To Find The Data icon" class="img-fluid">
                     </div>
                     <div class="search-btn-blue">
                         WHERE TO FIND THE DATA +
@@ -50,9 +49,9 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a href="#">
-                    <div class="usd-btn-graphic border-radius-custom">
-                         <img src="https://via.placeholder.com/80x80/26c6da/ffffff?text=Icon" alt="2025 Facts And Figures Placeholder" class="img-fluid">
+                <a href="#" class="usd-btn">
+                    <div class="usd-btn-graphic">
+                         <img src="/img/refresh-img/facts-figures.png" alt="Facts And Figures icon" class="img-fluid">
                     </div>
                     <div class="search-btn-blue">
                         2025 FACTS AND FIGURES +

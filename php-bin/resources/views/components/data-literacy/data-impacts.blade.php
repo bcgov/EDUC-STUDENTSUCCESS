@@ -1,7 +1,7 @@
 <!-- Link to specific Data Impacts CSS -->
 <link href="/css/data-impacts.css" rel="stylesheet" type="text/css">
 
-<section class="data-impacts-section py-5 my-5">
+<section class="data-impacts-section py-5">
     <div class="container py-4">
         <div class="row align-items-center">
             
@@ -32,11 +32,10 @@
                 </div>
             </div>
 
-            <!-- Right Column: Image Placeholder -->
+            <!-- Right Column -->
             <div class="col-lg-6 col-md-12 text-center text-lg-start ps-lg-5">
                 <div class="data-impacts-image-wrapper">
-                    <!-- Placeholder image matching the vibe of the mock -->
-                    <img src="https://placehold.co/500x500/21a6a1/FFFFFF?text=Data+Impacts+Graphic" alt="Data Impacts in Classrooms Graphic" class="img-fluid data-impacts-image">
+                    <img src="/img/refresh-img/data-impacts-graphic.png" alt="Data Impacts in Classrooms Graphic" class="img-fluid data-impacts-image">
                 </div>
             </div>
 

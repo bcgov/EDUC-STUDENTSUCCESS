@@ -1,7 +1,6 @@
 <div class="data-lit-banner-container text-center w-100 mb-5">
-    <!-- Image Placeholder for the Data Literacy Banner -->
-    <img src="https://via.placeholder.com/1400x350/9322e9/ffffff?text=Data+Literacy+Banner+Image+Placeholder" 
-         alt="Data Literacy Banner Placeholder" 
+    <img src="/img/refresh-img/data-literacy-header01.png" 
+         alt="Data Literacy Banner" 
          class="img-fluid w-100" 
          style="object-fit: cover; border-radius: 4px;" />
 </div>

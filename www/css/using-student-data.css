@@ -46,18 +46,54 @@
 
 /* Button styles */
 
+.usd-btn {
+    position: relative;
+    display: block;
+    padding-top: 16px; /* Reserves room for the icon overhanging the top of the bar */
+    text-decoration: none;
+}
+
+/* Icon sits on the bar's bottom-left corner and overhangs its top edge */
 .usd-btn-graphic {
-    background-color: #3fe0d0; /* Teal background holding the left placeholder graphic */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 80px; 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 56px;
+    z-index: 1;
 }
 
 .usd-btn-graphic img {
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
     display: block;
+    width: 100%;
+    height: auto;
+}
+
+.usd-btn .search-btn-blue {
+    display: flex;
+    width: 100%;
+    min-height: 40px;
+    padding-left: 68px; /* Clears the icon */
+    text-align: center;
+}
+
+/* The icon covers part of the bar, so the hover state is driven by the whole link */
+.usd-btn:hover .search-btn-blue {
+    opacity: 0.9;
+}
+
+.intro-heading-highlight {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+/* Light cyan highlighter effect under the text */
+.intro-heading-highlight::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    width: 195px;
+    height: 20px;
+    background-color: #dff4f3; 
+    z-index: -1;
 }

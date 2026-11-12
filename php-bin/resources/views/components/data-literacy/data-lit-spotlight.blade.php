@@ -2,7 +2,7 @@
 <link href="/css/data-lit-spotlight.css" rel="stylesheet" type="text/css">
 @endpush
 
-<section class="spotlight-section position-relative my-5" id="spotlightCarousel">
+<section class="spotlight-section position-relative" id="spotlightCarousel">
     
     <!-- Arrows -->
     <button class="spotlight-prev" onclick="spotlightPrevSlide()" aria-label="Previous slide">
@@ -18,15 +18,14 @@
         <!-- Slide 1 -->
         <div class="spotlight-item active" data-slide-index="0">
             <div class="spotlight-title-container">
-                <h2 class="spotlight-title">In the Spotlight</h2>
-                <span class="spotlight-title-highlight"></span>
+                <h2 class="spotlight-title data-release-heading">In the Spotlight</h2>
             </div>
             
             <div class="row align-items-center">
                 <div class="col-md-5 mb-4 mb-md-0">
                     <div class="spotlight-img-wrapper">
                         <!-- Curved corner image -->
-                        <img src="https://via.placeholder.com/400x350/003366/ffffff.png?text=Spotlight+Image+1" alt="Spotlight Image" class="spotlight-img">
+                        <img src="/img/refresh-img/spot-light-image1.png" alt="Spotlight Image" class="spotlight-img">
                         <!-- Cyan Pin & Orange Ring -->
                         <div class="spotlight-accent-pin"></div>
                         <div class="spotlight-accent-ring"></div>
@@ -39,7 +38,7 @@
                     <p>Whether you're curious, love data, or just want to see what we're up to, check it out.</p>
                     
                     <div class="spotlight-footer">
-                        <a href="#" class="spotlight-btn-cta">FIND OUT MORE +</a>
+                        <a href="#" class="search-btn-blue">FIND OUT MORE +</a>
                         
                         <div class="spotlight-indicators">
                             <button type="button" class="indicator-0 active" onclick="spotlightGoTo(0)" aria-label="Slide 1"></button>
@@ -54,14 +53,13 @@
         <!-- Slide 2 -->
         <div class="spotlight-item" data-slide-index="1">
             <div class="spotlight-title-container">
-                <h2 class="spotlight-title">In the Spotlight</h2>
-                <span class="spotlight-title-highlight"></span>
+                <h2 class="spotlight-title data-release-heading">In the Spotlight</h2>
             </div>
             
             <div class="row align-items-center">
                 <div class="col-md-5 mb-4 mb-md-0">
                     <div class="spotlight-img-wrapper">
-                        <img src="https://via.placeholder.com/400x350/00b4d8/ffffff.png?text=Spotlight+Image+2" alt="Spotlight Image 2" class="spotlight-img">
+                        <img src="/img/refresh-img/spot-light-image2.png" alt="Spotlight Image 2" class="spotlight-img">
                         <div class="spotlight-accent-pin"></div>
                         <div class="spotlight-accent-ring"></div>
                     </div>
@@ -73,7 +71,7 @@
                     <p>With data, we empower the educational process step by step.</p>
                     
                     <div class="spotlight-footer">
-                        <a href="#" class="spotlight-btn-cta">FIND OUT MORE +</a>
+                        <a href="#" class="search-btn-blue">FIND OUT MORE +</a>
                         
                         <div class="spotlight-indicators">
                             <button type="button" class="indicator-0" onclick="spotlightGoTo(0)" aria-label="Slide 1"></button>
@@ -88,14 +86,13 @@
         <!-- Slide 3 -->
         <div class="spotlight-item" data-slide-index="2">
             <div class="spotlight-title-container">
-                <h2 class="spotlight-title">In the Spotlight</h2>
-                <span class="spotlight-title-highlight"></span>
+                <h2 class="spotlight-title data-release-heading">In the Spotlight</h2>
             </div>
             
             <div class="row align-items-center">
                 <div class="col-md-5 mb-4 mb-md-0">
                     <div class="spotlight-img-wrapper">
-                        <img src="https://via.placeholder.com/400x350/7209b7/ffffff.png?text=Spotlight+Image+3" alt="Spotlight Image 3" class="spotlight-img">
+                        <img src="/img/refresh-img/spot-light-image3.png" alt="Spotlight Image 3" class="spotlight-img">
                         <div class="spotlight-accent-pin"></div>
                         <div class="spotlight-accent-ring"></div>
                     </div>
@@ -107,7 +104,7 @@
                     <p>Review the calendar for our next presentation date.</p>
                     
                     <div class="spotlight-footer">
-                        <a href="#" class="spotlight-btn-cta">FIND OUT MORE +</a>
+                        <a href="#" class="search-btn-blue">FIND OUT MORE +</a>
                         
                         <div class="spotlight-indicators">
                             <button type="button" class="indicator-0" onclick="spotlightGoTo(0)" aria-label="Slide 1"></button>
