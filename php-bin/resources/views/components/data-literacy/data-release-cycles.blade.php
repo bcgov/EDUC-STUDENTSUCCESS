@@ -24,8 +24,7 @@
             <!-- Right Column: Image Placeholders -->
             <div class="col-lg-5 text-center text-lg-start">
                 <div class="data-release-graphic">
-                    <img src="https://placehold.co/500x520/e0fdfd/003366?text=Data+Release+Calendar" alt="K-12 education data and reporting calendar, organized by month" class="img-fluid data-release-image">
-                    <img src="https://placehold.co/130x130/40c4c4/ffffff?text=Icon" alt="" class="data-release-accent">
+                    <img src="/img/refresh-img/data-realease-image.png" alt="K-12 education data and reporting calendar, organized by month" class="img-fluid data-release-image">
                 </div>
             </div>
 
